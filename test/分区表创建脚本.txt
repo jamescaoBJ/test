@@ -1,0 +1,147 @@
+----创建分区函数
+
+CREATE PARTITION FUNCTION PCM_Partition(DATE)
+AS RANGE RIGHT FOR VALUES ('2010-01-01','2011-01-01','2012-01-01','2013-01-01',
+'2014-01-01','2015-01-01','2016-01-01','2017-01-01'
+,'2018-01-01','2019-01-01','2020-01-01','2021-01-01'
+,'2022-01-01','2023-01-01','2024-01-01','2025-01-01'
+,'2026-01-01','2027-01-01','2028-01-01','2029-01-01'
+,'2030-01-01','2031-01-01','2032-01-01','2033-01-01')  ;  
+　　--查看分区表是否创建成功
+
+SELECT * FROM sys.partition_functions;
+-----创建分区架构列表
+alter database PCM_PARTITION add filegroup PCM_P1;
+alter database PCM_PARTITION add filegroup PCM_P2;
+alter database PCM_PARTITION add filegroup PCM_P3;
+alter database PCM_PARTITION add filegroup PCM_P4;
+alter database PCM_PARTITION add filegroup PCM_P5;
+alter database PCM_PARTITION add filegroup PCM_P6;
+alter database PCM_PARTITION add filegroup PCM_P7;
+alter database PCM_PARTITION add filegroup PCM_P8;
+alter database PCM_PARTITION add filegroup PCM_P9;
+alter database PCM_PARTITION add filegroup PCM_P10;
+alter database PCM_PARTITION add filegroup PCM_P11;
+alter database PCM_PARTITION add filegroup PCM_P12;
+alter database PCM_PARTITION add filegroup PCM_P13;
+alter database PCM_PARTITION add filegroup PCM_P14;
+alter database PCM_PARTITION add filegroup PCM_P15;
+alter database PCM_PARTITION add filegroup PCM_P16;
+alter database PCM_PARTITION add filegroup PCM_P17;
+alter database PCM_PARTITION add filegroup PCM_P18;
+alter database PCM_PARTITION add filegroup PCM_P19;
+alter database PCM_PARTITION add filegroup PCM_P20;
+alter database PCM_PARTITION add filegroup PCM_P21;
+alter database PCM_PARTITION add filegroup PCM_P22;
+alter database PCM_PARTITION add filegroup PCM_P23;
+alter database PCM_PARTITION add filegroup PCM_P24;
+alter database PCM_PARTITION add filegroup PCM_P25;
+
+---分区架构和分区函数关联
+CREATE PARTITION SCHEME PCM_Range
+AS PARTITION PCM_Partition
+TO (PCM_P1,PCM_P2,PCM_P3,PCM_P4,
+    PCM_P5,PCM_P6,PCM_P7,PCM_P8,
+    PCM_P9,PCM_P10,PCM_P11,PCM_P12,
+		PCM_P13,PCM_P14,PCM_P15,PCM_P16,
+		PCM_P17,PCM_P18,PCM_P19,PCM_P20,
+		PCM_P21,PCM_P22,PCM_P23,PCM_P24,
+		PCM_P25);
+
+
+----为分区函架构定义文件存放位置
+
+alter database PCM_PARTITION add file   --增加文件
+(
+    NAME = 'PCM_P1_f',
+    FILENAME = 'D:\Tools\database\db_files\data\PCM_P1_f.ndf',
+    SIZE = 1000MB,
+    MAXSIZE = UNLIMITED,
+    FILEGROWTH = 10%
+)
+TO filegroup PCM_P1;
+
+
+
+alter database PCM_PARTITION add file   --增加文件
+(
+    NAME = 'PCM_P2_f',
+    FILENAME = 'D:\Tools\database\db_files\data\PCM_P2_f.ndf',
+    SIZE = 1000MB,
+    MAXSIZE = UNLIMITED,
+    FILEGROWTH = 10%
+)
+TO filegroup PCM_P2;
+
+
+
+alter database PCM_PARTITION add file   --增加文件
+(
+    NAME = 'PCM_P3_f',
+    FILENAME = 'D:\Tools\database\db_files\data\PCM_P3_f.ndf',
+    SIZE = 1000MB,
+    MAXSIZE = UNLIMITED,
+    FILEGROWTH = 10%
+)
+TO filegroup PCM_P3;
+
+
+
+alter database PCM_PARTITION add file   --增加文件
+(
+    NAME = 'PCM_P4_f',
+    FILENAME = 'D:\Tools\database\db_files\data\PCM_P4_f.ndf',
+    SIZE = 1000MB,
+    MAXSIZE = UNLIMITED,
+    FILEGROWTH = 10%
+)
+TO filegroup PCM_P4;
+
+
+
+alter database PCM_PARTITION add file   --增加文件
+(
+    NAME = 'PCM_P5_f',
+    FILENAME = 'D:\Tools\database\db_files\data\PCM_P5_f.ndf',
+    SIZE = 1000MB,
+    MAXSIZE = UNLIMITED,
+    FILEGROWTH = 10%
+)
+TO filegroup PCM_P5;
+
+
+alter database PCM_PARTITION add file   --增加文件
+(
+    NAME = 'PCM_P6_f',
+    FILENAME = 'D:\Tools\database\db_files\data\PCM_P6_f.ndf',
+    SIZE = 1000MB,
+    MAXSIZE = UNLIMITED,
+    FILEGROWTH = 10%
+)TO filegroup PCM_P6;
+
+
+
+
+
+create table orderRecords(
+id int,
+orderId int,
+salesDate date
+)
+on PCM_Range(salesDate);
+
+
+
+ 
+select * from orderRecords where $PARTITION.PCM_Partition(salesDate)=(select $PARTITION.PCM_Partition('2010-01-10'));
+
+ 
+
+INSERT into orderRecords values(31,31,'2010-01-01');
+INSERT into orderRecords values(32,32,'2011-01-01');
+INSERT into orderRecords values(1,1,'2012-01-01');
+INSERT into orderRecords values(2,2,'2013-01-01');
+INSERT into orderRecords values(3,3,'2014-01-01');
+
+
+

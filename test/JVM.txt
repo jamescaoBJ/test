@@ -1,0 +1,15 @@
+对JVM 分析讲解非常详细的文章
+http://blog.csdn.net/ning109314/article/details/10411495/
+
+heap: 老生代，新生代，持久代
+标记清除
+copy
+标记整理
+计数器
+
+
+并行，串行，并发
+
+
+
+stock:

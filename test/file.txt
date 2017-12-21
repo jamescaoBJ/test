@@ -1,0 +1,100 @@
+spring-ws example
+
+http://blog.csdn.net/metecyu/article/details/24627373
+https://stackoverflow.com/questions/18400026/info-wsservlet14-jax-ws-servlet-initializing
+http://www.micmiu.com/soa/webservice/jax-ws-tomcat-deploy/
+
+
+========================
+Jenkins 用户信息
+
+admin/zept123456
+caoyange/zept123456
+zept/123456
+
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox; default-src 'self';")
+java -Dhudson.model.DirectoryBrowserSupport.CSP= -jar jenkins.war
+
+java -Xms1024m -Xmx1024m -XX:PermSize=512M -XX:PermSize=1024M -jar jenkins.war 
+=========
+公司SVN账号
+caoyange/Cygzept2016
+
+=======
+oracle
+
+数据库实例：orcl
+
+密码：Zept123456
+
+=================
+公司原有SVN地址和用户
+https://117.159.5.134:8443/svn/ETM
+WangZhiyuan
+123456
+
+=================
+
+
+
+2.5.
+2.6.
+2.7.
+2.8.
+
+已经赔付
+已经有的病例
+1.18,2.5,2.10,2.20,3.7,3.16,3,28,4.10
+未赔付：
+2017621956856002  2927  1.18 21,22 ,2.4. 2.10,2.11 2.13,2.16 
+2017621956856004  8334.43    3.3 3.5 3.6 3.7 3.1 3.2 3.31 4.5 4.8
+2017621956856004    2316.2   2.9 4.10.4.15
+
+ 
+
+
+
+
+
+
+
+<dependency>
+			<groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2</version>
+		</dependency>
+
+
+
+DataCenter:
+1:oeval   综合评价
+2：online   在线
+3: Monitor
+4: ides  智能诊断
+5: stock 备品备件
+
+flow: flowheloer
+prealm:?
+samplecenter?
+shere ?
+
+
+cor_maint：保养
+decision:决策支持
+defect：缺陷
+document：文档
+EXPSYS:知识库
+fault:故障
+
+
+
+Writing to license File [C:\Users\lenovo\.myeclipse.properties]
+
+##MyEclipse license file
+# 2017-6-29 9:41:27
+LICENSEE=james
+LICENSE_KEY=wLR7ZL-855555-75517356318711821
+ACTIVATION_CODE=11dFE061ce043a12147731wLR7ZL-855555-75517356318711821200628
+ACTIVATION_KEY=158348332da5cc93300ff2b6d7cbb3a946614bde4d659527ec9d5ef24b921bd6c997a7bb99a972452c8d8d6d1a24a390498e28c0002324def622d123d1749a3255a5c64cc4acdca3874df2dad1681041b87ade4971ff909eed5da2dffb24fe88d983ea2e91ac5e6a93a61428e26784b1737d9662f1c4bccae855ff4ff0998e38
+# Activation keys are uniquely generated on a per-machine basis
+# and cannot be copied to another machine.

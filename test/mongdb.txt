@@ -1,0 +1,26 @@
+mongdb下载地址： http://dl.mongodb.org/dl/win32/x86_64
+演示例子
+http://www.cnblogs.com/lzrabbit/p/3682510.html
+
+
+
+创建数据库目录D:\MongoDB\data，接下来打开命令行窗口，切换到D:\MongoDB\bin 目录执行如下命令：
+
+其中 --dbpath是指定数据库存放目录，这里要注意有两个 "-"
+
+mongod --dbpath D:\MongoDB\data
+
+
+将mongodb安装为windows服务非常简单只需要在上面执行的命令行后添加 --install即可
+
+mongod --dbpath D:\MongoDB\data --install
+按照正常的剧情，应该服务就安装成功了，但是很不幸，出现下面提示
+
+--install has to be used with --logpath
+按照提示，我们需要指定log目录，所以我们创建log目录D:\MongoDB\logs 然后重新执行命令
+
+mongod --dbpath D:\MongoDB\data --logpath=D:\MongoDB\logs\mongodb.log --logappend
+但是提示还是没有指定日志路径，几经折腾发现这是2.6版本的一个bug，将会在下一个版本修复，然后我们有两个选择，一个选择是使用上一个版本2.4.9，另一个选择是先用2.4.9版本安装成功服务，然后在升级到2.6（肿么升级？直接用2.6版本替换掉对应2.4.9版本的文件），那我们还有其他的选择吗，答案当然是肯定的，使用sc命令创建服务，使用net start启动服务
+
+sc create MongoDB binPath= "D:\MongoDB\bin\mongod.exe --service --dbpath D:\MongoDB\data --logpath=D:\MongoDB\logs\mongodb.log  --logappend"
+net start MongoDB

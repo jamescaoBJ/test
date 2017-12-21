@@ -1,0 +1,26 @@
+shared.loader=${catalina.base}/shared/lib,${catalina.base}/shared/lib/*.jar
+
+-Xms1024m
+-Xmx2048m
+-XX:PermSize=1024m
+-XX:MaxPermSize=2048m
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:HeapDumpPath=D:\heapdumpSSS
+
+http://blog.csdn.net/wanglha/article/details/46632711
+给Tomcat添加参数
+其中不设-XX:HeapDumpPath时，dump出的文件在/tomcat_home/bin目录下
+set JAVA_OPTS=%JAVA_OPTS% -server -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=D:\heapdumpSSS
+
+
+
+
+
+log4j.rootCategory=INFO, stdout , R
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=[DP] %p [%t] %C.%M(%L) | %m%n
+log4j.appender.R=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.R.File=PCM.log 
+log4j.appender.R.layout=org.apache.log4j.PatternLayout
+log4j.appender.R.layout.ConversionPattern=%d-[DP] %p %t %c - %m%n

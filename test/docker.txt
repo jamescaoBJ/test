@@ -1,0 +1,20 @@
+bb167943998c82a396348d1ed4a28aa16c83a9685104a06c2d54aa422e9fcdda --=
+
+username:jamesdockeruser
+email:163 email
+password:斜两排
+
+
+cat docker.tar| docker import - rcc_dev:leads
+
+http://www.jianshu.com/p/653f99c32f66
+
+启动Ubuntu：
+docker  run -i -t ubuntu:12.04 /bin/bash
+
+apt-get update
+apt-get install vim
+如果是：bash:ping: command not found
+apt-get install iputils-ping
+安装Tomcat和JDK
+http://blog.csdn.net/lixucpf/article/details/51752730

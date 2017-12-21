@@ -1,0 +1,98 @@
+
+
+
+ #################################
+ Kafka入门经典教程
+http://blog.csdn.net/hmsiwtv/article/details/46960053
+1.Kafka独特设计在什么地方？
+2.Kafka如何搭建及创建topic、发送消息、消费消息？
+3.如何书写Kafka程序？
+4.数据传输的事务定义有哪三种？
+5.Kafka判断一个节点是否活着有哪两个条件？
+6.producer是否直接将数据发送到broker的leader(主节点)？
+7.Kafa consumer是否可以消费指定分区消息？
+8.Kafka消息是采用Pull模式，还是Push模式？
+9.Procuder API有哪两种？
+10.Kafka存储在硬盘上的消息格式是什么？
+=====================
+###################################
+
+
+
+生产者，消费者模型 
+http://www.cnblogs.com/xinlingyoulan/p/6054361.html
+
+
+
+
+
+        进入kafka安装目录，按下shift +右键，选择 "在此处打开命令窗口"，输入如下命令并按回车
+
+        .\bin\windows\kafka-server-start.bat    .\config\server.properties
+        
+        .\kafka-server-start.bat ..\..\config\server.properties
+
+        如果安装kafka安装成功，命令运行后应该是下面的情况：
+
+        kafka安装成功后就可以创建主题存储消息了
+
+使用kafka
+
+    创建主题：进入kafka安装目录的\bin\windows下按shift +右键，选择“在此处打开命令窗口”，输入如下命令并回车：
+
+    kafak-topics.bat  --create --zookeeper localhost:2181 --replication-factor 1 --partition 1 --topic test
+    
+     .\kafak-topics.bat  --create --zookeeper 192.168.1.103:2181 --replication-factor 1 --partition 1 --topic james007
+     .\kafka-topics.bat --create --zookeeper 192.168.1.103:2181 --replication-factor 1 --partition 1 --topic james008
+
+    创建producer 及consumer来测试服务器
+    在kafka安装目录的\bin\windows启动新的命令窗口，producer和consumer需要分别启动命令窗口。
+
+        启动producter，启动命令如下：
+
+        kafka-console-producer.bat  --broker-list localhost:9092  --topic test
+        
+        .\kafka-console-producer.bat  --broker-list 192.168.1.103:9092 --topic james007
+
+        启动consumer，启动命令如下：
+
+        kafka-console-consumer.bat  --zookeeper localhost:2181  --topic test
+        
+        .\kafka-console-consumer.bat  --zookeeper 192.168.1.103:2181  --topic james007
+
+        在producter窗口输入内容，如果在consumer窗口能看到内容，则说明kafka安装成功
+
+kafka常用命令
+
+    列出主题
+
+    kafka-topic.bat -list -zookeeper localhost:2181
+
+    描述主题
+
+    kafka-topics.bat -describe -zookeeper localhost:2181 -topic [topic name]
+
+    从头读取消息
+
+    kafka-console-consumer.bat -zookeeper localhost:2181 -topic [topic name] -from-beginning
+
+    删除主题
+
+    kafka-run-class.bat kafka.admin.TopicCommand -delete -topic [topic_to_delete] -zookeeper localhost:2181
+
+    查看topic的详细信息
+
+    ./kafka-topic.sh -zookeeper localhost:2181 -describe -topic  [topic name]
+
+    为topic增加副本
+
+    ./kafka-reassign-partitions.sh -zookeeper localhost:2181 -reassignment-json-file json/partitions-to-move.json -execute
+
+    为topic增加partition
+
+    ./bin/kafka-topics.sh -zookeeper localhost:2181 -alter -partitions 20 -topic [topic name]
+
+    下线broker
+
+    ./kafka-run-class.sh kafka.admin.ShutdownBroker --zookeeper localhost:2181 broker [brokerId] --num.retries 3 --retry.interval.ms 60
+    shutdown broker

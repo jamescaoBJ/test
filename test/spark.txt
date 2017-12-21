@@ -1,0 +1,4 @@
+阿里的开放数据服务(open data processing service,ODPS)
+阿里的大数据解决方案：御膳房
+阿里的实时多维分析平台：Garuda
+阿里的实时计算平台：Galaxy

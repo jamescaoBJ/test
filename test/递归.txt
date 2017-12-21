@@ -1,0 +1,51 @@
+ 
+
+
+CREATE TABLE [dbo].[DelereNote] (
+[ID] varchar(60),
+[PID] varchar(60) 
+)
+
+INSERT into DelereNote values (1,'');
+
+INSERT into DelereNote values (2,1);
+
+INSERT into DelereNote values (3,1);
+
+INSERT into DelereNote values (4,2);
+
+INSERT into DelereNote values (5,2);
+
+INSERT into DelereNote values (6,3);
+
+
+select * from DelereNote;
+
+create  proc DelereNoteProc  
+(  
+    @id varchar--定义要删除树节点  
+)  
+as  
+begin  
+     declare @childID int--声明变量  
+     declare cursors cursor local for select ID from DelereNote where PID=@id--local关键字 全局游标  
+     open cursors  
+      fetch next from cursors into @childID--取游标的值赋给变量  
+      while(@@FETCH_STATUS=0)--判断当前游标内是否存在值  
+      begin   
+        exec DelereNoteProc @childID--递归调用存储过程 把孩子节点的值赋给游标 递归调用  
+        fetch next from cursors into @childID--继续读取游标里面的内容  
+      end    
+      close cursors  
+      deallocate cursors  
+    delete from DelereNote where ID=@id--存储过程执行的删除方法  
+end  
+go   
+
+
+select * from DelereNote;
+exec DelereNoteProc '2';
+
+select * from SYS_DEPT  where 1=1 and 
+
+select * from DelereNote;

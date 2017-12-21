@@ -1,0 +1,11 @@
+http://www.cnblogs.com/DBFocus/archive/2010/08/04/1791668.html
+http://www.cnblogs.com/hpp3501/p/6758164.html
+http://www.cnblogs.com/lxblog/archive/2012/11/08/2760650.html
+http://www.cnblogs.com/gaizai/p/3305879.html
+http://www.cnblogs.com/daizhj/archive/2009/11/18/1605293.html
+http://www.cnblogs.com/gaizai/p/3305879.html
+
+
+数据库读写分离：
+配置例子：
+http://blog.csdn.net/lifuxiangcaohui/article/details/7280202
