@@ -10,6 +10,7 @@ package hello;
  * @date 2017-8-29 7:33:07
  */
 public class Greeting {
+	
 	private final long id;
     private final String content;
 
