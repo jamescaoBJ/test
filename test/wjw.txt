@@ -1,0 +1,140 @@
+keepalive :https://www.cnblogs.com/MYue/p/7084072.html
+nginx 虚拟IP：     http://localhost:10001/caladd/add?a=6&b=16&accesstoken=1
+http://www.linuxidc.com/Linux/2015-08/122113.htm
+http://m.blog.csdn.net/jiachengwin/article/details/75106861
+zuul集群
+	Zuul：构建高可用网关之多维度限流
+	https://segmentfault.com/a/1190000012252677
+
+nginx 集群例子：http://m.blog.csdn.net/jiachengwin/article/details/75106861
+######################################
+springboot docker 打包部署,运维的好例子
+http://blog.csdn.net/hguisu/article/details/51072683
+
+#######################################
+专项系统 http://zxnl.ncme.org.cn/main admin 123123
+
+二期开发环境dev.ncme.org.cn：10.1.27.106   jxjy   OYG4cwP8p4JQGc!d   data/devTomcat8 8090 dev开发服务器
+二期的数据库暂时用  10.1.27.106:3306/ncme_v2 账号：root 密码：root
+
+################
+数据库地址：10.1.27.240:3323/CPD_TEST   root  1N%HQ#QX8VLD0roW  外网：111.206.238.131
+10.1.27.240：3324 用户名/密码：wjw_user1/123456
+###############
+nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar &
+
+---默认输出到nohup.out中
+
+nohup java -jar XXX.jar &  
+
+#########################
+app URL
+http://10.1.27.106:8090/ncmeapp/#/
+##########################
+jar 文件和jar命令分开执行的例子
+nohup java  -server -Djava.security.egd=file:///dev/urandom -Xms2048m -Xmx2048m -XX:PermSize=512m -cp canal2es.jar:../resources/:$LIB_JARS  -DLOG.DIR=../logs -DLOG.NAME=canal2es1  com.tydic.canal2es.deployer.Canal2EsLauncher  $ID  $PROCESS_num $THREAD_num>/dev/null 2> ../logs/canal2es_startup.log &
+
+###########################
+	spring boot默认加载文件的路径是 
+	/META-INF/resources/ 
+	/resources/ 
+	/static/ 
+	/public/ 
+	这些目录下面, 从spring boot源码也可以看到 
+	private static final String[] CLASSPATH_RESOURCE_LOCATIONS = {  
+	        "classpath:/META-INF/resources/", "classpath:/resources/",  
+	        "classpath:/static/", "classpath:/public/" };  
+	
+	所有本地的静态资源都配置在了classpath下面了, 而非在webapp下了 
+###########################
+	当maven依赖本地而非repository中的jar包，sytemPath指明本地jar包路径
+	<dependency>
+	    <groupId>org.hamcrest</groupId>
+	    <artifactId>hamcrest-core</artifactId>
+	    <version>1.5</version>
+	    <scope>system</scope>
+	    <systemPath>${basedir}/WebContent/WEB-INF/lib/hamcrest-core-1.3.jar</systemPath>
+	</dependency>
+#########################
+
+1、applicationContext_jndi.xml		--	数据库连接   
+2、ncme.properties			私有云服务器配置修改	--	项目配置项（adminURL、peixunURL、qiantaiURL）
+3、log4j.properties							--	日志输出路径
+4、项目下必须存在upload目录
+5、删除WebRoot目录下的courseList.html、index.html页面
+6、生成静态化文件（可选）。http://10.1.27.106:8080/qiantai_sec/first.do?eh=626
+
+#############################
+1 UnderTow 简介
+	https://www.jianshu.com/p/9710585258fb
+	Undertow是Jboss开发的一款基于XNIO的高性能 Web 服务器，并且兼容servlet3.1，在spring boot中很容易利用starter来替换掉tomcat作为服务容器。
+	将pom.xml中的dependencies修改如下：
+		<dependencies>
+	    <!--Spring boot starter-->
+	    <dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-web</artifactId>
+	        <exclusions>
+	            <exclusion>
+	                <groupId>org.springframework.boot</groupId>
+	                <artifactId>spring-boot-starter-tomcat</artifactId>
+	            </exclusion>
+	        </exclusions>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-undertow</artifactId>
+	    </dependency>
+	    <!--/Spring boot starter-->
+	</dependencies>
+	
+	链接：https://www.jianshu.com/p/9710585258fb
+	
+	HTTP2作为新的HTTP标准，目前在Undertow上已经可以被很好地支持了，而在代码中只需要配置下，就可以启用HTTP2作为web的协议：
+	
+	// 在@Configuration的类中添加@bean
+	@Bean
+	UndertowEmbeddedServletContainerFactory embeddedServletContainerFactory() {
+	    
+	    UndertowEmbeddedServletContainerFactory factory = new UndertowEmbeddedServletContainerFactory();
+	    
+	    // 这里也可以做其他配置
+	    factory.addBuilderCustomizers(builder -> builder.setServerOption(UndertowOptions.ENABLE_HTTP2, true));
+	    
+	    return factory;
+	}
+	
+	作者：whthomas
+	链接：https://www.jianshu.com/p/9710585258fb
+	來源：简书
+	著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+	
+	与tomcat的配置不同，在application.properties中的配置：
+	
+	# 设置IO线程数, 它主要执行非阻塞的任务,它们会负责多个连接, 默认设置每个CPU核心一个线程
+	server.undertow.io-threads=4
+	# 阻塞任务线程池, 当执行类似servlet请求阻塞操作, undertow会从这个线程池中取得线程,它的值设置取决于系统的负载
+	server.undertow.worker-threads=20
+	# 以下的配置会影响buffer,这些buffer会用于服务器连接的IO操作,有点类似netty的池化内存管理
+	# 每块buffer的空间大小,越小的空间被利用越充分
+	server.undertow.buffer-size=1024
+	# 每个区分配的buffer数量 , 所以pool的大小是buffer-size * buffers-per-region
+	server.undertow.buffers-per-region=1024
+	# 是否分配的直接内存
+	server.undertow.direct-buffers=true
+	
+	作者：whthomas
+	链接：https://www.jianshu.com/p/9710585258fb
+	來源：简书
+	著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+2： JWT：组件介绍：
+对发布的API增加授权保护是非常必要的。利用JWT技术为API增加授权保护，保证只有获得授权的用户才能够访问API。
+http://blog.csdn.net/haiyan_qi/article/details/77373900
+3:  参考JsonTestBean
+	3.1 由bean向json转换：
+	  	当bean和json属性不匹配，在bean的属性上或是get***方法上 加上@JSONField(name = "**") name是json属性值,json属性区分大小写
+	3.2 由json向bean转换时候：
+	 	当bean和json属性不匹配，在bean的属性上或是get***方法上 加上@JSONField(name = "**") name是json属性值,json属性不区分大小写
+	 	如果json中有下划线，默认变成驼峰型
+	 	
+	备注：注解放在set***方法上，没有效果，不启作用

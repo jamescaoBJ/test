@@ -8,9 +8,7 @@ http://www.micmiu.com/soa/webservice/jax-ws-tomcat-deploy/
 ========================
 Jenkins 用户信息
 
-admin/zept123456
-caoyange/zept123456
-zept/123456
+admin/12345678
 
 System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox; default-src 'self';")
 java -Dhudson.model.DirectoryBrowserSupport.CSP= -jar jenkins.war

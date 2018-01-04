@@ -1,0 +1,10 @@
+CPD_TEST_create_table1218.sql
+这是表结构 250上的 你自己也可以先导出一份 
+最好是分开导出，先导出表结构在导出数据
+mysqldump -uroot -p -h10.1.27.250 -P3323 --default-character-set=utf8 --single-transaction -t --hex-blob -B cpd_test >data_cpd_test.sql
+这是导出数据语句
+240上你需要在后台登上3323  在cpd_test下去将所有的表truncate掉之后drop 
+truncate.sql
+drop_table.sql
+source 分别执行就好 
+然后在240页面上：不需要删节点的  你只需要将您 新建的那几张表数据清除或者先导出来在清除，然后在页面上删除这几张表的信息，重新配置这几张表的表信息，逻辑库选择cpd_test 数据节点选择dn01,dn02,dn03,dn04，然后做配置校验，最后在动态加载，就可以重新创建表操作表了
