@@ -1,3 +1,50 @@
+
+ scp -r weixin jxjy@10.1.27.105:/data/tomcat8/webapps/
+################
+内网服务器地址
+192.168.1.78
+administrator
+weeho_ZZ123
+###
+git 仓库同步： http://blog.csdn.net/lindexi_gd/article/details/72171157
+##############
+公钥地址：
+D:\workspace
+邮件：caoyange0412@163.com
+passphrase:caoyg
+
+######################
+ cp -r /data/admin /data/devTomcat8/webapps/
+ cp -r /data/resource  /data/devTomcat8/webapps/
+ cp -r /data/qiantai /data/devTomcat8/webapps/
+ cp -r /data/ncmeapp /data/devTomcat8/webapps/
+ 
+ 
+  cp -r admin_lib /data/devTomcat8/webapps/admin/WEB-INF/classes/
+   cp -r resource_lib /data/devTomcat8/webapps/resource/WEB-INF/classes/
+   cp -r lib /data/devTomcat8/webapps/qiantai/WEB-INF/classes/
+   cd /data/devTomcat8/webapps/admin/WEB-INF/classes/
+   mv admin_lib lib
+########################
+公司jenkins地址
+
+http://jenkins.ncme.org.cn
+admin
+1Qaz2wsx
+
+
+
+
+Jenkins
+
+jenkins.weeho.cn
+
+admin
+
+cf57a1eb8457427a945820cf31c493c6
+
+
+######################
 keepalive :https://www.cnblogs.com/MYue/p/7084072.html
 nginx 虚拟IP：     http://localhost:10001/caladd/add?a=6&b=16&accesstoken=1
 http://www.linuxidc.com/Linux/2015-08/122113.htm
@@ -18,10 +65,32 @@ http://blog.csdn.net/hguisu/article/details/51072683
 二期的数据库暂时用  10.1.27.106:3306/ncme_v2 账号：root 密码：root
 
 ################
+
+jdbc:mysql://10.1.27.97:3306/cpd_test?useUnicode=true&amp;characterEncoding=utf-8
+cpd_test
+hVVii#O%1!N2@eS6
+###################
+
 数据库地址：10.1.27.240:3323/CPD_TEST   root  1N%HQ#QX8VLD0roW  外网：111.206.238.131
 10.1.27.240：3324 用户名/密码：wjw_user1/123456
 ###############
 nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar &
+
+
+
+nohup java -Xmx256m -Xms128m -Xmn128m -jar eureka-server-0.0.1-SNAPSHOT.jar >eurekaSserver.log 2>&1 &
+
+nohup java -Xmx256m -Xms128m -Xmn128m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
+
+
+nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar >springboot9096.log 2>&1 &
+nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar >springboot9091.log 2>&1 &
+
+
+nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar >springboot9090.log 2>&1 &
+
+查看端口
+netstat –apn|grep 9090
 
 ---默认输出到nohup.out中
 
@@ -34,6 +103,14 @@ http://10.1.27.106:8090/ncmeapp/#/
 jar 文件和jar命令分开执行的例子
 nohup java  -server -Djava.security.egd=file:///dev/urandom -Xms2048m -Xmx2048m -XX:PermSize=512m -cp canal2es.jar:../resources/:$LIB_JARS  -DLOG.DIR=../logs -DLOG.NAME=canal2es1  com.tydic.canal2es.deployer.Canal2EsLauncher  $ID  $PROCESS_num $THREAD_num>/dev/null 2> ../logs/canal2es_startup.log &
 
+
+
+###########################
+
+生产数据库配置：
+10.1.27.50:3323
+root
+hVVii#O%1!N2@eS6
 ###########################
 	spring boot默认加载文件的路径是 
 	/META-INF/resources/ 
