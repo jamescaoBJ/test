@@ -1,4 +1,59 @@
 
+update log_study_cv_unit set `STATUS`=2 where  CV_ID=1228 and SYSTEM_USER_ID=23479;
+update log_study_cv_set set  STATE=2 where CV_SET_ID=102 and SYSTEM_USER_ID=23479;
+#######
+公司邮箱：
+caoyange@weeho.cn
+#1qaz2wsx3EDC4RFV
+#######
+java -jar springboot-0.0.1-SNAPSHOT.jar  --server.port=8003
+java -jar springboot-0.0.1-SNAPSHOT.jar --spring.profiles.active=test --server.port=8000
+ps -ef|grep -v grep|grep springboot-0.0.1-SNAPSHOT.jar|awk '{print $2}'|xargs kill -9
+
+nohup java -Xmx256m -Xms128m -Xmn128m -jar eureka-server-0.0.1-SNAPSHOT.jar >eurekaSserver.log 2>&1 &
+
+nohup java -Xmx256m -Xms128m -Xmn128m -jar eureka-server-0.0.1-SNAPSHOT.jar >eurekaSserver.log 2>&1 &
+
+
+nohup java -Xmx256m -Xms128m -Xmn128m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
+
+
+nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar --spring.profiles.active=test --server.port=9092 >springboot9092.log 2>&1 &
+
+nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT9091.jar >springboot9091.log 2>&1 &
+######
+删除手机号关联的表：
+select * from system_user where  mobil_phone like '%18813168732%';
+DELETE FROM system_user_prop_val WHERE USER_ID = 3327559;
+DELETE FROM log_study_cv_set WHERE SYSTEM_USER_ID = 3327559;
+DELETE FROM log_study_cv_unit WHERE SYSTEM_USER_ID = 3327559;
+DELETE FROM system_user_config WHERE USER_ID = 3327559;
+DELETE FROM system_user WHERE ID = 3327559;
+
+/**DELETE FROM system_account WHERE ACCOUNT_NAME LIKE '%在路上%';**/
+DELETE FROM system_account WHERE ACCOUNT_id in(3327559,3327559);
+
+/**DELETE FROM system_account WHERE ACCOUNT_id in(3326107,3327556);*/
+
+select * from system_account where account_name LIKE '%18813168732%';
+
+
+
+
+SELECT  * from system_timeliness where mobile_phone = 18813168732
+
+delete from system_timeliness where mobile_phone = 18813168732
+
+
+#########################
+vmware
+root
+123456james
+##########################
+测试账号：wanbing
+Qq123456
+18701680748
+##########################
  scp -r weixin jxjy@10.1.27.105:/data/tomcat8/webapps/
 ################
 内网服务器地址
@@ -65,6 +120,10 @@ http://blog.csdn.net/hguisu/article/details/51072683
 二期的数据库暂时用  10.1.27.106:3306/ncme_v2 账号：root 密码：root
 
 ################
+url=jdbc:mysql://10.1.27.240:3323/cpd_test?useUnicode=true&amp;characterEncoding=utf-8
+username=root
+password=1N%HQ#QX8VLD0roW
+
 
 jdbc:mysql://10.1.27.97:3306/cpd_test?useUnicode=true&amp;characterEncoding=utf-8
 cpd_test
@@ -83,8 +142,9 @@ nohup java -Xmx256m -Xms128m -Xmn128m -jar eureka-server-0.0.1-SNAPSHOT.jar >eur
 nohup java -Xmx256m -Xms128m -Xmn128m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
 
 
-nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar >springboot9096.log 2>&1 &
-nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar >springboot9091.log 2>&1 &
+nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT9096.jar >springboot9096.log 2>&1 &
+
+nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT9091.jar >springboot9091.log 2>&1 &
 
 
 nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar >springboot9090.log 2>&1 &

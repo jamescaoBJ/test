@@ -1,0 +1,5 @@
+开源平台
+baidu:PaddlePaddle
+谷歌：Tensorflow
+Facebook：Torch
+加州伯克利大学：Caffe

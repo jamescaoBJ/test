@@ -1,3 +1,21 @@
+########################    shell: 备份旧包，替换新包。如果失败，继续用旧的包
+cp /data/work/springboot/target/springboot-0.0.1-SNAPSHOT.jar /data/work/backup
+cd /data/work/springboot/target
+ps -ef|grep -v grep|grep springboot-0.0.1-SNAPSHOT.jar|awk '{print $2}'|xargs kill -9
+cp ${ITEM_ROOTDIR}/workspace/springboot/springboot/target/springboot-0.0.1-SNAPSHOT.jar /data/work 
+nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar  --spring.profiles.active=test  >springboot.log 2>&1 &
+if [ "$?" == "0" ]
+then 
+      echo "springboot is running"  
+      nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar  --spring.profiles.active=test --server.port=9091 >springboot9091.log 2>&1 &
+else
+ps -ef|grep -v grep|grep springboot-0.0.1-SNAPSHOT.jar|awk '{print $2}'|xargs kill -9
+cp  /data/work/backup/springboot-0.0.1-SNAPSHOT.jar /data/work/springboot/target/
+nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar   --spring.profiles.active=test   >springboot.log 2>&1 &
+fi
+########################
+
+
 http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html
 
 发送邮件插件详解：

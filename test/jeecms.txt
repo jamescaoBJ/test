@@ -1,0 +1,15 @@
+
+select * from jc_content ORDER BY  sort_date DESC;
+
+select * from jc_model;
+select * from jc_config;
+
+
+select * from jc_site_company;
+
+/***
+1: 配置---模型管理---添加模型   select  * from jc_model where model_id=3; 备注 栏目类型和内容类型必须进去点击保存(保存默认选中字段)
+2:  界面--模板----default-/WEB-INF/t/cms/www/default/channel/  上传文件james.html
+3：栏目：在根目录下新增栏目，栏目模型选择第一步中新建的模板
+4：在内容管理中：添加内容明细
+**/
