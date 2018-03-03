@@ -1,0 +1,8 @@
+mysql允许外部访问本地数据库操作：重启服务会失效
+grant all privileges on *.* to 'root'@'%' identified by '12345678' with grant option;
+flush privileges;
+##########
+从cmd窗口进入mysql命令行的命令：
+先进入mysql的安装bin目录，然后执行如下命令
+mysql -uroot -p12345678
+##########################

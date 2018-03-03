@@ -1,3 +1,8 @@
+STUDYWEB-677
+RESOURCE-364
+
+
+
 
 update log_study_cv_unit set `STATUS`=2 where  CV_ID=1228 and SYSTEM_USER_ID=23479;
 update log_study_cv_set set  STATE=2 where CV_SET_ID=102 and SYSTEM_USER_ID=23479;

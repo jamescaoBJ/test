@@ -1,4 +1,5 @@
-
+http://localhost:8080/jeecms/
+http://192.168.148.1:8080/jeecms/jeeadmin/jeecms/index.do
 select * from jc_content ORDER BY  sort_date DESC;
 
 select * from jc_model;
@@ -13,3 +14,22 @@ select * from jc_site_company;
 3：栏目：在根目录下新增栏目，栏目模型选择第一步中新建的模板
 4：在内容管理中：添加内容明细
 **/
+/*****模型表****
+ 
+/   
+select * from jc_model;
+/***栏目表:下面两张表
+
+对应的页面路径是：界面-模板-模板管理-模板列表-default-channel/ 其名字是:模型定义的栏目模板前缀 **/
+select * from jc_channel;
+select * from jc_channel_ext;
+
+
+/***内容表
+对应的页面路径是：界面-模板-模板管理-模板列表-default-content/其名字是:模型定义的内容模板前缀
+**/
+select * from jc_content where channel_id=96  ORDER BY  sort_date DESC;
+
+/***精彩评论相关的表***/
+select  * from jc_comment;
+select  * from jc_comment_ext;
