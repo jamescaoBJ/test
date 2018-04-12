@@ -1,0 +1,27 @@
+导出数据：
+mysqldump -ucpd_test -p -h10.1.27.97 -P3306 --default-character-set=utf8 --single-transaction -t --hex-blob -B cpd_test >data_cpd_test.sql
+mysqldump -uroot -p -h127.0.0.1  -P3323 --default-character-set=utf8 --single-transaction -t --hex-blob -B cpd_test >data_cpd_test.sql
+
+
+导出表结构
+mysqldump -uroot -p -h127.0.0.1 -P3323 --default-character-set=utf8 --skip-add-locks --skip-disable-keys  --hex-blob --no-create-db  --set-gtid-purged=off --skip-opt --single-transaction --skip-set-charset -d cpd_test >create_info.sql　 
+
+修改数据文件
+开头添加：SET FOREIGN_KEY_CHECKS=0;
+结尾添加：SET FOREIGN_KEY_CHECKS=1;
+
+修改表结构
+double-->decimal
+float-->decimal
+sed -i 's/double/decimal/g'
+sed -i 's/float/decimal/g'
+
+删除创建库语句 
+sed -i '/^LOCK TABLES/d' cpd_test0713.sql
+sed -i '/^UNLOCK TABLES/d' cpd_test0713.sql
+sed -i '/^\/\*/d' cpd_test0713.sql
+
+导入数据
+mysql -uroot -proot -h10.1.27.250 -P3323  -D cpd_test <data.sql
+或者
+source 

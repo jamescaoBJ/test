@@ -6,7 +6,7 @@ http://www.micmiu.com/soa/webservice/jax-ws-tomcat-deploy/
 
 
 ========================
-Jenkins ÓÃ»§ĞÅÏ¢
+Jenkinsç”¨æˆ·ä¿¡æ¯
 
 admin/12345678
 
@@ -15,18 +15,18 @@ java -Dhudson.model.DirectoryBrowserSupport.CSP= -jar jenkins.war
 
 java -Xms1024m -Xmx1024m -XX:PermSize=512M -XX:PermSize=1024M -jar jenkins.war 
 =========
-¹«Ë¾SVNÕËºÅ
+ï¿½ï¿½Ë¾SVNï¿½Ëºï¿½
 caoyange/Cygzept2016
 
 =======
 oracle
 
-Êı¾İ¿âÊµÀı£ºorcl
+ï¿½ï¿½ï¿½İ¿ï¿½Êµï¿½ï¿½ï¿½ï¿½orcl
 
-ÃÜÂë£ºZept123456
+ï¿½ï¿½ï¿½ë£ºZept123456
 
 =================
-¹«Ë¾Ô­ÓĞSVNµØÖ·ºÍÓÃ»§
+ï¿½ï¿½Ë¾Ô­ï¿½ï¿½SVNï¿½ï¿½Ö·ï¿½ï¿½ï¿½Ã»ï¿½
 https://117.159.5.134:8443/svn/ETM
 WangZhiyuan
 123456
@@ -40,10 +40,10 @@ WangZhiyuan
 2.7.
 2.8.
 
-ÒÑ¾­Åâ¸¶
-ÒÑ¾­ÓĞµÄ²¡Àı
+ï¿½Ñ¾ï¿½ï¿½â¸¶
+ï¿½Ñ¾ï¿½ï¿½ĞµÄ²ï¿½ï¿½ï¿½
 1.18,2.5,2.10,2.20,3.7,3.16,3,28,4.10
-Î´Åâ¸¶£º
+Î´ï¿½â¸¶ï¿½ï¿½
 2017621956856002  2927  1.18 21,22 ,2.4. 2.10,2.11 2.13,2.16 
 2017621956856004  8334.43    3.3 3.5 3.6 3.7 3.1 3.2 3.31 4.5 4.8
 2017621956856004    2316.2   2.9 4.10.4.15
@@ -65,11 +65,11 @@ WangZhiyuan
 
 
 DataCenter:
-1:oeval   ×ÛºÏÆÀ¼Û
-2£ºonline   ÔÚÏß
+1:oeval   ï¿½Ûºï¿½ï¿½ï¿½ï¿½ï¿½
+2ï¿½ï¿½online   ï¿½ï¿½ï¿½ï¿½
 3: Monitor
-4: ides  ÖÇÄÜÕï¶Ï
-5: stock ±¸Æ·±¸¼ş
+4: ides  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+5: stock ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½
 
 flow: flowheloer
 prealm:?
@@ -77,12 +77,12 @@ samplecenter?
 shere ?
 
 
-cor_maint£º±£Ñø
-decision:¾ö²ßÖ§³Ö
-defect£ºÈ±Ïİ
-document£ºÎÄµµ
-EXPSYS:ÖªÊ¶¿â
-fault:¹ÊÕÏ
+cor_maintï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+decision:ï¿½ï¿½ï¿½ï¿½Ö§ï¿½ï¿½
+defectï¿½ï¿½È±ï¿½ï¿½
+documentï¿½ï¿½ï¿½Äµï¿½
+EXPSYS:ÖªÊ¶ï¿½ï¿½
+fault:ï¿½ï¿½ï¿½ï¿½
 
 
 

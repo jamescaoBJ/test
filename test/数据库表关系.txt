@@ -1,23 +1,23 @@
 ###
-Àÿ≤ƒœ‡πÿµƒ±Ì
-select * from expert_info where name in('’≈»¡Î','’‘æ∏∆Ω');
-120162:’≈»¡Î
-510070:≥…Ò´’œ∞≠
+ÔøΩÿ≤ÔøΩÔøΩÔøΩÿµƒ±ÔøΩ
+select * from expert_info where name in('ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ','ÔøΩ‘æÔøΩ∆Ω');
+120162:ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ
+510070:ÔøΩÔøΩÔøΩÔøΩœ∞ÔøΩ
 
-120170:’‘æ∏∆Ω
+120170:ÔøΩ‘æÔøΩ∆Ω
 510019
-—ßø∆£∫æ´…ÒŒ¿…˙—ß
-select * from expert_prop_val where PROPID=510019 and EXPERTID=120170;----◊®º“—ßø∆
-510019:æ´…ÒŒ¿…˙—ß
-510070:≥…Ò´’œ∞≠
+—ßÔøΩ∆£ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ—ß
+select * from expert_prop_val where PROPID=510019 and EXPERTID=120170;----◊®ÔøΩÔøΩ—ßÔøΩÔøΩ
+510019:ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ—ß
+510070:ÔøΩÔøΩÔøΩÔøΩœ∞ÔøΩ
 
-select * from exam_prop_val where name in('≥…Ò´’œ∞≠','æ´…ÒŒ¿…˙—ß','¥´»æ≤°—ß');
+select * from exam_prop_val where name in('ÔøΩÔøΩÔøΩÔøΩœ∞ÔøΩ','ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ—ß','ÔøΩÔøΩ»æÔøΩÔøΩ—ß');
 
-select * from exam_icd_prop where name='≥…Ò´’œ∞≠';
+select * from exam_icd_prop where name='ÔøΩÔøΩÔøΩÔøΩœ∞ÔøΩ';
 
 
 
-select * from material_info where id>=3903934;---Àÿ≤ƒµƒ¥¥Ω®»À£∫     expertname£ª
+select * from material_info where id>=3903934;---ÔøΩÿ≤ƒµƒ¥ÔøΩÔøΩÔøΩÔøΩÀ£ÔøΩ     expertnameÔøΩÔøΩ
 
 
 SELECT * from material_prop_val where material_id >=3903935;
@@ -50,7 +50,7 @@ select  *  from material_prop_val where material_id=3303909
 select  * from expert_prop_val where  EXPERTID=120170;
 
 
-select * from expert_info where name in('’≈»¡Î','’‘æ∏∆Ω');
+select * from expert_info where name in('ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ','ÔøΩ‘æÔøΩ∆Ω');
 
 
 select * from system_account where account_id=21669 and ACCOUNT_NAME='zhaojingping';
@@ -67,7 +67,7 @@ select epv.PROPID from expert_prop_val epv,expert_info ei where epv.EXPERTID=ei.
 
 ###
 
-Ã‚ø‚∂‘”¶µƒ±Ì
+ÔøΩÔøΩÔøΩÔøΩ”¶ÔøΩƒ±ÔøΩ
 SELECT DISTINCT
 	t.id,
 	t.question_label_id,
@@ -150,7 +150,7 @@ AND t.id NOT IN (
 		)
 )
 ###########
-≤°¿˝œ‡πÿµƒ±Ì
+ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÿµƒ±ÔøΩ
 
 SELECT DISTINCT
 			c.*, CONVERT (p.id USING gbk)
@@ -187,4 +187,294 @@ SELECT DISTINCT
 			p.id DESC
 
 
+select *  from material_info where id>0 and creatorid !='linyunfei' and state = 2 and id in (select material_id from material_prop_val where prop_id in (510035) or creatorid ='linyunfei' )
 
+
+
+SELECT
+	*
+FROM
+	material_info
+WHERE
+	id > 0
+AND id IN (
+	SELECT
+		material_id
+	FROM
+		material_prop_val
+	WHERE
+		PROP_ID IN (
+			SELECT
+				epv.PROPID
+			FROM
+				expert_prop_val epv,
+				expert_info ei
+			WHERE
+				epv.EXPERTID = ei.ID
+			AND ei.USERNAME ='zhaojingping'
+		)
+)
+AND creatorid !=21669
+AND state = 2
+ORDER BY
+	id DESCÔºõ
+	
+	
+	select *  from material_info where id>0 AND state = 2 and id in (select material_id from material_prop_val where prop_id in (510035) or creatorid ='linyunfei' ) order by id desc;
+
+
+
+SELECT
+	*
+FROM
+	material_info
+WHERE
+	id > 0
+
+AND creatorid !=21640
+AND state = 2
+AND id IN (
+	SELECT
+		material_id
+	FROM
+		material_prop_val
+	WHERE
+		prop_id IN (510035)
+	OR creatorid ='linyunfei'
+)
+ORDER BY
+	id DESC
+	
+	
+	
+	
+
+
+SELECT
+	t.*, s.type_name AS typename
+FROM
+	exam_source_val t
+LEFT JOIN exam_source_type s ON t.type = s.id
+WHERE
+	t. NAME LIKE '%'
+AND t.id IN (
+	SELECT
+		sourceid
+	FROM
+		EXAM_SOURCE_PROP_VAL
+	WHERE
+		PROPID IN (510018)
+)
+AND t.state = 1
+ORDER BY
+	t.id DESC ;
+
+
+
+SELECT
+		DISTINCT PROPID
+	FROM
+		EXAM_SOURCE_PROP_VAL ORDER BY  PROPID desc ;
+
+
+
+SELECT
+	t.id
+FROM
+	exam_source_val t
+LEFT JOIN exam_source_type s ON t.type = s.id order by t.id desc ;
+
+
+
+
+select t.*,v.id as prop_val_id from exam_prop_val t,sub_sys_prop_val v where t.id = v.prop_val_id and v.id = 510018;
+
+
+
+
+select * from material_info where FILENAME='ÊàøÈ¢§ÂØºÁÆ°Ê∂àËûçÂõ¥ÊúØÊúüÊäóÂáù--ÊãúÁëûÂ¶•';
+
+Êü•ÁúãÁ¥†ÊùêÊòØÂê¶Ë¢´ÂºïÁî®
+select  * FROM  group_class_info where class_content like '%ÊàøÈ¢§ÂØºÁÆ°Ê∂àËûçÂõ¥ÊúØÊúüÊäóÂáù--ÊãúÁëûÂ¶•%';
+
+
+select * from material_prop_val  where material_id=3904399
+
+
+select * from cv_unit where id=4209572
+
+
+SELECT
+	*
+FROM
+	material_info
+WHERE
+	id > 0
+
+AND creatorid !=21640
+AND state = 2
+AND id IN (
+	SELECT
+		material_id
+	FROM
+		material_prop_val
+	WHERE
+		prop_id IN (510035)
+	OR creatorid ='linyunfei'
+)
+ORDER BY
+	id DESC
+
+
+
+select * from group_class_info where media_type='paper'
+
+and media_id in(
+select exam_id from  exam_exam_paper  where paper_id=3300343
+);
+
+
+
+
+„ÄÅ„ÄÅ„ÄÅ„ÄÅ„ÄÅ„ÄÅ„ÄÅ„ÄÅ„ÄÅ„ÄÅ„ÄÅ„ÄÅ„ÄÅ„ÄÅ„ÄÅ„ÄÅ„ÄÅ„ÄÅ„ÄÅ„ÄÅ
+
+ËØïÂç∑ÂíåÂçïÂÖÉÁöÑÂÖ≥Á≥ª
+SELECT
+	count(*)
+FROM
+	group_class_info
+WHERE
+	media_type = 'paper'
+AND media_id IN (
+	SELECT
+		EXAM_ID
+	FROM
+		exam_exam_paper
+	WHERE
+		PAPER_ID = 3900343
+)Ôºõ
+
+
+
+select  * from group_class_info  where class_name='ÊâãÂ∑•ÁªÑÂç∑';
+
+
+
+select * from exam_exam_paper
+
+
+
+
+select * from group_class_info
+
+select * from cv_unit_ref_quality  where parent_prop_id=260 and unit_id=4202461;
+
+
+select * from  cv_unit_ref_source where UNIT_ID=0
+delete from cv_unit_ref_source where UNIT_ID=0
+
+select * from cv  where id=4202462;
+
+insert into cv_unit_ref_source (UNIT_ID,SOURCE_ID) select 0,
+  SOURCE_ID from cv_unit_ref_source where UNIT_ID in(
+select UNIT_ID from cv_ref_unit where CV_ID=4202478);
+
+4202478
+
+4202462
+
+select UNIT_ID from cv_ref_unit where CV_ID=4202462
+
+insert into cv_unit_ref_source (UNIT_ID,SOURCE_ID) select 0,SOURCE_ID from cv_unit_ref_source where UNIT_ID in(select UNIT_ID from cv_ref_unit where CV_ID=4202478)
+
+
+
+
+
+
+
+select * from cv  where name ='Èù¢Êéà1';
+select * from cv where id =4202461;
+
+
+select * from cv_unit_ref_quality where UNIT_ID=4202462;
+
+
+
+
+select * from cv_unit where ID in (4209191,4200566);
+
+select * from  cv_set where id=4200566
+
+select * from cv  where id=4202461;
+
+select * from cv_ref_unit where UNIT_ID=4202461;
+select count(1), UNIT_ID from cv_unit_ref_source  GROUP BY UNIT_ID
+
+
+
+
+select * from cv  where id=4202478
+
+
+select * from cv_unit_ref_source  where UNIT_ID in(
+
+select UNIT_ID from cv_ref_unit where cv_id=4202478);
+
+
+
+select * from cv_ref_unit where cv_id=4202478
+
+select * from group_class_info
+
+select * from cv_ref_unit where UNIT_ID=4209191;
+select * from cv_unit where ID=4209191;
+select * from cv_unit_ref_source  where UNIT_ID=4209191;
+
+select * from exam_source_val where id=600492;
+
+
+select * from CV_SCHEDULE where CV_ID=4202460;
+
+
+
+select * from cv_unit_ref_source where UNIT_ID=4209191;
+
+
+
+
+
+
+‰∏ã‰∏ÄÊ≠•
+
+
+select * from CV_SET_SCHEDULE where    cv_SCHEDULE_ID  in (4207552,4207566,4207582)
+
+select * from cv_unit_ref_source  where UNIT_ID=4202462;
+
+
+select * from exam_source_val where id=4200566;
+
+
+
+
+/***/clone('4202462','4200566');
+
+
+select * from CV_SCHEDULE where CV_ID=4202462;
+
+
+select * from CV_SET_SCHEDULE where    cv_SCHEDULE_ID  in (4207584);
+
+
+select  * from cv_set where id=4200551;
+
+select * from CV_SET_SCHEDULE where CV_SET_ID=4202462
+
+	Ëß£Èô§Áî®Êà∑ÈîÅÂÆö
+update system_user set login_error_num=0,login_error_first_time=0,login_error_last_time=0 where id=20
+	
+
+Ëß£Èô§ÂæÆ‰ø°Ë¥¶Âè∑ÁªëÂÆö
+Êääsystem_account ÁöÑopenid Ê∏ÖÁ©∫
+	

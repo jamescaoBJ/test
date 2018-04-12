@@ -1,4 +1,10 @@
-########################    shell: ±¸·Ý¾É°ü£¬Ìæ»»ÐÂ°ü¡£Èç¹ûÊ§°Ü£¬¼ÌÐøÓÃ¾ÉµÄ°ü
+localâ€”â€”jenkins
+ç”¨æˆ·åå’Œå¯†ç 
+admin/zept12345678
+developer1/developer1
+developer2/developer2
+
+########################    shell: ï¿½ï¿½ï¿½Ý¾É°ï¿½ï¿½ï¿½ï¿½æ»»ï¿½Â°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¾ÉµÄ°ï¿½
 cp /data/work/springboot/target/springboot-0.0.1-SNAPSHOT.jar /data/work/backup
 cd /data/work/springboot/target
 ps -ef|grep -v grep|grep springboot-0.0.1-SNAPSHOT.jar|awk '{print $2}'|xargs kill -9
@@ -18,137 +24,137 @@ fi
 
 http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html
 
-·¢ËÍÓÊ¼þ²å¼þÏê½â£º
+ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£º
 
 
 
 
-Default Subject£º¹¹½¨Í¨Öª:$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!
+Default Subjectï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨Öª:$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!
 
-Default Content£º
+Default Contentï¿½ï¿½
 
 <hr/>
 
-(±¾ÓÊ¼þÊÇ³ÌÐò×Ô¶¯ÏÂ·¢µÄ£¬ÇëÎð»Ø¸´£¡)<br/><hr/>
+(ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Ç³ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Â·ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½)<br/><hr/>
 
-ÏîÄ¿Ãû³Æ£º$PROJECT_NAME<br/><hr/>
+ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Æ£ï¿½$PROJECT_NAME<br/><hr/>
 
-¹¹½¨±àºÅ£º$BUILD_NUMBER<br/><hr/>
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½$BUILD_NUMBER<br/><hr/>
 
-svn°æ±¾ºÅ£º${SVN_REVISION}<br/><hr/>
+svnï¿½æ±¾ï¿½Å£ï¿½${SVN_REVISION}<br/><hr/>
 
-¹¹½¨×´Ì¬£º$BUILD_STATUS<br/><hr/>
+ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½$BUILD_STATUS<br/><hr/>
 
-´¥·¢Ô­Òò£º${CAUSE}<br/><hr/>
+ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½${CAUSE}<br/><hr/>
 
-¹¹½¨ÈÕÖ¾µØÖ·£º<a href="${BUILD_URL}console">${BUILD_URL}console</a><br/><hr/>
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½Ö·ï¿½ï¿½<a href="${BUILD_URL}console">${BUILD_URL}console</a><br/><hr/>
 
-¹¹½¨µØÖ·£º<a href="$BUILD_URL">$BUILD_URL</a><br/><hr/>
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½<a href="$BUILD_URL">$BUILD_URL</a><br/><hr/>
 
-±ä¸ü¼¯:${JELLY_SCRIPT,template="html"}<br/><hr/>
+ï¿½ï¿½ï¿½ï¿½ï¿½:${JELLY_SCRIPT,template="html"}<br/><hr/>
 
-ÏÂÃæ½âÊÍÒ»ÏÂ³£ÓÃµÄÊôÐÔ¡£
-2.1.1 È«¾ÖÊôÐÔÏê½â
+ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Â³ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½Ô¡ï¿½
+2.1.1 È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-1. Override Global Settings£ºÈç¹û²»Ñ¡£¬¸Ã²å¼þ½«Ê¹ÓÃÄ¬ÈÏµÄE-mail NotificationÍ¨ÖªÑ¡Ïî¡£·´Ö®£¬Äú¿ÉÒÔÍ¨¹ýÖ¸¶¨²»Í¬ÓÚ( Ä¬ÈÏÑ¡Ïî)µÄÉèÖÃÀ´½øÐÐ¸²¸Ç¡£
+1. Override Global Settingsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ä¬ï¿½Ïµï¿½E-mail NotificationÍ¨ÖªÑ¡ï¿½î¡£ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½( Ä¬ï¿½ï¿½Ñ¡ï¿½ï¿½)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¸ï¿½ï¿½Ç¡ï¿½
 
-2. Default Content Type£ºÖ¸¶¨¹¹½¨ºó·¢ËÍÓÊ¼þÄÚÈÝµÄÀàÐÍ£¬ÓÐTextºÍHTMLÁ½ÖÖ.
+2. Default Content Typeï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ýµï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½Textï¿½ï¿½HTMLï¿½ï¿½ï¿½ï¿½.
 
-3. Use List-ID Email Header£ºÎªËùÓÐµÄÓÊ¼þÉèÖÃÒ»¸öList-IDµÄÓÊ¼þÐÅÍ·£¬ÕâÑùÄã¾Í¿ÉÒÔÔÚÓÊ¼þ¿Í»§¶ËÊ¹ÓÃ¹ýÂË¡£ËüÒ²ÄÜ×èÖ¹ÓÊ¼þ·¢¼þÈË´ó²¿·ÖµÄ×Ô¶¯»Ø¸´(ÖîÈçÀë¿ª°ì¹«ÊÒ¡¢ÐÝ¼ÙµÈµÈ)¡£Äã¿ÉÒÔÊ¹ÓÃÄãÏ°¹ßµÄÈÎºÎÃû³Æ»òÕßIDºÅ£¬µ«ÊÇËûÃÇ±ØÐë·ûºÏÈçÏÂÆäÖÐÒ»ÖÖ¸ñÊ½(ÕæÊµµÄID±ØÐëÒª°üº¬ÔÚ<ºÍ>±ê¼ÇÀï)£º
+3. Use List-ID Email Headerï¿½ï¿½Îªï¿½ï¿½ï¿½Ðµï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½List-IDï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Í»ï¿½ï¿½ï¿½Ê¹ï¿½Ã¹ï¿½ï¿½Ë¡ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë´ó²¿·Öµï¿½ï¿½Ô¶ï¿½ï¿½Ø¸ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ë¿ªï¿½ì¹«ï¿½Ò¡ï¿½ï¿½Ý¼ÙµÈµï¿½)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ßµï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½Æ»ï¿½ï¿½ï¿½IDï¿½Å£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Ö¸ï¿½Ê½(ï¿½ï¿½Êµï¿½ï¿½IDï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<ï¿½ï¿½>ï¿½ï¿½ï¿½ï¿½ï¿½)ï¿½ï¿½
 <ci-notifications.company.org>
 Build Notifications <ci-notifications.company.org>
-¡°Build Notifications¡± <ci-notifications.company.org>
-¹ØÓÚ¸üÏêÏ¸µÄList-IDËµÃ÷Çë²ÎÔÄRFC-2919.
+ï¿½ï¿½Build Notificationsï¿½ï¿½ <ci-notifications.company.org>
+ï¿½ï¿½ï¿½Ú¸ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½List-IDËµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½RFC-2919.
 
-4. Add 'Precedence: bulk' Email Header£ºÉèÖÃÓÅÏÈ¼¶,¸üÏêÏ¸ËµÃ÷Çë²ÎÔÄRFC-3834.
+4. Add 'Precedence: bulk' Email Headerï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¼ï¿½,ï¿½ï¿½ï¿½ï¿½Ï¸Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½RFC-3834.
 
-5. Default Recipients£º×Ô¶¨ÒåÄ¬ÈÏµç×ÓÓÊ¼þÊÕ¼þÈËÁÐ±í¡£Èç¹ûÃ»ÓÐ±»ÏîÄ¿ÅäÖÃ¸²¸Ç,¸Ã²å¼þ»áÊ¹ÓÃÕâ¸öÁÐ±í¡£Äú¿ÉÒÔÔÚÏîÄ¿ÅäÖÃÊ¹ÓÃ$ DEFAULT_RECIPIENTS²ÎÊý°üÀ¨´ËÄ¬ÈÏÁÐ±í£¬ÒÔ¼°Ìí¼ÓÐÂµÄµØÖ·ÔÚÏîÄ¿¼¶±ð¡£Ìí¼Ó³­ËÍ£ºcc:µç×ÓÓÊ¼þµØÖ·ÀýÈç,CC:someone@somewhere.com
+5. Default Recipientsï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Ä¬ï¿½Ïµï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ð±ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Ã¸ï¿½ï¿½ï¿½,ï¿½Ã²ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½$ DEFAULT_RECIPIENTSï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½Ð±ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ÂµÄµï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó³ï¿½ï¿½Í£ï¿½cc:ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½,CC:someone@somewhere.com
 
-6. Reply To List£º»Ø¸´ÁÐ±í, A comma separated list of e-mail addresses to use in the Reply-To header of the email. This value will be available as $DEFAULT_REPLYTO in the project configuration.
+6. Reply To Listï¿½ï¿½ï¿½Ø¸ï¿½ï¿½Ð±ï¿½, A comma separated list of e-mail addresses to use in the Reply-To header of the email. This value will be available as $DEFAULT_REPLYTO in the project configuration.
 
-7. Emergency reroute£ºÈç¹ûÕâ¸ö×Ö¶Î²»Îª¿Õ£¬ËùÓÐµÄµç×ÓÓÊ¼þ½«±»µ¥¶À·¢ËÍµ½¸ÃµØÖ·£¨»òµØÖ·ÁÐ±í£©¡£
+7. Emergency rerouteï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¶Î²ï¿½Îªï¿½Õ£ï¿½ï¿½ï¿½ï¿½ÐµÄµï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½Ãµï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½Ð±ï¿½ï¿½ï¿½
 
-8. Excluded Committers£º·ÀÖ¹ÓÊ¼þ±»ÓÊ¼þÏµÍ³ÈÏÎªÊÇÀ¬»øÓÊ¼þ,ÓÊ¼þÁÐ±íÓ¦¸ÃÃ»ÓÐÀ©Õ¹µÄÕË»§Ãû(Èç:@domain.com),²¢ÇÒÊ¹ÓÃ¶ººÅ·Ö¸ô
+8. Excluded Committersï¿½ï¿½ï¿½ï¿½Ö¹ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ÏµÍ³ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½,ï¿½Ê¼ï¿½ï¿½Ð±ï¿½Ó¦ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½ï¿½Ë»ï¿½ï¿½ï¿½(ï¿½ï¿½:@domain.com),ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã¶ï¿½ï¿½Å·Ö¸ï¿½
 
-9. Default Subject£º×Ô¶¨ÒåÓÊ¼þÍ¨ÖªµÄÄ¬ÈÏÖ÷ÌâÃû³Æ¡£¸ÃÑ¡ÏîÄÜÔÚÓÊ¼þµÄÖ÷Ìâ×Ö¶ÎÖÐÌæ»»Ò»Ð©²ÎÊý£¬ÕâÑùÄã¾Í¿ÉÒÔÔÚ¹¹½¨ÖÐ°üº¬Ö¸¶¨µÄÊä³öÐÅÏ¢¡£
+9. Default Subjectï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½Í¨Öªï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½æ»»Ò»Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½Ð°ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½
 
-10. Maximum Attachment Size£ºÓÊ¼þ×î´ó¸½¼þ´óÐ¡¡£
+10. Maximum Attachment Sizeï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ó¸½¼ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½
 
-11. Default Content£º×Ô¶¨ÒåÓÊ¼þÍ¨ÖªµÄÄ¬ÈÏÄÚÈÝÖ÷Ìå¡£¸ÃÑ¡ÏîÄÜÔÚÓÊ¼þµÄÄÚÈÝÖÐÌæ»»Ò»Ð©²ÎÊý£¬ÕâÑùÄã¾Í¿ÉÒÔÔÚ¹¹½¨ÖÐ°üº¬Ö¸¶¨µÄÊä³öÐÅÏ¢¡£
+11. Default Contentï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½Í¨Öªï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å¡£ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ»»Ò»Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½Ð°ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½
 
-12. Default Pre-send Script£ºÄ¬ÈÏ·¢ËÍÇ°Ö´ÐÐµÄ½Å±¾£¨×¢£ºgrooy½Å±¾£¬ÕâÊÇÎÒÔÚÄ³ÆªÎÄÕÂÉÏ¿´µ½µÄ£¬²»Ò»¶¨×¼È·£©¡£
+12. Default Pre-send Scriptï¿½ï¿½Ä¬ï¿½Ï·ï¿½ï¿½ï¿½Ç°Ö´ï¿½ÐµÄ½Å±ï¿½ï¿½ï¿½×¢ï¿½ï¿½grooyï¿½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³Æªï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½Ò»ï¿½ï¿½×¼È·ï¿½ï¿½ï¿½ï¿½
 
-13. Enable Debug Mode£ºÆôÓÃ²å¼þµÄµ÷ÊÔÄ£Ê½¡£Õâ½«Ôö¼Ó¶îÍâµÄÈÕÖ¾Êä³ö£¬¹¹½¨ÈÕÖ¾ÒÔ¼°JenkinsµÄÈÕÖ¾¡£ÔÚµ÷ÊÔÊ±ÊÇÓÐÓÃµÄ£¬µ«²»ÄÜÓÃÓÚÉú²ú¡£
+13. Enable Debug Modeï¿½ï¿½ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½â½«ï¿½ï¿½ï¿½Ó¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½Ô¼ï¿½Jenkinsï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ÃµÄ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-14. Enable Security£ºÆôÓÃÊ±£¬»á½ûÓÃ·¢ËÍ½Å±¾µÄÄÜÁ¦£¬Ö±½Ó½øÈëJenkinsÊµÀý¡£Èç¹ûÓÃ»§ÊÔÍ¼·ÃÎÊJenkins¹ÜÀí¶ÔÏóÊµÀý£¬½«Å×³öÒ»¸ö°²È«Òì³£¡£
+14. Enable Securityï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½ï¿½Í½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½Ó½ï¿½ï¿½ï¿½JenkinsÊµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½Jenkinsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×³ï¿½Ò»ï¿½ï¿½ï¿½ï¿½È«ï¿½ì³£ï¿½ï¿½
 
-15. Content Token Reference£ºÓÊ¼þÖÐ¿ÉÒÔÊ¹ÓÃµÄ±äÁ¿£¬ËùÓÐµÄ±äÁ¿¶¼ÊÇ¿ÉÑ¡µÄ¡£¾ßÌå½éÉÜÇë²é¿´È«¾ÖÓÊ¼þ±äÁ¿ÕÂ½Ú¡£
-2.1.2 È«¾ÖÓÊ¼þ±äÁ¿
+15. Content Token Referenceï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Ð¿ï¿½ï¿½ï¿½Ê¹ï¿½ÃµÄ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½Ñ¡ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¿´È«ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â½Ú¡ï¿½
+2.1.2 È«ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½
 
-Ps£º¿´×Å¸Ð¾õÓÐµãÔÎÍ·£¬¶Ô±È×ÅJenkinsÒ³Ãæ¿´ÒªºÃÐ©¡£
+Psï¿½ï¿½ï¿½ï¿½ï¿½Å¸Ð¾ï¿½ï¿½Ðµï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½JenkinsÒ³ï¿½æ¿´Òªï¿½ï¿½Ð©ï¿½ï¿½
 
-email-ext²å¼þÔÊÐíÊ¹ÓÃ±äÁ¿À´¶¯Ì¬²åÈëÊý¾Ýµ½ÓÊ¼þµÄÖ÷ÌâºÍÄÚÈÝÖ÷ÌåÖÐ¡£±äÁ¿ÊÇÒ»¸öÒÔ$(ÃÀÔª·ûºÅ)¿ªÊ¼£¬²¢ÒÔ¿Õ¸ñ½áÊøµÄ×Ö·û´®¡£µ±Ò»¸öÓÊ¼þ´¥·¢Ê±£¬Ö÷ÌâºÍÄÚÈÝÖ÷Ìå×Ö¶ÎµÄËùÓÐ±äÁ¿¶¼»áÍ¨¹ýÕæÊµµÄÖµ¶¯Ì¬µØÌæ»»¡£Í¬Ñù£¬±äÁ¿ÖÐµÄ¡°Öµ¡±ÄÜ°üº¬ÆäËüµÄ±äÁ¿£¬¶¼½«±»Ìæ»»³ÉÕæÊµµÄÄÚÈÝ¡£
+email-extï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ã±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½$(ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½)ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Ô¿Õ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¶Îµï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½Öµï¿½ï¿½Ì¬ï¿½ï¿½ï¿½æ»»ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ¡ï¿½Öµï¿½ï¿½ï¿½Ü°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½æ»»ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½Ý¡ï¿½
 
-±ÈÈç£¬ÏîÄ¿ÅäÖÃÒ³µÄÄ¬ÈÏÖ÷ÌâºÍÄÚÈÝ·Ö±ð¶ÔÓ¦µÄÊÇÈ«¾ÖÅäÖÃÒ³ÃæµÄDEFAULT_SUBJECTºÍDEFAULT_CONTENT£¬Òò´ËËü»á×Ô¶¯µØÊ¹ÓÃÈ«¾ÖµÄÅäÖÃ¡£Í¬Àí£¬´¥·¢Æ÷ÖÐµÄSubjectºÍContent·Ö±ð¶ÔÓ¦µÄÊÇÏîÄ¿ÅäÖÃÒ³ÃæµÄDEFAULT_SUBJECTºÍDEFAULT_CONTENT£¬ËùÒÔËüÒ²»á×Ô¶¯µØÊ¹ÓÃÏîÄ¿µÄÅäÖÃ¡£ÓÉÓÚ±äÁ¿ÖÐµÄ¡°Öµ¡±ÄÜ°üº¬ÆäËüµÄ±äÁ¿£¬ËùÒÔ¾ÍÄÜÎª±äÁ¿¿ìËÙµØ´´½¨²»Í¬µÄÇÐÈëµã£ºÈ«¾Ö¼¶±ð(ËùÓÐÏîÄ¿)£¬×¨Êô¼¶±ð(µ¥Ò»ÏîÄ¿)£¬´¥·¢Æ÷¼¶±ð(¹¹½¨½á¹û)¡£
+ï¿½ï¿½ï¿½ç£¬ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý·Ö±ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½DEFAULT_SUBJECTï¿½ï¿½DEFAULT_CONTENTï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½È«ï¿½Öµï¿½ï¿½ï¿½ï¿½Ã¡ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½Subjectï¿½ï¿½Contentï¿½Ö±ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½DEFAULT_SUBJECTï¿½ï¿½DEFAULT_CONTENTï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½Ã¡ï¿½ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½ï¿½ÐµÄ¡ï¿½Öµï¿½ï¿½ï¿½Ü°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¾ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÙµØ´ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã£ºÈ«ï¿½Ö¼ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿)ï¿½ï¿½×¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½Ò»ï¿½ï¿½Ä¿)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)ï¿½ï¿½
 
-Èç¹ûÄãÒª²é¿´ËùÓÐ¿ÉÓÃµÄ±äÁ¿£¬Äã¿ÉÒÔµã»÷ÅäÖÃÒ³µÄContent Token ReferenceµÄÎÊºÅ»ñÈ¡ÏêÏ¸µÄÐÅÏ¢¡£
+ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½é¿´ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½ÃµÄ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½Content Token Referenceï¿½ï¿½ï¿½ÊºÅ»ï¿½È¡ï¿½ï¿½Ï¸ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½
 
-ËùÓÐµÄ±äÁ¿¶¼ÊÇ¿ÉÑ¡µÄ£¬Ã¿¸ö±äÁ¿¿ÉÒÔÈçÏÂ±íÊ¾£¬×Ö·û´®ÀàÐÍÊ¹ÓÃname=¡°value¡±£¬¶ø²¼¶ûÐÍºÍÊý×ÖÐÍÊ¹ÓÃname=value¡£Èç¹û{ºÍ}±ê¼ÇÀïÃæÃ»ÓÐ±äÁ¿£¬Ôò²»»á±»½âÎö¡£Ê¾Àý£º$TOKEN,${TOKEN},${TOKEN,count=100},${ENV,var=¡±PATH¡±}
+ï¿½ï¿½ï¿½ÐµÄ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½Ñ¡ï¿½Ä£ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½Ê¾ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½name=ï¿½ï¿½valueï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½name=valueï¿½ï¿½ï¿½ï¿½ï¿½{ï¿½ï¿½}ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ò²»»á±»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½$TOKEN,${TOKEN},${TOKEN,count=100},${ENV,var=ï¿½ï¿½PATHï¿½ï¿½}
 
-ÌáÊ¾£ºÓÃÓ¢ÎÄ¶ººÅ·Ö¸ô±äÁ¿µÄ²ÎÊý¡£
+ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ó¢ï¿½Ä¶ï¿½ï¿½Å·Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½
 
-ÏÂÃæÎÒ½âÊÍÒ»ÏÂ³£ÓÃµÄÊôÐÔ¡£
+ï¿½ï¿½ï¿½ï¿½ï¿½Ò½ï¿½ï¿½ï¿½Ò»ï¿½Â³ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½Ô¡ï¿½
 
-     ${FILE,path="PATH"} °üÀ¨Ö¸¶¨ÎÄ¼þ£¨Â·¾¶£©µÄº¬Á¿Ïà¶ÔÓÚ¹¤×÷¿Õ¼ä¸ùÄ¿Â¼¡£
-        pathÎÄ¼þÂ·¾¶£¬×¢Òâ£ºÊÇ¹¤×÷ÇøÄ¿Â¼µÄÏà¶ÔÂ·¾¶¡£
-     ${BUILD_NUMBER} ÏÔÊ¾µ±Ç°¹¹½¨µÄ±àºÅ¡£
-     ${JOB_DESCRIPTION} ÏÔÊ¾ÏîÄ¿ÃèÊö¡£
-     ${SVN_REVISION} ÏÔÊ¾svn°æ±¾ºÅ¡£»¹Ö§³ÖSubversion²å¼þ³ö¿ÚµÄSVN_REVISION_n°æ±¾¡£
-     ${CAUSE} ÏÔÊ¾Ë­¡¢Í¨¹ýÊ²Ã´ÇþµÀ´¥·¢Õâ´Î¹¹½¨¡£
-     ${CHANGES } -ÏÔÊ¾ÉÏÒ»´Î¹¹½¨Ö®ºóµÄ±ä»¯¡£
-        showPaths Èç¹ûÎª true,ÏÔÊ¾Ìá½»ÐÞ¸ÄºóµÄµØÖ·¡£Ä¬ÈÏfalse¡£
-        showDependencies Èç¹ûÎªtrue£¬ÏÔÊ¾ÏîÄ¿¹¹½¨ÒÀÀµ¡£Ä¬ÈÏÎªfalse
-        format ±éÀúÌá½»ÐÅÏ¢£¬Ò»¸ö°üº¬%XµÄ×Ö·û´®£¬ÆäÖÐ%a±íÊ¾×÷Õß£¬%d±íÊ¾ÈÕÆÚ£¬%m±íÊ¾ÏûÏ¢£¬%p±íÊ¾Â·¾¶£¬%r±íÊ¾°æ±¾¡£×¢Òâ£¬²¢²»ÊÇËùÓÐµÄ°æ±¾ÏµÍ³¶¼Ö§³Ö%dºÍ%r¡£Èç¹ûÖ¸¶¨showPaths½«±»ºöÂÔ¡£Ä¬ÈÏ¡°[%a] %m\\n¡±¡£
-        pathFormat Ò»¸ö°üº¬¡°%p¡±µÄ×Ö·û´®£¬ÓÃÀ´±êÊ¾ÔõÃ´´òÓ¡Â·¾¶¡£
-     ${BUILD_ID}ÏÔÊ¾µ±Ç°¹¹½¨Éú³ÉµÄID¡£
-     ${PROJECT_NAME} ÏÔÊ¾ÏîÄ¿µÄÈ«Ãû¡££¨¼ûAbstractProject.getFullDisplayName£©
-     ${PROJECT_DISPLAY_NAME} ÏÔÊ¾ÏîÄ¿µÄÏÔÊ¾Ãû³Æ¡££¨¼ûAbstractProject.getDisplayName£©
-     ${SCRIPT} ´ÓÒ»¸ö½Å±¾Éú³É×Ô¶¨ÒåÏûÏ¢ÄÚÈÝ¡£×Ô¶¨Òå½Å±¾Ó¦¸Ã·ÅÔÚ"$JENKINS_HOME/email-templates"¡£µ±Ê¹ÓÃ×Ô¶¨Òå½Å±¾Ê±»áÄ¬ÈÏËÑË÷$JENKINS_HOME/email-templatesdirectoryÄ¿Â¼¡£ÆäËûµÄÄ¿Â¼½«²»»á±»ËÑË÷¡£
-         script µ±ÆäÊ¹ÓÃµÄÊ±ºò£¬½ö½öÖ»ÓÐ×îºóÒ»¸öÖµ»á±»½Å±¾Ê¹ÓÃ£¨²»ÄÜÍ¬Ê±Ê¹ÓÃscriptºÍtemplate£©¡£
-         template³£¹æµÄsimpletemplateengine¸ñÊ½Ä£°å¡£
-     ${JENKINS_URL} ÏÔÊ¾Jenkins·þÎñÆ÷µÄurlµØÖ·£¨Äã¿ÉÒÔÔÙÏµÍ³ÅäÖÃÒ³¸ü¸Ä£©¡£
-     ${BUILD_LOG_MULTILINE_REGEX}°´ÕýÔò±í´ïÊ½Æ¥Åä²¢ÏÔÊ¾¹¹½¨ÈÕÖ¾¡£
-         regex java.util.regex.Pattern Éú³ÉÕýÔò±í´ïÊ½Æ¥ÅäµÄ¹¹½¨ÈÕÖ¾¡£ÎÞÄ¬ÈÏÖµ£¬¿ÉÎª¿Õ¡£
-         maxMatches Æ¥ÅäµÄ×î´óÊýÁ¿¡£Èç¹ûÎª0£¬½«Æ¥ÅäËùÓÐ¡£Ä¬ÈÏÎª0¡£
-         showTruncatedLines Èç¹ûÎªtrue£¬°üº¬[...truncated ### lines...]ÐÐ¡£Ä¬ÈÏÎªtrue¡£
-         substText Èç¹û·Ç¿Õ£¬¾Í°ÑÕâ²¿·ÖÎÄ×Ö£¨¶ø²»ÊÇÕûÐÐ£©²åÈë¸ÃÓÊ¼þ¡£Ä¬ÈÏÎª¿Õ¡£
-        escapeHtml Èç¹ûÎªtrue£¬¸ñÊ½»¯HTML¡£Ä¬ÈÏÎªfalse¡£
-         matchedSegmentHtmlStyle Èç¹û·Ç¿Õ£¬Êä³öHTML¡£Æ¥ÅäµÄÐÐÊý½«±äÎª<b style=¡±your-style-value¡±> html escaped matched line </b>¸ñÊ½¡£Ä¬ÈÏÎª¿Õ¡£
-     ${BUILD_LOG} ÏÔÊ¾×îÖÕ¹¹½¨ÈÕÖ¾¡£
-         maxLines ÈÕÖ¾×î¶àÏÔÊ¾µÄÐÐÊý£¬Ä¬ÈÏ250ÐÐ¡£
-         escapeHtml Èç¹ûÎªtrue£¬¸ñÊ½»¯HTML¡£Ä¬ÈÏfalse¡£
-     ${PROJECT_URL} ÏÔÊ¾ÏîÄ¿µÄURLµØÖ·¡£
-     ${BUILD_STATUS} -ÏÔÊ¾µ±Ç°¹¹½¨µÄ×´Ì¬(Ê§°Ü¡¢³É¹¦µÈµÈ)
-     ${BUILD_URL} -ÏÔÊ¾µ±Ç°¹¹½¨µÄURLµØÖ·¡£
-     ${CHANGES_SINCE_LAST_SUCCESS} -ÏÔÊ¾ÉÏÒ»´Î³É¹¦¹¹½¨Ö®ºóµÄ±ä»¯¡£
-         reverseÔÚ¶¥²¿±êÊ¾ÐÂ½üµÄ¹¹½¨¡£Ä¬ÈÏfalse¡£
-         format±éÀú¹¹½¨ÐÅÏ¢£¬Ò»¸ö°üº¬%XµÄ×Ö·û´®£¬ÆäÖÐ%cÎªËùÓÐµÄ¸Ä±ä£¬%nÎª¹¹½¨±àºÅ¡£Ä¬ÈÏ¡±Changes for Build #%n\n%c\n¡±¡£
-         showPaths,changesFormat,pathFormat·Ö±ð¶¨ÒåÈç${CHANGES}µÄshowPaths¡¢formatºÍpathFormat²ÎÊý¡£
-     ${CHANGES_SINCE_LAST_UNSTABLE} -ÏÔÊ¾ÏÔÊ¾ÉÏÒ»´Î²»ÎÈ¹Ì»òÕß³É¹¦µÄ¹¹½¨Ö®ºóµÄ±ä»¯¡£
-        reverseÔÚ¶¥²¿±êÊ¾ÐÂ½üµÄ¹¹½¨¡£Ä¬ÈÏfalse¡£
-         format±éÀú¹¹½¨ÐÅÏ¢£¬Ò»¸ö°üº¬%XµÄ×Ö·û´®£¬ÆäÖÐ%cÎªËùÓÐµÄ¸Ä±ä£¬%nÎª¹¹½¨±àºÅ¡£Ä¬ÈÏ¡±Changes for Build #%n\n%c\n¡±¡£
-         showPaths,changesFormat,pathFormat·Ö±ð¶¨ÒåÈç${CHANGES}µÄshowPaths¡¢formatºÍpathFormat²ÎÊý¡£
-     ${ENV} ¨CÏÔÊ¾Ò»¸ö»·¾³±äÁ¿¡£
-         var¨C ÏÔÊ¾¸Ã»·¾³±äÁ¿µÄÃû³Æ¡£Èç¹ûÎª¿Õ£¬ÏÔÊ¾ËùÓÐ£¬Ä¬ÈÏÎª¿Õ¡£
-     ${FAILED_TESTS} -Èç¹ûÓÐÊ§°ÜµÄ²âÊÔ£¬ÏÔÊ¾ÕâÐ©Ê§°ÜµÄµ¥Ôª²âÊÔÐÅÏ¢¡£
-     ${JENKINS_URL} -ÏÔÊ¾Jenkins·þÎñÆ÷µÄµØÖ·¡£(ÄãÄÜÔÚ¡°ÏµÍ³ÅäÖÃ¡±Ò³¸Ä±äËü)¡£
-     ${HUDSON_URL} -²»ÍÆ¼ö£¬ÇëÊ¹ÓÃ$JENKINS_URL
-     ${PROJECT_URL} -ÏÔÊ¾ÏîÄ¿µÄURL¡£
-     ${SVN_REVISION} -ÏÔÊ¾SVNµÄ°æ±¾ºÅ¡£
-     ${JELLY_SCRIPT} -´ÓÒ»¸öJelly½Å±¾Ä£°åÖÐ×Ô¶¨ÒåÏûÏ¢ÄÚÈÝ¡£ÓÐÁ½ÖÖÄ£°å¿É¹©ÅäÖÃ£ºHTMLºÍTEXT¡£Äã¿ÉÒÔÔÚ$JENKINS_HOME/email-templatesÏÂ×Ô¶¨ÒåÌæ»»Ëü¡£µ±Ê¹ÓÃ×Ô¶¯ÒåÄ£°åÊ±£¬¡±template¡±²ÎÊýµÄÃû³Æ²»°üº¬¡°.jelly¡±¡£
-         templateÄ£°åÃû³Æ£¬Ä¬ÈÏ¡±html¡±¡£
-     ${TEST_COUNTS} -ÏÔÊ¾²âÊÔµÄÊýÁ¿¡£
-        var¨C Ä¬ÈÏ¡°total¡±¡£
-            total -ËùÓÐ²âÊÔµÄÊýÁ¿¡£
-             fail -Ê§°Ü²âÊÔµÄÊýÁ¿¡£
-             skip -Ìø¹ý²âÊÔµÄÊýÁ¿¡£
+     ${FILE,path="PATH"} ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½Äºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½Õ¼ï¿½ï¿½Ä¿Â¼ï¿½ï¿½
+        pathï¿½Ä¼ï¿½Â·ï¿½ï¿½ï¿½ï¿½×¢ï¿½â£ºï¿½Ç¹ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½
+     ${BUILD_NUMBER} ï¿½ï¿½Ê¾ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½Å¡ï¿½
+     ${JOB_DESCRIPTION} ï¿½ï¿½Ê¾ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     ${SVN_REVISION} ï¿½ï¿½Ê¾svnï¿½æ±¾ï¿½Å¡ï¿½ï¿½ï¿½Ö§ï¿½ï¿½Subversionï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½SVN_REVISION_nï¿½æ±¾ï¿½ï¿½
+     ${CAUSE} ï¿½ï¿½Ê¾Ë­ï¿½ï¿½Í¨ï¿½ï¿½Ê²Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¹ï¿½ï¿½ï¿½ï¿½ï¿½
+     ${CHANGES } -ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½Î¹ï¿½ï¿½ï¿½Ö®ï¿½ï¿½Ä±ä»¯ï¿½ï¿½
+        showPaths ï¿½ï¿½ï¿½Îª true,ï¿½ï¿½Ê¾ï¿½á½»ï¿½Þ¸Äºï¿½Äµï¿½Ö·ï¿½ï¿½Ä¬ï¿½ï¿½falseï¿½ï¿½
+        showDependencies ï¿½ï¿½ï¿½Îªtrueï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½Îªfalse
+        format ï¿½ï¿½ï¿½ï¿½ï¿½á½»ï¿½ï¿½Ï¢ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%Xï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%aï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ß£ï¿½%dï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ú£ï¿½%mï¿½ï¿½Ê¾ï¿½ï¿½Ï¢ï¿½ï¿½%pï¿½ï¿½Ê¾Â·ï¿½ï¿½ï¿½ï¿½%rï¿½ï¿½Ê¾ï¿½æ±¾ï¿½ï¿½×¢ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ°æ±¾ÏµÍ³ï¿½ï¿½Ö§ï¿½ï¿½%dï¿½ï¿½%rï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½showPathsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¡ï¿½Ä¬ï¿½Ï¡ï¿½[%a] %m\\nï¿½ï¿½ï¿½ï¿½
+        pathFormat Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%pï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ã´ï¿½ï¿½Ó¡Â·ï¿½ï¿½ï¿½ï¿½
+     ${BUILD_ID}ï¿½ï¿½Ê¾ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½IDï¿½ï¿½
+     ${PROJECT_NAME} ï¿½ï¿½Ê¾ï¿½ï¿½Ä¿ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½AbstractProject.getFullDisplayNameï¿½ï¿½
+     ${PROJECT_DISPLAY_NAME} ï¿½ï¿½Ê¾ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½ï¿½ï¿½AbstractProject.getDisplayNameï¿½ï¿½
+     ${SCRIPT} ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½Ý¡ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Å±ï¿½Ó¦ï¿½Ã·ï¿½ï¿½ï¿½"$JENKINS_HOME/email-templates"ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Å±ï¿½Ê±ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½$JENKINS_HOME/email-templatesdirectoryÄ¿Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Â¼ï¿½ï¿½ï¿½ï¿½ï¿½á±»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+         script ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ãµï¿½Ê±ï¿½ò£¬½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Öµï¿½á±»ï¿½Å±ï¿½Ê¹ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½Í¬Ê±Ê¹ï¿½ï¿½scriptï¿½ï¿½templateï¿½ï¿½ï¿½ï¿½
+         templateï¿½ï¿½ï¿½ï¿½ï¿½simpletemplateengineï¿½ï¿½Ê½Ä£ï¿½å¡£
+     ${JENKINS_URL} ï¿½ï¿½Ê¾Jenkinsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½urlï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½
+     ${BUILD_LOG_MULTILINE_REGEX}ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½Æ¥ï¿½ä²¢ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½
+         regex java.util.regex.Pattern ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½Æ¥ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Îªï¿½Õ¡ï¿½
+         maxMatches Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0ï¿½ï¿½ï¿½ï¿½Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½Ä¬ï¿½ï¿½Îª0ï¿½ï¿½
+         showTruncatedLines ï¿½ï¿½ï¿½Îªtrueï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[...truncated ### lines...]ï¿½Ð¡ï¿½Ä¬ï¿½ï¿½Îªtrueï¿½ï¿½
+         substText ï¿½ï¿½ï¿½ï¿½Ç¿Õ£ï¿½ï¿½Í°ï¿½ï¿½â²¿ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½Îªï¿½Õ¡ï¿½
+        escapeHtml ï¿½ï¿½ï¿½Îªtrueï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½HTMLï¿½ï¿½Ä¬ï¿½ï¿½Îªfalseï¿½ï¿½
+         matchedSegmentHtmlStyle ï¿½ï¿½ï¿½ï¿½Ç¿Õ£ï¿½ï¿½ï¿½ï¿½HTMLï¿½ï¿½Æ¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª<b style=ï¿½ï¿½your-style-valueï¿½ï¿½> html escaped matched line </b>ï¿½ï¿½Ê½ï¿½ï¿½Ä¬ï¿½ï¿½Îªï¿½Õ¡ï¿½
+     ${BUILD_LOG} ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½
+         maxLines ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½250ï¿½Ð¡ï¿½
+         escapeHtml ï¿½ï¿½ï¿½Îªtrueï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½HTMLï¿½ï¿½Ä¬ï¿½ï¿½falseï¿½ï¿½
+     ${PROJECT_URL} ï¿½ï¿½Ê¾ï¿½ï¿½Ä¿ï¿½ï¿½URLï¿½ï¿½Ö·ï¿½ï¿½
+     ${BUILD_STATUS} -ï¿½ï¿½Ê¾ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬(Ê§ï¿½Ü¡ï¿½ï¿½É¹ï¿½ï¿½Èµï¿½)
+     ${BUILD_URL} -ï¿½ï¿½Ê¾ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½URLï¿½ï¿½Ö·ï¿½ï¿½
+     ${CHANGES_SINCE_LAST_SUCCESS} -ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½Î³É¹ï¿½ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½Ä±ä»¯ï¿½ï¿½
+         reverseï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Â½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½falseï¿½ï¿½
+         formatï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%Xï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%cÎªï¿½ï¿½ï¿½ÐµÄ¸Ä±ä£¬%nÎªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¡ï¿½Ä¬ï¿½Ï¡ï¿½Changes for Build #%n\n%c\nï¿½ï¿½ï¿½ï¿½
+         showPaths,changesFormat,pathFormatï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½${CHANGES}ï¿½ï¿½showPathsï¿½ï¿½formatï¿½ï¿½pathFormatï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     ${CHANGES_SINCE_LAST_UNSTABLE} -ï¿½ï¿½Ê¾ï¿½ï¿½Ê¾ï¿½ï¿½Ò»ï¿½Î²ï¿½ï¿½È¹Ì»ï¿½ï¿½ß³É¹ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½Ö®ï¿½ï¿½Ä±ä»¯ï¿½ï¿½
+        reverseï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½Â½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½falseï¿½ï¿½
+         formatï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%Xï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%cÎªï¿½ï¿½ï¿½ÐµÄ¸Ä±ä£¬%nÎªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¡ï¿½Ä¬ï¿½Ï¡ï¿½Changes for Build #%n\n%c\nï¿½ï¿½ï¿½ï¿½
+         showPaths,changesFormat,pathFormatï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½${CHANGES}ï¿½ï¿½showPathsï¿½ï¿½formatï¿½ï¿½pathFormatï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     ${ENV} ï¿½Cï¿½ï¿½Ê¾Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+         varï¿½C ï¿½ï¿½Ê¾ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ð£ï¿½Ä¬ï¿½ï¿½Îªï¿½Õ¡ï¿½
+     ${FAILED_TESTS} -ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ÜµÄ²ï¿½ï¿½Ô£ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ð©Ê§ï¿½ÜµÄµï¿½Ôªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½
+     ${JENKINS_URL} -ï¿½ï¿½Ê¾Jenkinsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äµï¿½Ö·ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½Ú¡ï¿½ÏµÍ³ï¿½ï¿½ï¿½Ã¡ï¿½Ò³ï¿½Ä±ï¿½ï¿½ï¿½)ï¿½ï¿½
+     ${HUDSON_URL} -ï¿½ï¿½ï¿½Æ¼ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½$JENKINS_URL
+     ${PROJECT_URL} -ï¿½ï¿½Ê¾ï¿½ï¿½Ä¿ï¿½ï¿½URLï¿½ï¿½
+     ${SVN_REVISION} -ï¿½ï¿½Ê¾SVNï¿½Ä°æ±¾ï¿½Å¡ï¿½
+     ${JELLY_SCRIPT} -ï¿½ï¿½Ò»ï¿½ï¿½Jellyï¿½Å±ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½Ý¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½É¹ï¿½ï¿½ï¿½ï¿½Ã£ï¿½HTMLï¿½ï¿½TEXTï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½$JENKINS_HOME/email-templatesï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½æ»»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Ä£ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½templateï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.jellyï¿½ï¿½ï¿½ï¿½
+         templateÄ£ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½Ä¬ï¿½Ï¡ï¿½htmlï¿½ï¿½ï¿½ï¿½
+     ${TEST_COUNTS} -ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        varï¿½C Ä¬ï¿½Ï¡ï¿½totalï¿½ï¿½ï¿½ï¿½
+            total -ï¿½ï¿½ï¿½Ð²ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+             fail -Ê§ï¿½Ü²ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+             skip -ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½

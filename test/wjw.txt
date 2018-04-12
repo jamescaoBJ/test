@@ -1,9 +1,11 @@
-STUDYWEB-677
-RESOURCE-364
-
-
-
-
+STUDYADMIN-1336
+STUDYADMIN-1300
+RESOURCE-814
+RESOURCE-815
+STUDYADMIN-1343
+STUDYADMIN-1307
+testlink:
+http://www.testlink.org.cn
 update log_study_cv_unit set `STATUS`=2 where  CV_ID=1228 and SYSTEM_USER_ID=23479;
 update log_study_cv_set set  STATE=2 where CV_SET_ID=102 and SYSTEM_USER_ID=23479;
 #######
@@ -34,7 +36,7 @@ DELETE FROM log_study_cv_set WHERE SYSTEM_USER_ID = 3327559;
 DELETE FROM log_study_cv_unit WHERE SYSTEM_USER_ID = 3327559;
 DELETE FROM system_user_config WHERE USER_ID = 3327559;
 DELETE FROM system_user WHERE ID = 3327559;
-
+delete  from cv_set_score_log where SYSTEM_USER_ID=3324059;
 /**DELETE FROM system_account WHERE ACCOUNT_NAME LIKE '%在路上%';**/
 DELETE FROM system_account WHERE ACCOUNT_id in(3327559,3327559);
 
@@ -59,7 +61,12 @@ root
 Qq123456
 18701680748
 ##########################
- scp -r weixin jxjy@10.1.27.105:/data/tomcat8/webapps/
+ scp -r qiantai jxjy@10.1.27.105:/data/tomcat8/webapps/
+ 
+ 
+  scp -r resource jxjy@10.1.27.105:/data/tomcat8/webapps/
+  scp -r resource jxjy@10.1.27.94:/data/tomcat8/webapps/
+  scp -r resource jxjy@10.1.27.103:/data/tomcat8/webapps/
 ################
 内网服务器地址
 192.168.1.78
@@ -90,7 +97,12 @@ passphrase:caoyg
 
 http://jenkins.ncme.org.cn
 admin
-1Qaz2wsx
+Super123
+#wjwJenkinsSuperAdmin
+
+dev_developer/dev_developer_246
+springboot_developer/springboot_developer_9986
+test_developer/test_developer_00291
 
 
 
@@ -280,3 +292,30 @@ http://blog.csdn.net/haiyan_qi/article/details/77373900
 	 	如果json中有下划线，默认变成驼峰型
 	 	
 	备注：注解放在set***方法上，没有效果，不启作用
+	
+/**
+openlayers
+https://cesiumjs.org/   
+https://cn.vuejs.org/index.html
+http://www.gdal.org/  卫星遥感处理
+https://github.com/nasa-gibs/onearth
+https://github.com/nasa-gibs/worldview'
+https://www.windy.com/overlays?36.880,116.499,5   较好的可视化效果
+#############
+象辑科技
+openlayers
+https://cesiumjs.org/   
+https://cn.vuejs.org/index.html
+http://www.gdal.org/  卫星遥感处理
+https://github.com/nasa-gibs/onearth
+https://github.com/nasa-gibs/worldview
+*/
+
+######
+tcxlx.cn/admin.php
+lengsad
+lhc123
+
+##########
+D:\Python27\;D:\Python27\Scripts;
+##########

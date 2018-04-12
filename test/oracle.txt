@@ -1,0 +1,110 @@
+78 数据库密码：
+Oracle11g
+
+默认密码：
+普通用户：SCOTT（密码：tiger）
+
+（2）普通管理员：SYSTEM（密码：manager）
+
+（3）超级管理员：SYS（密码：change_on_install）
+
+都已经修改成：Oracle11g
+
+https://localhost:1158/em
+
+
+
+
+conn sys/tiger as sysdba
+
+
+sqlplus 
+
+################
+
+
+create tablespace TBS_ZYY   
+  logging   
+  datafile  'E:\database\tablespace\TBS_ZYY.dbf'     
+  size 1024m    
+  autoextend on    
+  next 512m maxsize 10240m  
+  extent management local; 
+
+
+  
+  
+  
+create user tbszyy  identified by tbszyy 
+default tablespace TBS_ZYY
+temporary tablespace TEMP
+profile DEFAULT;
+
+
+
+grant connect to tbszyy;
+grant resource to tbszyy;
+grant dba to tbszyy;
+
+imp tbszyy/tbszyy@orcl full=y  file= E:\demo\zyy\zyy_20180104.dmp ignore=y
+
+
+
+##############
+
+
+create tablespace zyyts   
+  logging   
+  datafile  'E:\database\tablespace\zyy.dbf'     
+  size 1024m    
+  autoextend on    
+  next 512m maxsize 10240m  
+  extent management local; 
+
+
+  
+  
+  
+create user zyy  identified by zyy 
+default tablespace zyyts
+temporary tablespace TEMP
+profile DEFAULT;
+
+
+
+grant connect to zyy;
+grant resource to zyy;
+grant dba to zyy;
+
+
+
+
+
+tiger
+
+
+imp zyy/zyy@orcl full=y  file= E:\demo\zyy\zyy_20180104.dmp ignore=y
+
+
+
+导入实例
+
+imp utest/upassword  file=D:\20140227.dmp full=y ignore=y (将文件导入到我们自己新建的用户的表空间中)  注意：这条语句的执行环境是刚进命令台时的环境
+
+
+
+imp zyy/zyy@127.0.0.1:1521/zyy full=y  file= E:\demo\zyy\zyy_20180104.dmp ignore=y
+
+
+
+数据库名
+
+IMP-00058: 遇到 ORACLE 错误 12541
+ORA-12541: TNS: 无监听程序
+IMP-00000: 未成功终止导入
+
+conn sys/tiger as sysdba
+
+select name from v$database;
+select global_name from global_name;
+lsnrctl status
