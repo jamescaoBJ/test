@@ -1,0 +1,107 @@
+SELECT
+t.name,
+	t.ID,
+	csa.CV_SET_SERIAL_NUMBER AS SERIAL_NUMBER,
+	csa.CV_SET_LEVEL AS LEVEL,
+	csa.CV_SET_SCORE AS SCORE,
+	csa.CV_SET_SIGN AS SIGN,
+	csa.CV_SET_COST_TYPE AS cost_type,
+	csa.CV_SET_COST AS COST,
+	csa.CV_SET_START_DATE AS START_DATE,
+	csa.CV_SET_END_DATE AS END_DATE,
+	csa.CV_SET_BREAK_DAYS AS BREAK_DAYS,
+	t. NAME,
+	t.FORMA,
+	t. CODE,
+	t.FILE_PATH,
+	t.INTRODUCTION,
+	t.ANNOUNCEMENT,
+	t.KNOWLEDGE_NEEDED,
+	t.KNOWLEDGE_BASE,
+	t.REFERENCE,
+	t.REFERENCE_LATELY,
+	t.OPINION,
+	t.REPORT,
+	t.OPINION_TYPE,
+	t. STATUS,
+	t.TYPE,
+	t.MAKER,
+	t.DELI_MAN,
+	t.CREATE_DATE,
+	t.DELI_DATE,
+	t.PROVINCEID,
+	t.CITYID,
+	t.RELATION_QUIZ,
+	t.cv_set_type
+FROM
+	cv_set t
+LEFT JOIN cv_set_authorization csa ON csa.CV_SET_ID = t.id
+LEFT JOIN cv_set_authorization_region csar ON csar.AUTHORIZATION_ID = csa.id
+WHERE
+	1 = 1
+AND csa.CV_SET_START_DATE <= CURDATE()
+AND csa.CV_SET_END_DATE >= CURDATE()
+AND t. NAME LIKE '%0413yijieshu%'
+AND t. STATUS =5
+AND t.id IN (
+	SELECT
+		ccc.CV_SET_ID
+	FROM
+		cv_set_authorization_region csar
+	LEFT JOIN cv_set_authorization ccc ON ccc.id = csar.AUTHORIZATION_ID
+	GROUP BY
+		ccc.cv_set_id,
+		ccc.id
+	HAVING
+		count(1) = (
+			SELECT
+				count(1)
+			FROM
+				exam_prop_val epv
+			WHERE
+				epv.type = 20
+		)
+)
+AND t.id IN (
+	SELECT DISTINCT
+		(CV_SET_ID)
+	FROM
+		cv_set_authorization csa
+	LEFT JOIN cv_set_authorization_system_site csass ON csass.AUTHORIZATION_ID = csa.ID
+	LEFT JOIN system_site ss ON csass.SYSTEM_SITE_ID = ss.id
+	WHERE
+		ss.DOMAIN_NAME ='dev.ncme.org.cn'
+)
+GROUP BY
+	t.id
+ORDER BY
+	t.create_date DESC,
+	t.id DESC
+LIMIT 0,
+ 8
+
+
+
+
+SELECT DISTINCT
+		(CV_SET_ID)
+	FROM
+		cv_set_authorization csa
+	LEFT JOIN cv_set_authorization_system_site csass ON csass.AUTHORIZATION_ID = csa.ID
+	LEFT JOIN system_site ss ON csass.SYSTEM_SITE_ID = ss.id
+	WHERE
+		ss.DOMAIN_NAME ='dev.ncme.org.cn'；
+
+
+
+
+select  * from cv_set_authorization where CV_SET_ID=4200685;
+
+
+select * from cv_set_authorization_system_site where AUTHORIZATION_ID=330
+
+
+update cv_set_authorization_system_site  set SYSTEM_SITE_ID=1 where  AUTHORIZATION_ID=330
+
+
+select * from system_site where id=2;

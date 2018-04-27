@@ -462,7 +462,7 @@ select * from exam_source_val where id=4200566;
 
 
 select * from CV_SCHEDULE where CV_ID=4202462;
-
+//通过项目找到计划，通过计划找到课程
 
 select * from CV_SET_SCHEDULE where    cv_SCHEDULE_ID  in (4207584);
 
@@ -477,4 +477,29 @@ update system_user set login_error_num=0,login_error_first_time=0,login_error_la
 
 解除微信账号绑定
 把system_account 的openid 清空
+
+账号登录运行错误次数和时间：
+
+select * from system_user where  mobil_phone like '%18810610795%';
+update  system_user  set login_error_num=0,login_error_first_time=0,login_error_last_time=0 where id=3925293
+update system_login_limit  set login_num =3,lock_time=1
+
+
+select * from system_user where  mobil_phone like '%18810610795%';
+update  system_user  set login_error_num=0,login_error_first_time=0,login_error_last_time=0 where id=4525245
+update system_login_limit  set login_num =3,lock_time=1
+
+####
+
+人物画像
+SELECT DISTINCT
+	t.*
+FROM
+	QM_USER_IMAGE t
+LEFT JOIN QM_USER_IMAGE_PROP t1 ON t.ID = t1.USERIMAGE_ID
+LEFT JOIN QM_USER_IMAGE_GENERAL_PROP t2 ON t.ID = t2.IMAGE_ID
+LEFT JOIN QM_USER_IMAGE_SPECIAL_PROP t3 ON t.ID = t3.IMAGE_ID
+WHERE
+	t.id > 0
+AND t.TYPEID in(98954,98957)
 	
