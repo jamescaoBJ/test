@@ -1,0 +1,15 @@
+
+INSERT INTO  `system_menu` (`ID`, `NAME`, `SYSTEM_TYPE`, `MENU_TYPE`, `URL`, `state`) VALUES ('300004', '基地管理', '专项管理系统', '基地管理', '/zx/zxBase/list', '1');
+
+INSERT INTO system_role_menu  (`ROLE_ID`, `MENU_ID`) VALUES ('1', '300004');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('2', '300004');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('3', '300004');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('4', '300004');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('5', '300004');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('8', '300004');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('10', '300004');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('12', '300004');
+INSERT INTO  system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('16', '300004');
+
+
+select count(1) from (select ID, NAME, CODE,CONNECT_PERSON,CONNECT_TEL,SUBJECT,ORGID,CREATETIME from zx_base where 1=1 order by createtime desc) tota

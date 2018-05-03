@@ -501,5 +501,218 @@ LEFT JOIN QM_USER_IMAGE_GENERAL_PROP t2 ON t.ID = t2.IMAGE_ID
 LEFT JOIN QM_USER_IMAGE_SPECIAL_PROP t3 ON t.ID = t3.IMAGE_ID
 WHERE
 	t.id > 0
-AND t.TYPEID in(98954,98957)
+AND t.TYPEID in(98954,98957);
+学科
+SELECT * from  exam_prop_val  where   name like '%儿童精神障碍%';
+
+select * from  exam_prop_val  where   name like '%双相障碍%';
+
+select * from  exam_prop_val  where code='003-001-009'
+	
+
+INSERT INTO `cpd_test_240`.`qm_user_image_prop` (`USERIMAGE_ID`, `PROP_ID`) VALUES ( '4800408', '510019');
+
+INSERT INTO `cpd_test_240`.`qm_user_image_prop` (`USERIMAGE_ID`, `PROP_ID`) VALUES ( '4800407', '510019');	
+
+
+
+ 
+		SELECT DISTINCT
+			t.*, (
+				SELECT
+					count(1)
+				FROM
+					cv_set_schedule_faceteach
+				WHERE
+					cv_set_id = t.ID
+			) AS permNumber,
+			(
+				SELECT
+					COUNT(1)
+				FROM
+					system_user_face_entry f,
+					cv_set_schedule_faceteach s
+				WHERE
+					f.fid = s.id
+				AND s.cv_set_id = t.id
+			) AS pelNumaber,
+			auth.CV_SET_START_DATE AS authStartDate,
+			auth.CV_SET_END_DATE authEndDate,
+			auth.CV_SET_SCORE AS authScore,
+			auth.CV_SET_SERIAL_NUMBER AS authCode
+		FROM
+			cv_set AS t
+		JOIN cv_set_user_image AS c
+		JOIN qm_user_image_prop AS u ON t.ID = c.CV_SET_ID
+		JOIN cv_set_authorization AS auth ON t.ID = auth.CV_SET_ID
+		AND c.USERIMAGE_ID = u.USERIMAGE_ID
+		AND t. NAME LIKE '%的飞洒爽肤水大发大范德萨发三大%'
+		AND t. STATUS IN (1, 2, 3, 4, 5, 6)
+		AND t.forma = 3
+		AND t. NAME LIKE '%的飞洒爽肤水大发大范德萨发三大%'
+		ORDER BY
+			id DESC;
+
+
+select USERIMAGE_ID as id from CV_SET_USER_IMAGE where CV_SET_ID=4800563;
+
+
+
+
+select * from  QM_USER_IMAGE  where id in(4800407,4800408);
+
+
+select * from QM_USER_IMAGE_PROP  where USERIMAGE_ID in(4800407,4800408);
+
+SELECT DISTINCT
+	t.*
+FROM
+	QM_USER_IMAGE t
+LEFT JOIN QM_USER_IMAGE_PROP t1 ON t.ID = t1.USERIMAGE_ID
+LEFT JOIN QM_USER_IMAGE_GENERAL_PROP t2 ON t.ID = t2.IMAGE_ID
+LEFT JOIN QM_USER_IMAGE_SPECIAL_PROP t3 ON t.ID = t3.IMAGE_ID
+WHERE
+	t.id > 0
+AND t.id in (4800407,4800408);
+
+
+select * from QM_USER_IMAGE where ID in(4800407,4800408);
+
+
+
+
+SELECT
+	t1.prop_id AS id,
+	t3. NAME,t3.TYPE
+FROM
+	QM_USER_IMAGE_PROP t1
+LEFT JOIN SUB_SYS_PROP_VAL t2 ON t1.prop_id = t2.id
+LEFT JOIN EXAM_PROP_VAL t3 ON t2.prop_val_id = t3.id
+WHERE
+	t1.userimage_id =4800408
+  and t3.type=3
+
+
+
+SELECT DISTINCT
+	t.*
+FROM
+	QM_USER_IMAGE t
+LEFT JOIN QM_USER_IMAGE_PROP t1 ON t.ID = t1.USERIMAGE_ID
+LEFT JOIN QM_USER_IMAGE_GENERAL_PROP t2 ON t.ID = t2.IMAGE_ID
+LEFT JOIN QM_USER_IMAGE_SPECIAL_PROP t3 ON t.ID = t3.IMAGE_ID
+WHERE
+	t.id > 0
+AND t.TYPEID in(98954,98957);
+
+
+
+select * from  exam_prop_val  where code='003-001-009';
+
+
+select * from  exam_prop_val  where id in(510072,510074)
+
+精神卫生学儿童精神四级画像,精神卫生学双相精神四级画像
+
+
+
+select t.* from exam_prop_val t 
+       where exists ( 
+       select 1 from cv_set_user_image t2 
+        join qm_user_image t3 on t2.userimage_id=t3.id 
+      join qm_user_image_prop t4 on t3.id=t4.userimage_id 
+       where t2.cv_set_id=4800563 and t.id=t4.prop_id) ;
+
+
+select t.* from exam_prop_val t 
+       where exists ( 
+       select 1 from cv_set_user_image t2 
+        join qm_user_image t3 on t2.userimage_id=t3.id 
+      join qm_user_image_prop t4 on t3.id=t4.userimage_id 
+       where t2.cv_set_id=4800563 and t.id=t4.prop_id) and type=3;
+
+
+
+
+
+select t1.prop_id as id, t3.name 
+from QM_USER_IMAGE_PROP t1 
+left join SUB_SYS_PROP_VAL t2 ON t1.prop_id=t2.id
+ left join EXAM_PROP_VAL t3 on t2.prop_val_id=t3.id  where t1.userimage_id in(4800407,4800408) and type=3
+
+
+select  * from qm_user_image where id in(150,165);
+
+select * from qm_user_image_prop where userimage_id in (4800407,4800408);
+
+儿科护理学一级护师人物画像
+
+精神卫生学儿童精神四级画像,精神卫生学双相精神四级画像
+select * from cv_set_user_image  where cv_set_id=4800563 ;
+
+
+
+510019	3	精神卫生学	003-001-009	0	1	1
+
+
+
+
+INSERT INTO `cpd_test_240`.`qm_user_image_prop` (`USERIMAGE_ID`, `PROP_ID`) VALUES ( '4800408', '510019');
+
+
+510072
+510074
+select * from cv_set_schedule_faceteach where cv_set_id=4800566
+select *  from system_user_face_entry  where user_id=20 and code=2
+
+
+update system_user_face_entry set face_code='MSXMBM01期0003'  where user_id=20 and code=2
+
+
+select * from system_user_face_entry
+
+SELECT
+	cssf.*,sufe.face_code faceCode
+FROM
+cv_set_schedule_faceteach AS cssf LEFT JOIN system_user_face_entry AS sufe ON cssf.id=sufe.fid 
+WHERE
+	id =601165
+
+
+
+select *,(SELECT COUNT(*) from system_user_face_entry where fid=id) signNum from cv_set_schedule_faceteach where cv_set_id = 601165
+
+select t.* from exam_prop_val t  where t.id in(510072,510074);
+
+
+select * from cv_set_user_image  where cv_set_id=4800569 ;
+
+select  * from qm_user_image where id=2700314;
+
+select * from qm_user_image_prop where userimage_id=2700314;
+
+
+
+select t.* from exam_prop_val t where t.id in(700037589,
+700037590,
+580007)
+
+
+
+
+
+select * from cv_set_user_image  where cv_set_id=4800554 ;
+
+select  * from qm_user_image where id=2700314;
+
+select * from qm_user_image_prop where userimage_id=2700314;
+
+
+
+select t.* from exam_prop_val t where t.id in(700037589,
+700037590,
+580007)
+
+ 
+
 	

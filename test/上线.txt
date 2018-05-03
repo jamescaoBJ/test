@@ -1,0 +1,6 @@
+
+select * from system_site;
+update system_site set DOMAIN_NAME='dev.ncme.org.cn' where id=1;
+select * from system_account where USER_ID=20;
+update system_account set ACCOUNT_PASSWORD='0cc175b9c0f1b6a831c399e269772661'  where USER_ID=20;
+alter table system_message  add column SYSTEM_TYPE int(20) DEFAULT NULL COMMENT '发送方式：0-平台  1-短信';
