@@ -713,6 +713,72 @@ select t.* from exam_prop_val t where t.id in(700037589,
 700037590,
 580007)
 
+
+####
+我的学习直播项目
+SELECT  t1.`NAME`as name ,t1.ID as id,t1.`CODE` as code,t1.cost_type as costType,
+			t2.ID AS cvId,t2.`NAME` AS cvName,t2.FILE_PATH as cvFilePath, t3.CV_SET_START_DATE AS startDate,t4.start_date  as cvStartDate,t4.invalid_date as cvInvalidDate
+				FROM cv_live_signup t 
+			LEFT JOIN cv_set t1 ON t.cvsetid = t1.ID 
+			LEFT JOIN cv t2 ON t2.ID = t.cvid 
+			LEFT JOIN cv_set_authorization t3 ON t3.CV_SET_ID = t1.ID 
+			LEFT JOIN cv_live t4 on t4.cv_id = t2.ID 
+			WHERE t2.cv_type = 2  AND t1.`STATUS` = 5
+ AND t.userid =3925203
+			ORDER BY t.startdate DESC;
+	我的学习远程		
+			
+SELECT
+	t.*, t1.ID,
+	t2.CV_SET_SERIAL_NUMBER AS SERIAL_NUMBER,
+	t2.CV_SET_LEVEL AS LEVEL,
+	t2.CV_SET_SCORE AS SCORE,
+	t2.CV_SET_SIGN AS SIGN,
+	t2.CV_SET_COST_TYPE AS cost_type,
+	t2.CV_SET_COST AS COST,
+	t2.CV_SET_START_DATE AS START_DATE,
+	t2.CV_SET_END_DATE AS END_DATE,
+	t2.CV_SET_BREAK_DAYS AS BREAK_DAYS,
+	t1. NAME,
+	t1.FORMA,
+	t1. CODE,
+	t1.FILE_PATH,
+	t1.INTRODUCTION,
+	t1.ANNOUNCEMENT,
+	t1.KNOWLEDGE_NEEDED,
+	t1.KNOWLEDGE_BASE,
+	t1.REFERENCE,
+	t1.REFERENCE_LATELY,
+	t1.OPINION,
+	t1.REPORT,
+	t1.OPINION_TYPE,
+	t1. STATUS,
+	t1.TYPE,
+	t1.MAKER,
+	t1.DELI_MAN,
+	t1.CREATE_DATE,
+	t1.DELI_DATE,
+	t1.PROVINCEID,
+	t1.CITYID,
+	t1.RELATION_QUIZ,
+	t1.cv_set_type,
+	t3.*
+FROM
+	log_study_cv_set t
+JOIN cv_set t1 ON t.cv_set_id = t1.id
+JOIN cv_set_authorization t2 ON t1.id = t2.CV_SET_ID
+JOIN cv_set_authorization_system_site t4 ON t4.AUTHORIZATION_ID = t2.ID
+JOIN cv_set_authorization_region t5 ON t5.AUTHORIZATION_ID = t2.ID
+JOIN system_site t3 ON t3.id = t4.SYSTEM_SITE_ID
+WHERE
+	t.system_user_id =3925203
+AND t3.domain_name ='dev.ncme.org.cn'
+AND t1.forma =1
+AND t.is_apply_credit =1
+AND t5.PROP_VAL_ID =111000001
+GROUP BY
+	t1.id;			
+			
  
 
 	

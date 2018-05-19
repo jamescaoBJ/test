@@ -1,6 +1,96 @@
+菜单补充
+
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('18', '600063');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('5', '600063');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('4', '600063');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('18', '600063');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('5', '600063');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('5', '600064');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('5', '600065');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('5', '600067');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('5', '600066');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('3', '600067');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('3', '600066');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('4', '600063');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('4', '600064');
+INSERT INTO system_role_menu(`ROLE_ID`, `MENU_ID`) VALUES ('4', '600065');
+INSERT INTO system_role_menu(`ROLE_ID`, `MENU_ID`) VALUES ('4', '600067');
+INSERT INTO system_role_menu(`ROLE_ID`, `MENU_ID`) VALUES ('4', '600066');
+INSERT INTO system_role_menu(`ROLE_ID`, `MENU_ID`) VALUES ('4', '1500064');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('5', '300004');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('5', '1500063');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('5', '2100066');
+INSERT INTO system_role_menu (`ROLE_ID`, `MENU_ID`) VALUES ('5', '2100067');
+
+
+
+
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`) VALUES ('10', NULL, '2400312', NULL, '1', null, '506', NULL);
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`) VALUES ('10', NULL, '2400313', NULL, '1', null, '360', NULL);
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`) VALUES ('10', NULL, '2400314', NULL, '1', null, '362', NULL);
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`) VALUES ('10', NULL, '2400315', NULL, '1', null, '452', NULL);
+
+
+
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('52', '继“网”开来 创新发展', 'http://111.206.238.134:8080/ncme/ncme/uploadslider_1%288%29.jpg?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4645238273&Signature=BmrDvI%2BG7SodZ2hOzKlUUrKsKSk%3D', 'postView.do?mode=3', '<p>null</p>', '1', NULL, '1', 'admin', '999999999', '');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('76', '乡医链接', 'http://111.206.238.134:8080/ncme/ncme/uploadgif%286%29.gif?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4645664404&Signature=MpP7Wrc4VRw49EMGtC5uPErpI%2Bc%3D', '/countryDoctor', '<p>啊打卡不打卡办法</p>', '2', NULL, '1', 'admin', '999999999', '');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('77', '测试', 'http://111.206.238.134:8080/ncme/ncme/uploadslider_2%287%29.jpg?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4645238313&Signature=ipRjmUb2E6ql7Gm7tbUZJIS2FiE%3D', '', NULL, '1', NULL, '1', 'admin', '999999999', '');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('78', '乡村医', 'http://111.206.238.134:8080/ncme/ncme/uploadslider_3%289%29.jpg?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4646449394&Signature=pOYrgjYxIJD%2BDUPhuIxKP%2FTQfb0%3D', 'XiangYiIndex.do?code=111111111', '<p>null</p>', '1', '2018-04-24 10:40:34', '2', 'admin', '3', '');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('79', '的我一个大概', 'http://111.206.238.134:8080/ncme/ncme/uploadtimg%2830%29.jpg?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4646780801&Signature=BPYL6i5NLQEdsjU2NMxC6yaKKlA%3D', '  http://dev.ncme.org.cn/qiantai/liveList.do', NULL, '1', NULL, '1', 'admin', '999999999', 'timg.jpg');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('80', '测试是否能链接到对应的地址', 'http://111.206.238.134:8080/ncme/ncme/uploadQQ%E6%88%AA%E5%9B%BE20180402153129.png?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4646793365&Signature=XOoiE0Y5vQeNJHOPAzl0YuYpK4w%3D', 'https://www.baidu.com', '<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>', '1', NULL, '1', 'admin', '999999999', '');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('82', '继往开来', 'http://111.206.238.134:8080/ncme/ncme/upload%E8%83%9C%E4%BB%BB%E5%8A%9B%E6%A8%A1%E5%9E%8B.jpg?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4646799113&Signature=zTgbxcwOhg6f4l%2BtDo2%2FQtcP90E%3D', 'postView.do?mode=3', NULL, '2', NULL, '1', 'admin', '999999999', '');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('84', '添加banner图片', 'http://111.206.238.134:8080/ncme/ncme/uploadQQ%E6%88%AA%E5%9B%BE20180403093755%281%29.png?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4646864888&Signature=f61R62RpKt6Epgz1AwSC5SPqTXY%3D', '', '<p>qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq</p>', '1', NULL, '1', 'admin', '999999999', '');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('97', '新添加buanner', 'http://111.206.238.134:8080/ncme/ncme/uploadAndroid%2816%29.png?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4647307112&Signature=g14tosH9ZTnv9ZzZG%2FvdS09ntcY%3D', '', '<p>山东省地方水电费的观点</p>', '1', NULL, '1', 'admin', '999999999', 'Android.png');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('600058', '1', 'http://111.206.238.134:8080/ncme/ncme/uploadgif%2888%29.gif?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4648072876&Signature=d4c3Fi7PCClI6oBeyAJborVXBOE%3D', '', '<p>1</p>', '1', NULL, '1', 'admin', '999999999', '');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('600059', '链接', 'http://111.206.238.134:8080/ncme/ncme/uploadgif%2892%29.gif?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4648073213&Signature=zR3gi0g62PzU0dMhN2wZOgBsfcA%3D', 'https://www.baidu.com', '<p>1232131231313</p>', '1', NULL, '1', 'admin', '999999999', 'gif.gif');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('600061', '只有链接', 'http://111.206.238.134:8080/ncme/ncme/uploadgif%2893%29.gif?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4648073629&Signature=OLWSMzDNvTTgzvTq59VJ2nIire0%3D', 'http://news.baidu.com/', NULL, '1', NULL, '1', 'admin', '999999999', 'gif.gif');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('600062', '二维码', 'http://111.206.238.134:8080/ncme/ncme/uploadicon%288%29.png?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4648239101&Signature=Hatni8nswm21N7zXZjV1hjp3UcY%3D', '', '', '1', '2018-05-05 20:01:37', '2', 'admin', '1', '');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('600065', '手机界面', 'http://111.206.238.134:8080/ncme/ncme/uploadicon%E6%94%BE%E5%88%B0%E6%89%8B%E6%9C%BA%E7%95%8C%E9%9D%A2%281%29.jpg?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4648239492&Signature=HwQXLA0Tn0bzjOZnyOlZNQ%2FBlxo%3D', '', '', '1', '2018-04-24 10:40:35', '2', 'admin', '4', '');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('600067', '首页轮播图0002', 'http://111.206.238.134:8080/ncme/ncme/upload1%E9%A1%B9%E7%9B%AE%E5%88%97%E8%A1%A8.png?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4648239679&Signature=BBRhH6cuWN8wNTK8aFFXrRfybhk%3D', '', '<p><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span></p>', '1', NULL, '1', 'admin', '999999999', '1项目列表.png');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('600069', '首页轮播图0003', 'http://111.206.238.134:8080/ncme/ncme/upload2%E7%AD%9B%E9%80%89%E5%AD%A6%E7%A7%91%281%29.png?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4648239836&Signature=ip3RvAwSdUMrnluDcAx1Es6zBAU%3D', '', '<p><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span></p>', '1', NULL, '1', 'admin', '999999999', '2筛选学科.png');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('600070', '首页轮播图0004', 'http://111.206.238.134:8080/ncme/ncme/upload01%E7%99%BB%E5%BD%95%E5%89%8D.png?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4648239901&Signature=0muDjOAIXXkYcWjU%2FO1ML3k1USI%3D', '', '<p><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span><span style=\"font-family: 微软雅黑; font-size: 14px;\">dev.ncme.org.cn</span></p>', '1', NULL, '1', 'admin', '999999999', '01登录前.png');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('600078', '文本内容', 'http://111.206.238.134:8080/ncme/ncme/upload05%E5%AD%A6%E4%B9%A0%E5%8D%A1%E6%98%8E%E7%BB%86.png?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4648253660&Signature=7Swr9SbV6zTpVrKQBJ4Bh4bjaUg%3D', '', '<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>', '1', NULL, '1', 'admin', '999999999', '05学习卡明细.png');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('600079', '文本内容0001', 'http://111.206.238.134:8080/ncme/ncme/upload05%E5%AD%A6%E4%B9%A0%E5%8D%A1%E6%98%8E%E7%BB%86%282%29.png?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4648253695&Signature=QJ80q3XFElFRaM2qMjzyptpUzBY%3D', '', '<p>是大大大</p>', '2', NULL, '1', 'admin', '999999999', '');
+INSERT INTO `cpd_test`.`advert` (`ID`, `NAME`, `URL`, `TARGET_URL`, `REMARK`, `TYPE`, `CREATEDATE`, `STATE`, `CREATOR`, `ORDERNUM`, `FORMAT`) VALUES ('600081', '是否跳转', 'http://111.206.238.134:8080/ncme/ncme/uploadjpg%2812%29.jpg?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=4648454248&Signature=SGGxtA6PdSn1uERi8px7LMxOM%2Fw%3D', '', '<p>aaa</p>', '1', '2018-04-23 10:58:35', '1', 'admin', '2', '');
+
+
+
 
 select * from system_site;
 update system_site set DOMAIN_NAME='dev.ncme.org.cn' where id=1;
 select * from system_account where USER_ID=20;
 update system_account set ACCOUNT_PASSWORD='0cc175b9c0f1b6a831c399e269772661'  where USER_ID=20;
-alter table system_message  add column SYSTEM_TYPE int(20) DEFAULT NULL COMMENT '发送方式：0-平台  1-短信';
+
+
+必须是34条
+
+SELECT
+				*
+			FROM
+				exam_prop_val epv
+			WHERE
+				epv.type = 20;
+
+
+
+必须保证：下面执行结果和cv_set_authorization_region条数一致:3378条
+SELECT csar.*,
+		ccc.CV_SET_ID,ccc.*
+	FROM
+		cv_set_authorization_region csar
+	LEFT JOIN cv_set_authorization ccc ON ccc.id = csar.AUTHORIZATION_ID;
+
+select count(1) from cv_set_authorization_region;---
+
+
+
+SELECT csar.*,
+		ccc.CV_SET_ID,ccc.*
+	FROM
+		cv_set_authorization_region csar
+	LEFT JOIN cv_set_authorization ccc ON ccc.id = csar.AUTHORIZATION_ID
+#where ccc.cv_set_id =178 and csar.PROP_VAL_ID=111000001
+	GROUP BY
+
+		ccc.cv_set_id,
+		ccc.id

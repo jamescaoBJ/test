@@ -1,13 +1,41 @@
-STUDYADMIN-1542
-STUDYADMIN-1534
-STUDYADMIN-1531
-STUDYADMIN-1539
-STUDYADMIN-1537
-STUDYADMIN-1536
-STUDYADMIN-1538
-STUDYADMIN-1546
-STUDYADMIN-1547
+STUDYADMIN-1560
+STUDYWEB-1043
+STUDYADMIN-1584
+
+
+
+#################
+STUDYWEB-1071：
+ExamPropValJDBCDAO:
+public ExamReturnProp getNextLevelProp(ExamPropQuery propQuery) 
+ExamReturnProp r_prop = new ExamReturnProp();
+		String sql = "select t.*, v.id as prop_val_id,p.name as typeName, tt.prop_type_name as c_type_name,(select count(1) from qm_user_image_prop where  PROP_ID=?) as hasProjectNum  "
+				+ "from exam_prop_val t, sub_sys_prop_val v, prop_val_ref r,sub_sys_prop p,exam_prop_type tt "
+				+ "where t.id = v.prop_val_id and v.id = r.prop_val2 and p.id = v.sys_prop_id and tt.prop_type = t.c_type and r.prop_val1 = ? and t.name like ? ";
+		String sql_size = "select count(1) from exam_prop_val t, sub_sys_prop_val v, prop_val_ref r,sub_sys_prop p,exam_prop_type tt "
+				+ "where t.id = v.prop_val_id and v.id = r.prop_val2 and p.id = v.sys_prop_id and tt.prop_type = t.c_type and r.prop_val1 = ? and t.name like ?";
+		
+		if(propQuery.getExt_type() != null && propQuery.getExt_type() > 0) {
+			sql += "and t.ext_type=" + propQuery.getExt_type();
+			sql_size += "and t.ext_type=" + propQuery.getExt_type();
+		}
+		
+		sql += " order by t.code";
+		
+		String searchName = propQuery.getName();
+		if (searchName == null) searchName = "%";
+		else searchName = "%" + searchName + "%";
+		
+		List<ExamProp> returnList = getJdbcTemplate().query(PageUtil.getPageSql(sql, propQuery.getPageNo(), propQuery
+				.getPageSize()), ParameterizedBeanPropertyRowMapper.newInstance(ExamProp.class),propQuery.getSysPropId(), propQuery.getSysPropId(), searchName);
+##############
+#######
+启动分布式数据库
+240
+/usr/local/hotdb/hotdb-server/bin
+./hotdb_server start
 ###
+apple
 !@#$qazwsxedcrfv5TGB
 ################################
 10.1.27.139
@@ -23,7 +51,15 @@ china-ops
 在这个目录下面  
   
 ################################
-
+10.1.27.146
+jxjy
+jd$%sdf9456srdgf
+云主机，压力测试
+10.1.27.145
+jxjy
+6tw34gh#@$sefgtrhy
+云主机，压力测试
+################################
 
 testlink:
 http://www.testlink.org.cn
@@ -47,8 +83,9 @@ nohup java -Xmx256m -Xms128m -Xmn128m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&
 
 
 nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar --spring.profiles.active=test --server.port=9092 >springboot9092.log 2>&1 &
+ nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar --server.port=9096 >springboot9096.log 2>&1 &
 
-nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT9091.jar >springboot9091.log 2>&1 &
+nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar >springboot9091.log 2>&1 &
 ######
 删除手机号关联的表：
 select * from system_user where  mobil_phone like '%18813168732%';
@@ -56,14 +93,16 @@ DELETE FROM system_user_prop_val WHERE USER_ID = 3327559;
 DELETE FROM log_study_cv_set WHERE SYSTEM_USER_ID = 3327559;
 DELETE FROM log_study_cv_unit WHERE SYSTEM_USER_ID = 3327559;
 DELETE FROM system_user_config WHERE USER_ID = 3327559;
-DELETE FROM system_user WHERE ID = 3327559;
 delete  from cv_set_score_log where SYSTEM_USER_ID=3324059;
+DELETE FROM system_user WHERE ID = 3327559;
 /**DELETE FROM system_account WHERE ACCOUNT_NAME LIKE '%在路上%';**/
 DELETE FROM system_account WHERE ACCOUNT_id in(3327559,3327559);
 
 /**DELETE FROM system_account WHERE ACCOUNT_id in(3326107,3327556);*/
 
 select * from system_account where account_name LIKE '%18813168732%';
+
+
 
 
 
