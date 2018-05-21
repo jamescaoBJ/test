@@ -1,0 +1,88 @@
+https://blog.csdn.net/wangjianno2/article/details/80335116
+http://blog.51cto.com/benpaozhe/1763897
+
+ Nginx/tengine(后面名称只写nginx了)单纯做cache性能比不过ats，特别是在磁盘处理方面，不过论综合能力nginx就是大拿了，他集web服务器、负载均衡、cache三种能力于一身，可以说是非常综合性的选手。比如说一个中型网站的场景选型，前端是负载，后端托着一堆apache服务器，现在该到前端负载选型的了，虽然lvs和ha单纯从负载的性能要比nginx好一些，但我还是会选nginx，因为nginx在做负载的同时，可以将热点的静态内容cache一遍，做一次加速，无形间减轻了后端web服务器的一些压力，提高了用户体验，一箭双雕。Nginx做cache配置是很灵活的，里面有各种缓存指令，起初接触会摸不到北，我用了也有一段时间了，现在总结一下nginx做cache时我认为的三大症结——存不存、存多久、用不用？
+
+    nginx的资源是否缓存是由客户端、源站与nginx的缓存配置共同决定，nginx如果没有缓存策略配置，默认按照request请求头、header响应头信息走标准的http缓存判断机制（看cache-control、expires、cookie这些属性），仅当一个资源没有被设为不能缓存的黑名单，且有大于0的存放时间的生命周期时，资源才被缓存，对于nginx缓存判断流程我花精力画了一张结构图分享如下：
+
+
+
+wKioL1cPbISQd-9iAAE4m5H2iTY852.png
+
+
+
+ 
+
+   测试举例，默认配置，一个200ok资源（http://www.haixiano.com/member/login.php）  只有cookie信息没有max-age。
+
+第一次测试配置参数：
+
+proxy_cache_valid 200 10m;
+
+#proxy_ignore_headers Set-Cookie; 注释掉
+
+
+
+头信息以及测试如下：
+
+wKioL1cPbnayRC0JAAAsHoXTdhw133.png
+
+多次访问操作如下：
+
+wKiom1cPbm7TYRB_AABpzo-8Hb0722.png
+
+
+
+多次访问日志如下（全部MISS）：
+
+wKiom1cPdxzTAO0OAACtDhgeoWQ438.png
+
+
+
+小结：虽然有对于200ok的信息设置缓存时间为10分钟，但是cookie信息的首先判断是不能存，所以根本不会看你对200ok资源的缓存时间，最终结论是不能存。
+
+
+
+第二次测试配置参数：
+
+#proxy_cache_valid 200 10m;注释掉
+
+proxy_ignore_headers Set-Cookie; 
+
+
+
+多次访问日志如下（全部MISS）：
+
+wKioL1cPd-jgaDnrAAD8HZBtfGw201.png
+
+
+
+小结：虽然忽略了对cookie信息的判断，告诉nginx有cookie的信息是可以存的，但是对于200ok的信息设置缓存时间为0，所以最终资源还是不能存。
+
+
+
+第三次测试配置参数：
+
+
+proxy_cache_valid 200 10m;
+
+proxy_ignore_headers Set-Cookie; 
+
+
+
+多次访问日志如下（1次访问MISS后，之后均为HIT）：
+
+
+wKiom1cPeL7A0f8QAAC6thsutOU785.png
+
+
+
+小结：首先忽略了cookie信息的判断，告诉nginx说cookie信息是可以存的，后查询没有expires和max-age就去找默认缓存时间，发现对于200ok的默认缓存时间是10m，所以最终判定可以缓存，有效缓存时间为10分钟。
+
+
+
+    综上，一个资源只有同时具备可缓存和有缓存时间大于0的生命周期的双重属性，才能真正被缓存下来，至于存下来之后用不用还得再进行下一步的判断。所以nginx对于资源是否缓存要经过两步判断，第一步存不存，第二步存多久，对于是否用缓存了的资源为用户进行服务还得进行下一层用不用的判断，详细的走的判断参数可以看我画的那张图。
+
+
+
+    优化建议：为了做到cache加速的同时，又不影响业务，在缓存策略配置上最好遵循头部信息的要求，不要忽略nocache等字样强制存储，也就是说proxy_ignore_headers指令慎用，比如一些图片验证码和一些php、jsp、asp等动态内容在存储了后，用户多次访问会返回同样的信息，导致用户报障。还有一类资源是没有明确生命周期缓存头的（无cache-control或expires），也就是没有任何缓存要求，建议采用保守方式不要存储，主要是proxy_cache_valid指令的配置，有cookie的信息nginx默认就是不存的。对于故障信息的存储根据实际业务处理，有些故障信息是有必要存储的，还有任何资源如果源站出问题，要设置吐过期资源给用户，做到起码用户可以访问，保护一下源站。个别资源的缓存处理根据业务需要个别设置。

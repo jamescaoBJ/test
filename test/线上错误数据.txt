@@ -1,0 +1,39 @@
+insert INTO sub_sys_prop_val_temp_temp  SELECT * from sub_sys_prop_val
+
+SELECT * from sub_sys_prop_val_temp_temp where id != prop_val_id
+
+update sub_sys_prop_val_temp_temp set id= prop_val_id where id != prop_val_id
+
+select * from sub_sys_prop_val l
+
+update sub_sys_prop_val set id= prop_val_id where id != prop_val_id
+
+####删除学科字表主键关联
+####1，删除外键 1） wszg_prop_ref_base_prop  2） yhk_prop_ref_base_prop
+   Alter table  sub_sys_prop_val  Drop PRIMARY  key
+
+
+select t.* from expert_prop_val t where propid in(SELECT p.id from sub_sys_prop_val p where p.id != p.prop_val_id)
+
+###专家的信息，学科错误的专家
+##select t.* from expert_prop_val t where propid in(SELECT p.id from sub_sys_prop_val p where p.id != p.prop_val_id)
+
+####修改专家表中错误的学科
+update  expert_prop_val t set t.PROPID =(select prop_val_id from sub_sys_prop_val p where t.PROPID=p.id) where  propid in(SELECT p.id from sub_sys_prop_val p where p.id != p.prop_val_id)
+
+
+select * from prop_val_ref where PROP_VAL1=580003
+
+
+###修改关联表id
+update sub_sys_prop_val set id= prop_val_id where id != prop_val_id
+
+
+
+ALTER TABLE `wszg_prop_ref_base_prop` drop foreign key `wszg_prop_ref_base_prop_ibfk_2` ;
+
+ALTER TABLE `yhk_prop_ref_base_prop` drop foreign key `yhk_prop_ref_base_prop_ibfk_2` ;
+
+
+select * from exam_prop_val WHERE  id=700010939
+select * from prop_val_ref where PROP_VAL1=700010939;
