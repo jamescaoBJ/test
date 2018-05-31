@@ -1,0 +1,246 @@
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES (NULL, '1', 'mp4', '肖小敏-妊娠合并系统性红斑狼疮-3-病理生理_1', '', '8A7DF500A7F335829C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '肖小敏-妊娠合并系统性红斑狼疮-3-病理生理_1', NULL, NULL, '1', '', '');
+
+select * from material_info  where FILENAME='肖小敏-妊娠合并系统性红斑狼疮-3-病理生理_1';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204976', '510000003');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204976', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204976', '631007868');
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES (NULL, '1', 'mp4', '肖小敏-妊娠合并系统性红斑狼疮-4-临床处理要点_1', '', '0F666035B02F59F19C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '肖小敏-妊娠合并系统性红斑狼疮-4-临床处理要点_1', NULL, NULL, '1', '', '');
+
+select * from material_info  where FILENAME='肖小敏-妊娠合并系统性红斑狼疮-4-临床处理要点_1';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204977', '510000011');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204977', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204977', '631007868');
+
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES (NULL, '1', 'mp4', '李瑞满-妊娠期高血压疾病-2、产前产时处理', '', '5EC25EAD1C6D42609C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '李瑞满-妊娠期高血压疾病-2、产前产时处理', NULL, NULL, '1', '', '');
+
+select * from material_info  where FILENAME='李瑞满-妊娠期高血压疾病-2、产前产时处理';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204978', '510000011');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204978', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204978', '631007868');
+
+
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES (NULL, '1', 'mp4', '李奇林-急危重病救治与风险防范-3、如何加强急危病急危值管理', '', '44AD740B160632619C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '李奇林-急危重病救治与风险防范-3、如何加强急危病急危值管理', NULL, NULL, '1', '', '');
+
+select * from material_info  where FILENAME='李奇林-急危重病救治与风险防范-3、如何加强急危病急危值管理';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204979', '510000014');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204979', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204979', '631007868');
+
+ 
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES (NULL, '1', 'mp4', '李奇林-急危重病救治与风险防范-4、急危病救治风险防范', '', '46CA9E7A15B9B20D9C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '李奇林-急危重病救治与风险防范-4、急危病救治风险防范', NULL, NULL, '1', '', '');
+
+select * from material_info  where FILENAME='李奇林-急危重病救治与风险防范-4、急危病救治风险防范';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204980', '510000014');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204980', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204980', '631007868');
+
+
+
+
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES (NULL, '1', 'mp4', '潘集阳-失眠障碍-3、临床诊断', '', 'A75D7F926D4668559C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '潘集阳-失眠障碍-3、临床诊断', NULL, NULL, '1', '', '');
+
+select * from material_info  where FILENAME='潘集阳-失眠障碍-3、临床诊断';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204981', '510000011');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204981', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204981', '631007868');
+
+
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES (NULL, '1', 'mp4', '潘集阳-失眠障碍-4、治疗', '', 'C02B329E3F2CC3B19C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '潘集阳-失眠障碍-4、治疗', NULL, NULL, '1', '', '');
+
+select * from material_info  where FILENAME='潘集阳-失眠障碍-4、治疗';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204982', '510000011');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204982', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204982', '631007868');
+
+
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES (NULL, '1', 'mp4', '付耀高-肉毒毒素治疗肌张力障碍-4、临床常见问题分析', '', '68EB7172F9D756929C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '付耀高-肉毒毒素治疗肌张力障碍-4、临床常见问题分析', NULL, NULL, '1', '', '');
+
+select * from material_info  where FILENAME='付耀高-肉毒毒素治疗肌张力障碍-4、临床常见问题分析';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204983', '510000011');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204983', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204983', '631007868');
+
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES (NULL, '1', 'mp4', '昌耘冰-颈椎前路减压融合内固定术-3、解剖及手术步骤', '', 'A3AC81F70EE191089C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '昌耘冰-颈椎前路减压融合内固定术-3、解剖及手术步骤', NULL, NULL, '1', '', '');
+
+select * from material_info  where FILENAME='昌耘冰-颈椎前路减压融合内固定术-3、解剖及手术步骤';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204984', '510000003');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204984', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204984', '631007868');
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES (NULL, '1', 'mp4', '王建华-经口咽松解下拉复位技术治疗复杂颅底凹陷症-3、解剖、手术步骤及病例介绍', '', 'FC10882CEB7F9C119C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '王建华-经口咽松解下拉复位技术治疗复杂颅底凹陷症-3、解剖、手术步骤及病例介绍', NULL, NULL, '1', '', '');
+
+select * from material_info  where FILENAME='王建华-经口咽松解下拉复位技术治疗复杂颅底凹陷症-3、解剖、手术步骤及病例介绍';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204985', '510000003');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204985', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204985', '631007868');
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES (NULL, '1', 'mp4', '陈陆馗-经乙状窦后入路显微手术切除听神经鞘瘤-3、手术过程', '', 'D7BEC7C7394783A69C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '陈陆馗-经乙状窦后入路显微手术切除听神经鞘瘤-3、手术过程', NULL, NULL, '1', '', '');
+
+select * from material_info  where FILENAME='陈陆馗-经乙状窦后入路显微手术切除听神经鞘瘤-3、手术过程';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204986', '510000003');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204986', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('4204986', '631007868');
+
+===============
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`) 
+VALUES (NULL, '1', 'mp4', '肖小敏-妊娠合并系统性红斑狼疮-3-病理生理_1', '', '8A7DF500A7F335829C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '肖小敏-妊娠合并系统性红斑狼疮-3-病理生理_1', NULL, NULL, '1');
+
+select * from material_info  where FILENAME='肖小敏-妊娠合并系统性红斑狼疮-3-病理生理_1';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905185', '510000003');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905185', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905185', '631007868');
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`) 
+VALUES (NULL, '1', 'mp4', '肖小敏-妊娠合并系统性红斑狼疮-4-临床处理要点_1', '', '0F666035B02F59F19C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '肖小敏-妊娠合并系统性红斑狼疮-4-临床处理要点_1', NULL, NULL, '1');
+
+select * from material_info  where FILENAME='肖小敏-妊娠合并系统性红斑狼疮-4-临床处理要点_1';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905186', '510000011');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905186', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905186', '631007868');
+
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`) 
+VALUES (NULL, '1', 'mp4', '李瑞满-妊娠期高血压疾病-2、产前产时处理', '', '5EC25EAD1C6D42609C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '李瑞满-妊娠期高血压疾病-2、产前产时处理', NULL, NULL, '1');
+
+select * from material_info  where FILENAME='李瑞满-妊娠期高血压疾病-2、产前产时处理';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905187', '510000011');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905187', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905187', '631007868');
+
+
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`) 
+VALUES (NULL, '1', 'mp4', '李奇林-急危重病救治与风险防范-3、如何加强急危病急危值管理', '', '44AD740B160632619C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '李奇林-急危重病救治与风险防范-3、如何加强急危病急危值管理', NULL, NULL, '1');
+
+select * from material_info  where FILENAME='李奇林-急危重病救治与风险防范-3、如何加强急危病急危值管理';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905188', '510000014');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905188', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905188', '631007868');
+
+ 
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`) 
+VALUES (NULL, '1', 'mp4', '李奇林-急危重病救治与风险防范-4、急危病救治风险防范', '', '46CA9E7A15B9B20D9C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '李奇林-急危重病救治与风险防范-4、急危病救治风险防范', NULL, NULL, '1');
+
+select * from material_info  where FILENAME='李奇林-急危重病救治与风险防范-4、急危病救治风险防范';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905189', '510000014');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905189', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905189', '631007868');
+
+
+
+
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`) 
+VALUES (NULL, '1', 'mp4', '潘集阳-失眠障碍-3、临床诊断', '', 'A75D7F926D4668559C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '潘集阳-失眠障碍-3、临床诊断', NULL, NULL, '1');
+
+select * from material_info  where FILENAME='潘集阳-失眠障碍-3、临床诊断';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905190', '510000011');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905190', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905190', '631007868');
+
+
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID` )
+VALUES (NULL, '1', 'mp4', '潘集阳-失眠障碍-4、治疗', '', 'C02B329E3F2CC3B19C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '潘集阳-失眠障碍-4、治疗', NULL, NULL, '1');
+
+select * from material_info  where FILENAME='潘集阳-失眠障碍-4、治疗';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905191', '510000011');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905191', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905191', '631007868');
+
+
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`) 
+VALUES (NULL, '1', 'mp4', '付耀高-肉毒毒素治疗肌张力障碍-4、临床常见问题分析', '', '68EB7172F9D756929C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '付耀高-肉毒毒素治疗肌张力障碍-4、临床常见问题分析', NULL, NULL, '1');
+
+select * from material_info  where FILENAME='付耀高-肉毒毒素治疗肌张力障碍-4、临床常见问题分析';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905192', '510000011');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905192', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905192', '631007868');
+
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`) 
+VALUES (NULL, '1', 'mp4', '昌耘冰-颈椎前路减压融合内固定术-3、解剖及手术步骤', '', 'A3AC81F70EE191089C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '昌耘冰-颈椎前路减压融合内固定术-3、解剖及手术步骤', NULL, NULL, '1');
+
+select * from material_info  where FILENAME='昌耘冰-颈椎前路减压融合内固定术-3、解剖及手术步骤';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905193', '510000003');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905193', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905193', '631007868');
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`) 
+VALUES (NULL, '1', 'mp4', '王建华-经口咽松解下拉复位技术治疗复杂颅底凹陷症-3、解剖、手术步骤及病例介绍', '', 'FC10882CEB7F9C119C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '王建华-经口咽松解下拉复位技术治疗复杂颅底凹陷症-3、解剖、手术步骤及病例介绍', NULL, NULL, '1');
+
+select * from material_info  where FILENAME='王建华-经口咽松解下拉复位技术治疗复杂颅底凹陷症-3、解剖、手术步骤及病例介绍';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905194', '510000003');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905194', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905194', '631007868');
+
+
+INSERT INTO `CPD_TEST`.`material_info` (`CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`) 
+VALUES (NULL, '1', 'mp4', '陈陆馗-经乙状窦后入路显微手术切除听神经鞘瘤-3、手术过程', '', 'D7BEC7C7394783A69C33DC5901307461', '0.00', '', '1', '', NULL, 'admin', '4', '2018-05-30 11:35:59', '2018-05-30 11:35:59', '', '系统管理员', NULL, '陈陆馗-经乙状窦后入路显微手术切除听神经鞘瘤-3、手术过程', NULL, NULL, '1');
+
+select * from material_info  where FILENAME='陈陆馗-经乙状窦后入路显微手术切除听神经鞘瘤-3、手术过程';
+
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905195', '510000003');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905195', '610010661');
+INSERT INTO `CPD_TEST`.`material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('3905195', '631007868');

@@ -1,0 +1,14 @@
+https://blog.csdn.net/qq_21387171/article/details/53787019
+对应service1
+service2
+service3
+service4 这四个项目
+
+
+
+
+执行数据库脚本后
+
+java -jar zipkin-server-2.8.4-exec.jar --STORAGE_TYPE=mysql --MYSQL_DB=zipkin --MYSQL_USER=root --MYSQL_PASS=12345678  --MYSQL_HOST=localhost --MYSQL_TCP_PORT=3306
+
+java -jar zipkin-server-1.17.1-exec.jar --STORAGE_TYPE=mysql --MYSQL_DB=zipkin --MYSQL_USER=root --MYSQL_PASS=12345678 --MYSQL_HOST=localhost --MYSQL_TCP_PORT=3306

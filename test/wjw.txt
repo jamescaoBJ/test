@@ -1,6 +1,11 @@
-STUDYADMIN-1560
-STUDYWEB-1043
-STUDYADMIN-1584
+线上数据库控制台
+http://10.1.27.252:3324/page/index.html
+ecloud/ecloud
+###############
+240数据库控制台
+http://10.1.27.240:3324/page/index.html
+wjw_user1/123456
+
 
 
 
@@ -102,11 +107,6 @@ DELETE FROM system_account WHERE ACCOUNT_id in(3327559,3327559);
 
 select * from system_account where account_name LIKE '%18813168732%';
 
-
-
-
-
-
 SELECT  * from system_timeliness where mobile_phone = 18813168732
 
 delete from system_timeliness where mobile_phone = 18813168732
@@ -159,10 +159,10 @@ http://jenkins.ncme.org.cn
 admin
 Super123
 #wjwJenkinsSuperAdmin
-
 dev_developer/dev_developer_246
 springboot_developer/springboot_developer_9986
 test_developer/test_developer_00291
+zx_developer/zx_developer_0089
 
 
 
@@ -170,6 +170,7 @@ test_developer/test_developer_00291
 Jenkins
 
 jenkins.weeho.cn
+
 
 admin
 
