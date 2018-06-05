@@ -1,0 +1,18 @@
+cd /data/zhuanxiang/tomcat7/bin
+ps -ef|grep -v grep|grep tomcat7|awk '{print $2}'|xargs kill -9
+cp  /data/zhuanxiang/tomcat7/webapps/zxxt  /data/backup/source
+rm -r  ../webapps/zxxt*
+cp  ${ITEM_ROOTDIR}/workspace/dev_zhuanxiang/release/dev/resource.war /data/devTomcat8/webapps
+cp ../webapps/release/dev/zxxt.war ../webapps
+rm -r  ../webapps/release
+./startup.sh 
+if [ "$?" == "0" ]
+then 
+	  echo "new code is running"  
+else
+    ps -ef|grep -v grep|grep tomcat7|awk '{print $2}'|xargs kill -9
+     rm -r  ../webapps/zxxt*
+	cp  /data/backup/source/zxxt /data/zhuanxiang/tomcat7/webapps
+	echo "old code is running"  
+	./startup.sh 
+fi
