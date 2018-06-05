@@ -5,7 +5,10 @@ ecloud/ecloud
 240数据库控制台
 http://10.1.27.240:3324/page/index.html
 wjw_user1/123456
-
+#################
+jenkins物理机
+10.1.27.116
+ubuntu/china-ops
 
 
 

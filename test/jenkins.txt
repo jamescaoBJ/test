@@ -26,6 +26,26 @@ http://www.cnblogs.com/zz0412/p/jenkins_jj_01.html
 
 �����ʼ������⣺
 
+#################################
+cd /data/zhuanxiang/tomcat7/bin
+ps -ef|grep -v grep|grep tomcat7|awk '{print $2}'|xargs kill -9
+cp  /data/zhuanxiang/tomcat7/webapps/zxxt  /data/backup/source
+rm -r  ../webapps/zxxt*
+cp  ${ITEM_ROOTDIR}/workspace/hui_dev/release/hui/zxxt.war /data/zhuanxiang/tomcat7/webapps
+cp ../webapps/release/hui/zxxt.war ../webapps
+rm -r  ../webapps/release
+./startup.sh 
+if [ "$?" == "0" ]
+then 
+	  echo "new code is running"  
+else
+    ps -ef|grep -v grep|grep tomcat7|awk '{print $2}'|xargs kill -9
+     rm -r  ../webapps/zxxt*
+	cp  /data/backup/source/zxxt.war /data/zhuanxiang/tomcat7/webapps/
+	echo "old code is running"  
+	./startup.sh 
+fi
+#################################
 
 
 
