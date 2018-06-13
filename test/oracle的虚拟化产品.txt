@@ -1,0 +1,13 @@
+https://cloud.oracle.com/containers
+Oracle Container Cloud Service，
+借助Wercker 可以对接K8S+Github+Docker.com，
+实现一键部署、运营、管理和维护。
+
+
+
+oracle郑州办公室
+
+地址：河南省郑州市中原区中原中路220号裕达国际贸易中心A座2015室
+邮编：450007
+电话：86-371-6755 9500
+传真：86-371-6797 2085
