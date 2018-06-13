@@ -7,7 +7,7 @@ flush privileges;
 mysql -uroot -p12345678
 ##########################
 
-
+mysql -uroot -proot
 
 mysql -uroot -p -h127.0.0.1 -P3323 -D cpd_test </root/data/20180428/data_cpd_test04272.sql 
 

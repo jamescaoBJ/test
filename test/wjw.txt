@@ -1,3 +1,8 @@
+select count(DISTINCT t.id)  from cv_set t left join cv_set_authorization csa on csa.CV_SET_ID = t.id left join cv_set_authorization_region csar on csar.AUTHORIZATION_ID = csa.id where 1=1 AND csa.CV_SET_START_DATE <= CURDATE() AND csa.CV_SET_END_DATE >= CURDATE() and t.status =5 and t.forma != 5  and t.id in (select DISTINCT(ccc.CV_SET_ID) from cv_set_authorization_region csar left join cv_set_authorization ccc on ccc.id = csar.AUTHORIZATION_ID where csar.PROP_VAL_ID = 111000001)  and t.id in (select DISTINCT(CV_SET_ID) from cv_set_authorization csa left join cv_set_authorization_system_site csass on csass.AUTHORIZATION_ID = csa.ID left join system_site ss on csass.SYSTEM_SITE_ID=ss.id where ss.DOMAIN_NAME='dev.ncme.org.cn')  and t.id in (select distinct(cvim.cv_set_id) from CV_SET_USER_IMAGE cvim where USERIMAGE_ID in (select ip.userimage_id from qm_user_image_prop ip where prop_id in (select DISTINCT sspv.ID from sub_sys_prop_val sspv LEFT JOIN exam_prop_val epv ON epv.ID = sspv.PROP_VAL_ID where epv.`NAME` ='精神病与精神卫生学')))
+
+
++++=
+
 线上数据库控制台
 http://10.1.27.252:3324/page/index.html
 ecloud/ecloud
@@ -393,3 +398,23 @@ select * from system_login_limit
 
 项目人物画像
 select * from cv_set_user_image t where cv_set_id=4800448
+
+##
+STUDYADMIN-1725	项目发布-已发布列表，加载时间超过1分钟（1分6秒）/---服务进不去
+STUDYADMIN-1724	数据统计-面授项目统计页面，加载时间超过3秒（16秒）/5秒
+	STUDYADMIN-1723	系统维护-审查日志页面，加载时间超过3秒（11秒）/11秒
+STUDYADMIN-1722	系统维护-账号管理页面，加载时间超过3秒（5秒）/5秒
+STUDYADMIN-1721	系统维护-编辑管理页面，加载时间超过3秒（32秒）/22秒
+	STUDYADMIN-1720	系统维护-学员管理页面，加载时间超过3秒（28秒）/28秒
+STUDYADMIN-1717	项目管理-项目审核页面，加载时间超过3秒（9秒）/ 8秒
+STUDYADMIN-1716	项目管理-项目管理页面，加载时间超过3秒（1分2秒）/5秒
+STUDYADMIN-1715	项目管理-我的学科页面，加载时间超过1分钟，最后404/----服务进不去
+STUDYADMIN-1714	项目管理-我的项目页面，加载时间超过3秒（32秒）/6秒
+STUDYADMIN-1713	能力管理-学习地图页面，加载时间超过3秒（6秒）/5.4
+RESOURCE-911	病例审核-已审核列表，加载时间超过3秒（5秒）/4.1秒
+RESOURCE-910	素材审核-已审核列表，加载时间超过3秒（18秒）/18秒多
+	RESOURCE-909	素材管理-素材审核页面，加载时间超过3秒（7秒）/6.8秒
+	RESOURCE-908	素材管理-素材页面，加载时间超过3秒（11秒）/11秒
+	RESOURCE-907	题库管理-审核试题页面，加载时间超过3秒（8秒）/8秒
+RESOURCE-906	题库管理-题库管理页面，加载时间超过3秒（7秒）/7秒
+STUDYWEB-1168	个人中心-账号管理页面，页面加载时间超过3秒（5秒）/4.5秒

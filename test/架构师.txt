@@ -4,3 +4,35 @@ https://pan.baidu.com/s/1Soppkf2plRJCe5LKxqN6Dg
 微服务架构教程链接
 https://pan.baidu.com/s/1EjZe8-jfO-Vx2t9S6j_QjQ
 密码：jm3h
+
+
+非常好的一篇文章
+https://blog.csdn.net/significantfrank/article/details/79286947
+好书：Eric Evans的《领域驱动设计》
+
+Programs must be written for people to read, and only incidentally for machines to execute
+
+
+SOFA
+
+git上名字叫COPA
+https://github.com/alibaba/COPA、
+
+
+虚拟化方面
+https://www.cnrancher.com/blog/
+Rancher
+kubernetes
+docker
+
+查看日志：
+splunk和kibana是两个著名的查看日志工具
+spring cloud sleuth：可以从上下文中轻松提取想要的值
+zipkin/pinpoint
+微服务日志监控：elk
+
+微服务监控
+收集服务的单个操作和统计信息（指标）:coda hale/Yammer java metrics library /prometheus/influxdb
+然后用grafana/prometheus/aws cloudwathch来监控
+
+jarslink:如果有几十个微服务，我们需要很多jar，端口也很多。用jarslink合并jar。再路由到其他jar。可以之启动一个jar，进行访问。
