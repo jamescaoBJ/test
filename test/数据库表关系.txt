@@ -477,6 +477,13 @@ AND t5.PROP_VAL_ID ='111000001'
 
 /***/clone('4202462','4200566');
 
+通过项目找到课程：
+select * from CV_SET_SCHEDULE where CV_SET_ID=4200367;
+select * from CV_SCHEDULE where SCHEDULE_ID=4207262;
+通过课程查找单元
+select * from cv_ref_unit where CV_ID=4202110;
+
+
 
 select * from CV_SCHEDULE where CV_ID=4202462;
 //通过项目找到计划，通过计划找到课程
