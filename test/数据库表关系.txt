@@ -1,3 +1,11 @@
+1.mysql -uroot -p -h127.0.0.1 -P3323 -D cpd_test
+2.source /root/data/drop.sql
+3.show tables;判断表是否删除干净
+4.source /root/data/20180620/create_info0502.sql
+5.show tables;判断表是否全
+6.exit;
+7.mysql -uroot -p -h127.0.0.1 -P3323 -D cpd_test </root/data/20180620/data_cpd_test.sql
+
 ###
 �ز���صı�
 select * from expert_info where name in('������','�Ծ�ƽ');

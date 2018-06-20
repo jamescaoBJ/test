@@ -1,10 +1,23 @@
 CPD_TEST_create_table1218.sql
-���Ǳ��ṹ 250�ϵ� ���Լ�Ҳ�����ȵ���һ�� 
-����Ƿֿ��������ȵ������ṹ�ڵ�������
+这是表结构 250上的 你自己也可以先导出一份 
+最好是分开导出，先导出表结构在导出数据
 mysqldump -uroot -p -h10.1.27.250 -P3323 --default-character-set=utf8 --single-transaction -t --hex-blob -B cpd_test >data_cpd_test.sql
-���ǵ����������
-240������Ҫ�ں�̨����3323  ��cpd_test��ȥ�����еı�truncate��֮��drop 
+这是导出数据语句
+240上你需要在后台登上3323  在cpd_test下去将所有的表truncate掉之后drop 
 truncate.sql
 drop_table.sql
-source �ֱ�ִ�оͺ� 
-Ȼ����240ҳ���ϣ�����Ҫɾ�ڵ��  ��ֻ��Ҫ���� �½����Ǽ��ű�������������ȵ������������Ȼ����ҳ����ɾ���⼸�ű�����Ϣ�����������⼸�ű��ı���Ϣ���߼���ѡ��cpd_test ���ݽڵ�ѡ��dn01,dn02,dn03,dn04��Ȼ��������У�飬����ڶ�̬���أ��Ϳ������´�������������
+source 分别执行就好 
+然后在240页面上：不需要删节点的  你只需要将您 新建的那几张表数据清除或者先导出来在清除，然后在页面上删除这几张表的信息，重新配置这几张表的表信息，逻辑库选择cpd_test 数据节点选择dn01,dn02,dn03,dn04，然后做配置校验，最后在动态加载，就可以重新创建表操作表了
+
+
+###########
+
+
+1.mysql -uroot -p -h127.0.0.1 -P3323 -D cpd_test
+2.source /root/data/drop.sql
+3.show tables;判断表是否删除干净
+4.source /root/data/20180620/create_info0502.sql
+5.show tables;判断表是否全
+6.exit;
+7.mysql -uroot -p -h127.0.0.1 -P3323 -D cpd_test </root/data/20180620/data_cpd_test.sql
+#############
