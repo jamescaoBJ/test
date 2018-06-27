@@ -14,7 +14,15 @@ caoyange 
 
 
 +++=
-
+########################
+datasource.url=jdbc:mysql://10.1.27.252:3323/cpd_test
+datasource.username=root
+datasource.password=hVVii#O%1!N2@eS6
+######################################
+datasource.url=jdbc:mysql://10.1.27.252:3323/zcpd_test
+datasource.username=zroot
+datasource.password=hVVii#O%1!N2@eS6
+########################
 线上数据库控制台
 http://10.1.27.252:3324/page/index.html
 ecloud/ecloud
@@ -26,10 +34,21 @@ wjw_user1/123456
 jenkins物理机
 10.1.27.116
 ubuntu/china-ops
-
-
+####################
+10.1.27.240
+操作系统
+root
+YTZiMzEzZmUzOWQ2OTJkN2FkY2E4ODY0
+####################
+10.1.27.252 操作系统
+root
+YTZiMzEzZmUzOWQ2OTJkN2FkY2E4ODY0
 
 #################
+redis服务
+10.1.27.98  端口 6379
+10.1.27.108 端口 6379
+#############
 STUDYWEB-1071：
 ExamPropValJDBCDAO:
 public ExamReturnProp getNextLevelProp(ExamPropQuery propQuery) 
@@ -100,20 +119,22 @@ java -jar springboot-0.0.1-SNAPSHOT.jar --spring.profiles.active=test --server.p
 ps -ef|grep -v grep|grep springboot-0.0.1-SNAPSHOT.jar|awk '{print $2}'|xargs kill -9
 
 nohup java -Xmx256m -Xms128m -Xmn128m -jar eureka-server-0.0.1-SNAPSHOT.jar >eurekaSserver.log 2>&1 &
-
-nohup java -Xmx1024m -Xms512m -Xmn128m -jar eureka-server-0.0.1-SNAPSHOT.jar >eurekaSserver.log 2>&1 &
-
-
 nohup java -Xmx256m -Xms128m -Xmn128m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
+
+
+nohup java -Xmx1024m -Xms512m -Xmn128m -jar eureka-server-0.0.1-SNAPSHOT.jar >eurekaserver.log 2>&1 &
 
 nohup java -Xmx1024m -Xms512m -Xmn512m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
 
+nohup java -Xmx2048m -Xms1024m -Xmn1024m -jar springboot-0.0.1-SNAPSHOT.jar  --envCong=pre150 >springboot9090.log  2>&1 &
+nohup java -Xmx2048m -Xms1024m -Xmn1024m -jar springboot-0.0.1-SNAPSHOT.jar  --envCong=pre150 --server.port=9096 >springboot9096.log  2>&1 &
 
 nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar --spring.profiles.active=test --server.port=9092 >springboot9092.log 2>&1 &
 nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar --server.port=9096 >springboot9096.log 2>&1 &
 
 nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar --server.port=9097 >springboot9097.log 2>&1 &
-nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar >springboot9091.log 2>&1 &
+nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar >springboot9090.log 2>&1 &
+nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar >springboot9090.log 2>&1 &
 ######
 删除手机号关联的表：
 select * from system_user where  mobil_phone like '%18813168732%';

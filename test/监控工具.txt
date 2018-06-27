@@ -1,0 +1,18 @@
+1:zabbix
+2:Open-falcon
+3:prometheus:拉模式，文本配置，利于配置版本化。插件多，要监控什么，都有插件。
+  prometheus-server:负责监控数据收集和存储，
+  prometheus alert manager:负责根据告警规则进行告警，可集成很多告警通道。
+  nodex-exporter:从机器读取指标，然后暴露一个http服务，prometheus 从这个服务中收集监控指标。prometheus还有其他exporter.
+  
+ansible :部署工具，配置管理。以及和jenkins的集成。
+  ansible-cmdb:根据inventory自动生成当前所有机器的情况
+
+数据的可视化：grafana 和prometheus集成的非常好。所以用grafana .在grafana上查看nodex-exporter上收集的数据。
+从prometheus发送告警到钉钉，采用prometheus-webhook-dingtalk.
+
+
+既可以实现，收集收据到展示，以及发送钉钉的过程的可视化监控。 
+
+############
+除了jenkins可以实现将包部署到到kubernetes，也可以有其他方式：helm->helm install artifactory部署 artfactory应用到kubernetes.

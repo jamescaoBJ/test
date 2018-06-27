@@ -21,3 +21,40 @@ source 分别执行就好
 6.exit;
 7.mysql -uroot -p -h127.0.0.1 -P3323 -D cpd_test </root/data/20180620/data_cpd_test.sql
 #############
+
+
+
+1.mysql -uzroot -p -h10.1.27.252 -P3323 -D zcpd_test
+2.source /root/data/drop.sql
+3.show tables;判断表是否删除干净
+4.source /root/data/20180625/create_info0502.sql
+5.show tables;判断表是否全
+6.exit;
+7.mysql -uzroot -p -h10.1.27.252 -P3323 -D zcpd_test </root/data/20180625/data_cpd_test.sql
+#############
+
+
+########################
+
+  drop table content_sentence_type;     
+  drop table zx_certificate;           
+  drop table zx_examine_import_result;
+  
+  
+  scp -r ncmeapp jxjy@10.1.27.105:/data/preEnv/preTomcat/webapps
+  scp -r ncmeapp jxjy@10.1.27.103:/data/preEnv/preTomcat/webapps
+  scp -r ncmeapp jxjy@10.1.27.94:/data/preEnv/
+  
+  eurekaserver
+  
+  scp -r jdk1.8.0_102 jxjy@10.1.27.149:/data/
+  scp -r jdk1.8.0_102 jxjy@10.1.27.148:/data/
+  scp -r jdk1.8.0_102 jxjy@10.1.27.150:/data/
+  scp -r jdk1.8.0_102 jxjy@10.1.27.51:/data/
+  
+  export JAVA_HOME=/data/jdk1.8.0_102 
+  export PATH=$JAVA_HOME/bin:$PATHexpor
+  
+export JAVA_HOME=/data/jdk1.8.0_102
+export CLASSPATH=$JAVA_HOME/lib:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH=$PATH:$JAVA_HOME/bin
