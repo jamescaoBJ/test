@@ -4,7 +4,7 @@
 生产机-09	4核8G	10.1.27.149	jxjy	DW4t5sfg$@r5rgr	   已做limit	eureka,zuul
 生产机-10	4核8G	10.1.27.150	jxjy	hky$%657(yhdefer 已做limit	springboot1
 生产机-11	4核8G	10.1.27.51	jxjy	fyjtr%4745cDfdg	   已做limit	springboot2
-
+生产机-11	4核8G	10.1.27.112	jxjy	Ty4cY^GFdcIfoN0IJ_
 ########################
 select count(DISTINCT t.id)  from cv_set t left join cv_set_authorization csa on csa.CV_SET_ID = t.id left join cv_set_authorization_region csar on csar.AUTHORIZATION_ID = csa.id where 1=1 AND csa.CV_SET_START_DATE <= CURDATE() AND csa.CV_SET_END_DATE >= CURDATE() and t.status =5 and t.forma != 5  and t.id in (select DISTINCT(ccc.CV_SET_ID) from cv_set_authorization_region csar left join cv_set_authorization ccc on ccc.id = csar.AUTHORIZATION_ID where csar.PROP_VAL_ID = 111000001)  and t.id in (select DISTINCT(CV_SET_ID) from cv_set_authorization csa left join cv_set_authorization_system_site csass on csass.AUTHORIZATION_ID = csa.ID left join system_site ss on csass.SYSTEM_SITE_ID=ss.id where ss.DOMAIN_NAME='dev.ncme.org.cn')  and t.id in (select distinct(cvim.cv_set_id) from CV_SET_USER_IMAGE cvim where USERIMAGE_ID in (select ip.userimage_id from qm_user_image_prop ip where prop_id in (select DISTINCT sspv.ID from sub_sys_prop_val sspv LEFT JOIN exam_prop_val epv ON epv.ID = sspv.PROP_VAL_ID where epv.`NAME` ='精神病与精神卫生学')))
 VPN 账号

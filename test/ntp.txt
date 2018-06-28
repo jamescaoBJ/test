@@ -1,0 +1,14 @@
+ntp服务器上
+#允许这个网段的 去做时间同步，
+restrict 192.168.200.0 mask 255.255.255.0 nomodify notrap
+#以哪个作为时间同步服务器
+server 192.168.200.232
+
+#使用局域网的时间同步
+
+注释其他server0:n
+server 127.127.1.0
+fudge 127.127.1.0 stratum 10
+
+添加日志
+logfile /var/log/ntp.log
