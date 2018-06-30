@@ -47,6 +47,7 @@ YTZiMzEzZmUzOWQ2OTJkN2FkY2E4ODY0
 #################
 redis服务
 10.1.27.98  端口 6379
+10.1.27.106 端口 6379
 10.1.27.108 端口 6379
 #############
 STUDYWEB-1071：
@@ -122,9 +123,16 @@ nohup java -Xmx256m -Xms128m -Xmn128m -jar eureka-server-0.0.1-SNAPSHOT.jar >eur
 nohup java -Xmx256m -Xms128m -Xmn128m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
 
 
+
+nohup java -Xmx512m -Xms256m -Xmn128m -jar eureka-server-0.0.1-SNAPSHOT.jar >eurekaserver.log 2>&1 &
+
 nohup java -Xmx1024m -Xms512m -Xmn128m -jar eureka-server-0.0.1-SNAPSHOT.jar >eurekaserver.log 2>&1 &
 
 nohup java -Xmx1024m -Xms512m -Xmn512m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
+
+
+
+nohup java -Xmx512m -Xms256m -Xmn256m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
 
 nohup java -Xmx2048m -Xms1024m -Xmn1024m -jar springboot-0.0.1-SNAPSHOT.jar  --envCong=pre150 >springboot9090.log  2>&1 &
 nohup java -Xmx2048m -Xms1024m -Xmn1024m -jar springboot-0.0.1-SNAPSHOT.jar  --envCong=pre150 --server.port=9096 >springboot9096.log  2>&1 &
@@ -143,6 +151,8 @@ DELETE FROM log_study_cv_set WHERE SYSTEM_USER_ID = 3327559;
 DELETE FROM log_study_cv_unit WHERE SYSTEM_USER_ID = 3327559;
 DELETE FROM system_user_config WHERE USER_ID = 3327559;
 delete  from cv_set_score_log where SYSTEM_USER_ID=3324059;
+
+delete  from cv_set_favorites where SYSTEM_USER_ID=4825454;
 DELETE FROM system_user WHERE ID = 3327559;
 /**DELETE FROM system_account WHERE ACCOUNT_NAME LIKE '%在路上%';**/
 DELETE FROM system_account WHERE ACCOUNT_id in(3327559,3327559);

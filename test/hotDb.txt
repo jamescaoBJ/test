@@ -32,7 +32,16 @@ source 分别执行就好
 6.exit;
 7.mysql -uzroot -p -h10.1.27.252 -P3323 -D zcpd_test </root/data/20180625/data_cpd_test.sql
 #############
+123456
+#############
 
+1.mysql -utest1 -p -h127.0.0.1 -P3323 -D ncme_test
+2.source /root/data/drop.sql;
+3.show tables;判断表是否删除干净
+4.source /root/data/20180625/create_info0502.sql
+5.show tables;判断表是否全
+6.exit;
+7.mysql -utest1 -p -h127.0.0.1 -P3323 -D ncme_test </root/data/20180625/data_cpd_test.sql
 
 ########################
 
