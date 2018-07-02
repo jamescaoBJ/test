@@ -1,3 +1,8 @@
+ 培训后台的数据统计和培训管理后台的学员管理这两个模块不上线
+ 
+update system_menu set state=0 where id=3900072;
+ 
+update system_menu set state=0 where id in (600067,2700069,2700071)
 ########################
 
 生产机-08	4核8G	10.1.27.148	jxjy	sdgfas#24$#@D	   已做limit	eureka,zuul
