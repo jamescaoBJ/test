@@ -1,0 +1,328 @@
+
+select  * from material_info where code is null  LIMIT 0,3
+
+
+
+select  max(id+1) from material_info LIMIT 0,3
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405368', '', '1', 'WMV', '', '', '9DA1BCB0208C7B4C9C33DC5901307461', '0.00', '', '1', '', '', '黄晶晶', '2', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '黄晶晶', NULL, '', '', '5850821', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405368', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405368', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405368', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405368', '631007868');
+
+
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405369', '', '1', 'WMV', '', '', '39E2CB8D6096A3DB9C33DC5901307461', '0.00', '', '1', '', '', '杨扬帆', '2', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '杨扬帆', NULL, '', '', '5850823', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405369', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405369', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405369', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405369', '631007868');
+
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405370', '', '1', 'WMV', '', '', '839D72D00DC90B769C33DC5901307461', '0.00', '', '1', '', '', '杨扬帆', '2', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '杨扬帆', NULL, '', '', '5850823', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405369', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405369', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405369', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405369', '631007868');
+
+
+
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405370', '', '1', 'WMV', '', '', '839D72D00DC90B769C33DC5901307461', '0.00', '', '1', '', '', '黄晶晶', '2', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '黄晶晶', NULL, '', '', '5850821', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405370', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405370', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405370', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405370', '631007868');
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405371', '', '1', 'WMV', '', '', '6D617CF870156B959C33DC5901307461', '0.00', '', '1', '', '', '姜利斌', '2', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '姜利斌', NULL, '', '', '5850824', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405371', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405371', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405371', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405371', '631007868');
+
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405372', '', '1', 'WMV', '', '', '2F55301FBF5C41019C33DC5901307461', '0.00', '', '1', '', '', '依荷芭丽·迟', '2', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '依荷芭丽·迟', NULL, '', '', '5850825', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405372', '510017');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405372', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405372', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405372', '631007868');
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405373', '', '1', 'WMV', '', '', '54B744C1CCC9F2539C33DC5901307461', '0.00', '', '1', '', '', '孙辉', '2', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '孙辉', NULL, '', '', '5850828', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405373', '510023');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405373', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405373', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405373', '631007868');
+
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405374', '', '1', 'WMV', '', '', '962BDC3EC61BB5AF9C33DC5901307461', '0.00', '', '1', '', '', '魏世辉', '2', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '魏世辉', NULL, '', '', '5850831', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405374', '510023');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405374', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405374', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405374', '631007868'); 
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405375', '', '1', 'WMV', '', '', '424B322883848B6A9C33DC5901307461', '0.00', '', '1', '', '', '张晓梅', '2', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '张晓梅', NULL, '', '', '5850819', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405375', '510016');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405375', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405375', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405375', '631007868');
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405376', '', '1', 'WMV', '', '', 'A946EB5BA00827E39C33DC5901307461', '0.00', '', '1', '', '', '张晓梅', '2', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '张晓梅', NULL, '', '', '5850819', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405376', '510016');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405376', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405376', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405376', '631007868');
+
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405377', '', '1', 'WMV', '', '', '14C7A038D6B60A759C33DC5901307461', '0.00', '', '1', '', '', '胡博杰', '2', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '胡博杰', NULL, '', '', '5850832', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405377', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405377', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405377', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405377', '631007868');
+
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405378', '', '1', 'WMV', '', '', 'E00E3519225603469C33DC5901307461', '0.00', '', '1', '', '', '何广辉', '2', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '何广辉', NULL, '', '', '5850833', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405378', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405378', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405378', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405378', '631007868');
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405379', '', '1', 'WMV', '', '', '886CBCF8DE1F18399C33DC5901307461', '0.00', '', '1', '', '', '韩梅', '2', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '韩梅', NULL, '', '', '5850837', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405379', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405379', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405379', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405379', '631007868');
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405380', '', '1', 'WMV', '', '', '3A02E898AB6A18639C33DC5901307461', '0.00', '', '1', '', '', '李岩', '2', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '李岩', NULL, '', '', '5850838', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405380', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405380', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405380', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405380', '631007868');
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405381', '', '1', 'WMV', '', '', 'B07C2769443F09BC9C33DC5901307461', '0.00', '', '1', '', '', '李晓明', '2', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '李晓明', NULL, '', '', '5850840', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405381', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405381', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405381', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405381', '631007868');
+
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405382', '', '1', 'WMV', '', '', 'DE23D5936FB872099C33DC5901307461', '0.00', '', '1', '', '', '赵宏', '2', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '赵宏', NULL, '胃NEN诊治经验分享', '', '4350819', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405382', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405382', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405382', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405382', '631007868');
+
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405383', '', '1', 'WMV', '', '', 'D7DB87614A8DA6DE9C33DC5901307461', '0.00', '', '1', '', '', '赵建军', '4', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '赵建军', NULL, '消融联合外科同期切除治疗结直肠癌肝转移的策略', '', '5850842', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405383', '510022');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405383', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405383', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405383', '631007868');
+
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405384', '', '1', 'WMV', '', '', 'C3211DB21931412C9C33DC5901307461', '0.00', '', '1', '', '', '左成果', '4', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '左成果', NULL, '新生血管性青光眼', '', '5850844', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405384', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405384', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405384', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405384', '631007868');
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405385', '', '1', 'WMV', '', '', '2D43EA7E587E2AF49C33DC5901307461', '0.00', '', '1', '', '', '李涛', '4', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '李涛', NULL, '选择性贲门周围血管离断术', '', '5850846', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405385', '510022');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405385', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405385', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405385', '631007868');
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405386', '', '1', 'WMV', '', '', '138FB27753F945C09C33DC5901307461', '0.00', '', '1', '', '', '陈松', '4', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '陈松', NULL, '严重增殖型糖尿病视网膜病变玻璃体视网膜手术策略', '', '150329', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405386', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405386', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405386', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405386', '631007868');
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405387', '', '1', 'WMV', '', '', '138FB27753F945C09C33DC5901307461', '0.00', '', '1', '', '', '杨本涛', '4', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '杨本涛', NULL, '眼部免疫相关炎性病变影像学分析思路', '', '5850850', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405387', '510069');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405387', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405387', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405387', '631007868');
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405388', '', '1', 'WMV', '', '', '31F9E0382C6EA9F89C33DC5901307461', '0.00', '', '1', '', '', '周军', '4', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '周军', NULL, '眼眶骨折的诊治', '', '5850852', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405388', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405388', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405388', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405388', '631007868');
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405389', '', '1', 'WMV', '', '', '9DC19DE4F51625209C33DC5901307461', '0.00', '', '1', '', '', '周丹', '4', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '周丹', NULL, '眼内异物的诊断和治疗', '', '5850854', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405389', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405389', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405389', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405389', '631007868');
+
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405390', '', '1', 'WMV', '', '', '1CFDAD9767B978FE9C33DC5901307461', '0.00', '', '1', '', '', '陈慧瑾', '4', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '陈慧瑾', NULL, '眼外伤的玻璃体手术', '', '5850855', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405390', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405390', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405390', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405390', '631007868');
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405391', '', '1', 'WMV', '', '', 'F7AE49AA65634A529C33DC5901307461', '0.00', '', '1', '', '', '石素胜', '4', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '石素胜', NULL, '胰腺神经内分泌肿瘤病理诊断及进展', '', '4350820', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405391', '510016');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405391', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405391', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405391', '631007868');
+
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405392', '', '1', 'WMV', '', '', '9E2B031B03861B6D9C33DC5901307461', '0.00', '', '1', '', '', '田彦杰', '4', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '田彦杰', NULL, '原发性眼附属器淋巴瘤', '', '5850856', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405392', '510042');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405392', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405392', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405392', '631007868');
+
+
+
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405393', '', '1', 'WMV', '', '', '92BA7137238CC33D9C33DC5901307461', '0.00', '', '1', '', '', '毕楠', '4', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '毕楠', NULL, '早期非小细胞肺癌的放射治疗', '', '5850857', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405393', '510078');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405393', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405393', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405393', '631007868');
+
+
+
+
+INSERT INTO `material_info` (`ID`, `CODE`, `TYPE`, `FORMAT`, `FILENAME`, `DURATION`, `SAVEPATH`, `FPS`, `RESOLUTION`, `NATIONAL_STATE`, `SUMMARY`, `OTHER_SOURCE`, `EXPERTNAME`, `STATE`, `UPLOAD_DATE`, `DELI_DATE`, `DELI_OPINION`, `DELI_MAN`, `COGNIZE`, `NAME`, `SURNAME`, `EXPERTID`, `CREATORID`, `material_catalog`, `categoryIds`) 
+VALUES ('5405394', '', '1', 'WMV', '', '', '202C508BDEB1583F9C33DC5901307461', '0.00', '', '1', '', '', '陈维', '4', '2018-08-01 18:37:06', '2018-08-01 18:37:06', '', '陈维', NULL, '左心耳封堵治疗房颤', '', '5850860', '20', NULL, NULL);
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405394', '510011');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405394', '510000003');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405394', '610010661');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5405394', '631007868');
+
+
+
+
+
+
+
+update material_info  set state=4 where state=2 and UPLOAD_DATE='2018-08-01 18:37:06'
+
+
+select * from material_info where  name =''  and UPLOAD_DATE='2018-08-01 18:37:06'
+
+update material_info set name='瞳孔检查与常见瞳孔异常' where SAVEPATH='B07C2769443F09BC9C33DC5901307461'
+
+
+select name  from material_info where SAVEPATH='9DA1BCB0208C7B4C9C33DC5901307461' 
+
+select * from material_info where id in (5405387)
+
+
+select * from expert_info where name='陈维'
+
+select * from  material_info where id=5405581;
+
+
+
+
+select * from MATERIAL_PROP_VAL   LIMIT 0,3
+select * from MATERIAL_PROP_VAL  where material_id=5405383;
+
+95BD020DCBF390F3

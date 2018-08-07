@@ -1,3 +1,17 @@
+#####
+
+
+show full PROCESSLIST;
+show  full PROCESSLIST;
+
+#允许最大连接
+show variables like '%connect%';
+
+##当前连接
+show global status like 'Max_used_connections';
+
+查看进程，在mysql命令行中删除
+################
 mysql允许外部访问本地数据库操作：重启服务会失效
 grant all privileges on *.* to 'root'@'%' identified by '12345678' with grant option;
 flush privileges;
@@ -20,3 +34,24 @@ mysql -uroot -p -h127.0.0.1 -P3306 -D cpd_test </root/data/201806120/data_cpd_te
 
 
 mysql -uroot -p -h10.1.27.240 -P3323 -D cpd_test </data/sql/sub_sys_prop_val.sql
+
+
+source /root/data/20180716/create_info.SQL
+mysql -uroot -p -h10.1.27.240 -P3323 -D cpd_test </root/data/20180716/data_cpd_test.sql
+mysql -utest1 -p -h10.1.27.240 -P3323 -D ncme_test </root/data/20180716/data_cpd_test.sql
+
+sed -i '/^\/\*/d' data_cpd_test.sql
+
+
+datasource.url=jdbc:mysql://10.1.27.240:3323/ncme_test
+datasource.username=test1
+datasource.password=123456
+
+datasource.url=jdbc:mysql://10.1.27.240:3323/cpd_test
+datasource.username=root
+datasource.password=1N%HQ#QX8VLD0roW
+
+
+mysqldump -uroot -p -h10.1.27.240  -P3323 --default-character-set=utf8 --single-transaction --no-create-db --skip-lock-tables --skip-add-locks --skip-disable-keys -t -c --hex-blob -B zcpd_test >/root/data/20180716/data_cpd_test.sql
+
+mysqldump -uroot -p -h10.1.27.240 -P3323 --default-character-set=utf8 --skip-lock-tables -d cpd_test >/data/mysql/mysqldata3306/mydata/20180801/DB.SQL

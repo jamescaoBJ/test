@@ -1,0 +1,376 @@
+最全的30+个开源免费的Docker工具
+
+容器生态系统的发展和扩展速度越来越快速，并且已经有了许多的Docker工具和服务，想要知道所有的有用选择，你会发现基本很难完成。
+
+无论您是初学者还是专家，开发人员或DevOps工程师，SRE或平台架构师，此列表都将成为你所了解的最受欢迎的Docker工具，以帮助你在开发流程的每个阶段充分利用Docker工具。
+
+Docker工具类别列表：
+● 编排和调度
+● 持续集成/持续部署（CI / CD）
+● 监控
+● 记录
+● 安全
+● 存储/卷管理
+● 联网
+● 服务发现
+● 构建
+● 管理
+
+
+编排和调度程序
+
+1、Kubernetes
+
+Kubernetes是市场上现有的最受欢迎的容器编排引擎。最初作为Google项目开始，许多团队使用它在生产中部署容器。谷歌每周使用Kubernetes运行数十亿个容器。
+
+Kubernetes 可以自动在一个容器集群中选择一个工作容器供使用。其核心概念是 Container Pod。
+
+链接：https ：//kubernetes.io
+
+
+2、Docker Swarm
+
+Swarm是一个Web应用程序开发框架，它允许程序分布在多台计算机，从某种程度上让程序对程序员完全透明。Swarm从版本1.12.0开始包含在Docker Engine中，具备诸如负载平衡，扩展和安全性等高级功能。
+
+Swarm延续了Docker注重简洁性和开发人员体验的优良特性。它可以说比开箱即用的Kubernetes更容易使用。
+
+链接：https ：//www.docker.com
+
+
+3、Mesosphere DC / OS
+
+Mesosphere 数据中心操作系统（DC / OS）是一个集成的开源平台，用于构建Apache Mesos分布式系统内核上的数据和容器。无论在云中或使用内部部署软件，它旨在将数据中心内的多台计算机视为一个或多个集群，DC / OS可轻松的部署和运行有状态和无状态的容器、大数据以及传统应用。
+
+链接：https：//dcos.io/
+
+
+4、Amazon ECS
+
+Amazon Web Services是对容器编排的答复，Amazon ECS是一种高度可扩展的管理服务，允许开发人员在EC2实例上运行容器化应用程序。它由多个内置组件组成，可以简单地调度和部署Docker集群，任务和服务。
+
+链接：https ：//aws.amazon.com/ecs/
+
+成本： Amazon ECS无需额外费用。仅为存储和运行应用程序所需的AWS资源（例如EC2实例或EBS卷）付费。
+
+
+5、 Azure容器服务（AKS）
+
+最近，从Azure更名为AKS，Azure的服务是一种开源管理服务，它提供了创建，配置和管理虚拟机齐群。AKS提供在 Microsoft Azure 上部署和管理基于容器的应用程序。使用 Azure 容器服务时，可利用 Azure 的企业级功能，并且仍可通过 Kubernetes 以及 Docker 映像格式保留应用程序的可移植性。
+
+链接：https：//azure.microsoft.com/en-us/services/container-service/
+
+成本：仅支付虚拟机以及使用的相关存储和网络资源。
+
+
+6、Cloud Foundry’s Diego
+
+Cloud Foundry使用其Diego架构来管理“garden”环境中的应用程序容器。Garden遵循Linux的Open Container Initiative容器指南，并通过Diego的其他组件进行抽象。Diego元素通过Cloud Controller提供应用程序调度和管理功能。
+
+链接：https：//docs.cloudfoundry.org/concepts/diego
+
+成本：免费
+
+
+7、Marathon
+
+Marathon是基于Apache Mesos构建的私有生产级平台即服务（PaaS）。Marathon框架承诺扩展Dockerized应用程序，并在必要时扩展到更多节点以增加可用资源池。它还可以充当容器编排工具，为容器化工作负载提供故障恢复。Marathon自动处理硬件或软件故障，并确保应用程序“始终开启”。
+
+链接：https：//mesosphere.github.io/marathon/
+
+成本：免费
+
+
+8、HashiCorp Nomad
+
+在Linux，Mac和Windows的支持下，Nomad是一个集群管理器和调度器，专为微服务和批量处理工作流设计。可以拓展到跨数据中心和区域的数千个节点。Nomad 支持在所有主流操作系统运行虚拟化，容器化或者是独立的应用，灵活的支持广泛的工作流负载。
+
+链接：https：//www.nomadproject.io/
+
+成本：免费
+
+
+9、Helios
+
+Helios最初是Spotify的内部工具，能够让数百个微服务在数千台服务器上有效工作。它能够大规模部署和管理容器，并且配备了基于HTTP的API以及命令行客户端。
+
+Helios只需要在工具运行的机器上使用ZooKeeper集群和JVM。
+
+链接：https：//github.com/spotify/helios
+
+成本：免费
+
+
+10、Rancher
+
+Rancher不仅仅是一个容器协调器，而是一个全方位的容器管理平台，用于在产品环境中运行Docker。RancherOS是一种基于容器的操作系统（OS），能够提供许多基础架构服务，例如全局和本地负载平衡，多主机网络和卷快照等。Rancher还集成了Docker Machine和Docker Swarm等原生Docker管理能力。
+
+链接：http：//rancher.com/
+
+成本：免费
+
+
+11、Nebula
+
+Nebula是一个为Docker编排创建的新开源项目，旨在管理大规模集群。该工具通过根据需要缩小每个项目组件来实现。目标是充当物联网设备的Docker协调器以及CDN或边缘计算等分布式服务。Nebula能够通过单个API调用同时更新全球数以万计的物联网设备。Nebula旨在帮助开发者和操作系统像分布式Dockerized应用程序一样处理物联网设备。
+
+链接：http：//nebula.readthedocs.io/en/latest/
+
+成本：免费
+
+
+持续集成/持续部署（CI / CD）
+
+12、Jenkins
+
+Jenkins是一个领先的CI工具，它使开发和运营团队能够持续、自动地构建/测试软件项目。Jenkins是一个基于Java的独立程序，开箱即用，提供数百个插件，旨在与堆栈中的其他工具集成。该工具使开发者能够快速配置构建，部署，然后快速拆除。
+
+成本：免费
+
+
+13、CircleCI
+
+CircleCI承诺帮助软件团队专注于为客户提供价值，而不是维护CI基础架构。CircleCI使CI过程更快捷，更简单，从而提高了IT团队的工作效率。它可以快速集成，并允许用户在注册后立即构建和部署。通过SSH手动调试，并在开始项目时同时动态缩放容器数量。
+
+链接：https：//circleci.com/
+
+费用：第一个容器是免费的；开源项目+3免费；额外的容器每月50美元（每个容器）
+
+
+14、Travis CI
+
+作为一个免费的开源CI项目，Travis CI通过自动构建和测试代码更改来提高开发过程的效率。而软件即服务（Saas）平台能够提供有关代码更改成功的即时反馈。Travis CI还能够通过管理部署和通知来自动化开发过程。
+
+链接：https：//travis-ci.org/
+
+成本：免费
+
+
+15、GitLab CI
+
+GitLab结合了CI，CD和代码审查来处理整个应用程序生命周期。它与Docker Engine上的GitLab runner同时使用，可实现自动化测试和应用程序构建。其他功能包括活动流，IDE，问题跟踪和存储库管理。GitLab CI还有一个内置的容器注册表来扫描和存储Docker存储库。
+
+链接：https：//about.gitlab.com/features/gitlab-ci-cd/
+
+成本：社区版：免费，无限制的用户
+企业版入门：3.25美元/用户/月
+企业版Premium：16.59美元/用户/月
+
+
+16、 Wercker
+
+Docker原生CI和CD自动化平台，旨在帮助软件开发人员构建和部署他们的应用程序和复杂的微服务架构。Wercker与Kubernetes本地集成，可自动完成部署工作流程，因此您可以专注于构建应用程序。
+
+链接：http：//www.wercker.com/
+
+费用：社区版：免费；虚拟专用管道：每月350美元起
+
+
+17、Prometheus
+
+Prometheus由SoundCloud开发，是一个开源的服务监控系统和警报工具包。它结合了监控的许多方面，例如度量生成和收集，可视化数据展示以及异常发生时的警报功能。Prometheus擅长记录数字时间序列，并提供各种客户端开发库
+
+链接：https：//prometheus.io/
+
+成本：免费
+
+
+18、Sysdig
+
+Sysdig开源是所有Sysdig产品的核心技术。开源工具旨在捕捉系统状态信息，提供单个系统的详细故障排除，提供命令行借口以及强大的交互界面。
+
+链接：https：//www.sysdig.org/
+
+成本：开源：免费
+基本：每月20美元
+Pro Cloud：每月30美元
+专业软件：变化
+
+
+19、 cAdvisor
+
+Google的cAdvisor（Container Advisor）是一种监控解决方案，可分析运行中Docker容器的所有性能特性和资源使用情况。该工具能够收集处理并导出容器指标，例如网络统计信息，资源参数以及资源使用情况的完整历史记录。
+
+链接：https：//github.com/google/cadvisor
+
+成本：免费
+
+
+记录
+
+20、 Logspout
+
+Logspout是一个很好的Docker工具，可以帮助管理在Docker容器中运行的程序生成的日志。它将容器应用程序日志发送到某个中央位置。Logspout还有一个可扩展的模块系统。
+
+链接：https：//github.com/gliderlabs/logspout
+
+成本：免费
+
+
+21、Fluentd
+
+Fluentd作为一个开源数据收集器 - 一个用于统一和记录所有其他容器日志的工具。有500多个插件，Fluentd连接到许多数据源和数据输出以收集事件; 这些被标记为在需要的地方路由它们。这种基于标记的路由可以清晰地表达复杂的路由。
+
+链接：https：//www.fluentd.org/
+
+成本：免费
+
+
+22、 Logstash
+
+作为Elastic Stack的一部分，Logstash与Beats，Elasticsearch和Kibana一起运行良好。它是一个应用程序日志，用于传输和处理你的日志，事件或其他数据。
+
+链接：https：//www.elastic.co/products/logstash
+
+成本：免费
+
+
+23. syslog-ng
+
+使用syslog-ng能够进行基于内容和优先权/facility的过滤，是一个值得信赖的日志管理基础架构，它将高性能功能与丰富的消息解析和重写完美结合在一起。
+
+链接：https：//syslog-ng.org/
+
+费用：免费（可根据要求提供syslog-ng Premium Edition的定价）
+
+
+安全
+
+24、Clair
+
+Clair是一个开源项目，旨在识别和分析Docker和appc应用程序容器中的漏洞。它提供一个能威胁容器漏洞的列表，定期提取新的容器漏洞数据，以识别容器映像中的威胁，包括上游的威胁。
+
+链接：https：//coreos.com/clair/docs/latest/
+
+成本：免费
+
+
+25、Docker Bench for Security
+
+Docker Bench for Security是一个预构建的打包容器，可以在任何Docker主机上运行。它是一组Bash shell脚本，应该以root用户身份运行。是一个用来检测 CIS Docker 1.6 Benchmark 所有自动化测试的脚本。
+
+链接：https：//hub.docker.com/r/docker/docker-bench-security/
+
+成本：免费
+
+
+26、 Docker Notary
+
+Notary是一个开源的Docker项目，它旨在保证数据集合的安全。用于运行和受新人的集合进行交互。对已发布的集合进行数字签名，并允许用户验证内容的完整性和来源。
+
+链接：https：//github.com/docker/notary
+
+成本：免费
+
+
+存储/卷管理
+
+27、convoy
+
+Rancher是一个开源项目，提供了在产品环境中对 Docker 容器进行全方位管理的平台。Convoy是一个开源的Docker卷驱动程序，可以在任何地方对Docker卷进行备份和恢复。在AWS上创建Docker卷，受Elastic Block Store的所有功能和性能支持。此外，获取现有EBS卷并使用它生成附加到Docker容器的卷。
+
+链接：https：//github.com/rancher/convoy
+
+成本：免费
+
+
+28、Portworx
+
+Portworx是一种用于持久，共享和复制卷的分散式存储解决方案; 它可以大规模自动化数据服务的部署和运营。
+
+链接：https：//portworx.com/
+
+成本：免费
+
+
+29、Blockbridge
+
+Blockbridge Volume Plugin为容器应用程序提供高性能存储，具有高级安全性，移动性，备份和还原功能。通过Docker 1.13+的“Managed Docker Plugin”，Docker本身可以完成安装和生命周期管理。
+
+链接：http：//www.blockbridge.com/
+
+成本：免费
+
+
+联网
+
+30、flannel
+
+flannel是专为Kubernetes设计的，它是一种通过在集群中的多个节点之间使用第3层IPv4网络来配置安全网络结构的简单方法。它不控制容器如何与主机平台联网，只控制如何在主机之间传输流量。
+
+链接：https：//coreos.com/flannel/docs/latest/
+
+成本：免费
+
+
+31、Calico项目
+
+作为一个高度可扩展的开源项目，Calico是纯三层的SDN实现，可以支持许多计算主机上的大量虚拟机群集。该工具的简化网络模型设计支持为每个工作负载配置细粒度连接策略，并允许集中管理SDN。
+
+链接：https：//www.projectcalico.org/getting-started/docker/
+
+成本：免费
+
+
+服务发现
+
+32、Consul
+
+Consul是一种易于使用，基于开放标准的服务发现方法，可在FreeBSD，Linux，Mac OS X，Solaris和Windows上运行。Consul具有多数据中心感知功能，可为多个区域提供支持，无需复杂配置。主要功能包括：服务发现，健康检查和键/值存储等。
+
+链接：https：//www.consul.io/
+
+成本：免费
+
+
+33、Etcd
+
+etcd由CoreOS创建，是一个高度可用的键值存储系统，专为共享配置和服务发现而设计。该工具提供了一种在一组机器上存储数据的可靠方法。它专为运行CoreOS的集群而构建，但etcd也适用于其他操作系统，包括BSD，Linux和OS X.
+
+链接：https：//coreos.com/etcd/
+
+成本：免费
+
+
+34、Factorish
+
+Factorish创建了一个简单易用的轻量级（<30mb）容器代理。该工具基于alpine / gliderlabs，nginx作为HTTP负载均衡器运行。
+
+链接：https：//hub.docker.com/r/factorish/proxy/
+
+成本：免费
+
+
+构建
+
+35、Packer
+
+Packer是一个Hashicorp工具，用于构建机器映像（包括Docker），并与Ansible，Chef和Puppet等配置管理工具集成。它是一个轻量级工具，可以从单一配置来源为多平台创建相同的机器映像。
+
+链接：https：//www.packer.io/docs/builders/docker.html
+
+成本：免费
+
+
+36、 Whales
+
+使用Whales自动将你的应用程序Dockerize。唯一需要的是在主机上安装并运行Docker。然后，Whales通过输出必要的文件来运行Docker的应用程序。
+
+成本：免费
+
+
+37、Gradle
+
+Gradle插件使所有构建脚本都可以与Docker守护程序进行通信。每个任务都委托给Docker客户端，然后通过HTTP连接到Docker的远程API。大多数配置参数是可选的。
+
+成本：免费
+
+
+管理
+
+38、Portainer
+
+Portainer是Docker环境的开源轻量级的管理UI。Portainer在Docker API之上工作，轻松管理不同的Docker环境。功能包括管理容器，图像，网络和卷的功能。
+
+链接：https：//portainer.io/
+
+成本：免费

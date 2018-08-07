@@ -1,0 +1,101 @@
+ 月份 GitHub 上最热门的 Java 项目排行已经出炉啦，在本月的名单中，也有新面孔出现，如谷歌最近新开源的一款容器镜像构建工具Jib，下面就是本月上榜的15个开源项目：
+
+
+1Java-Interview
+https://github.com/crossoverJie/Java-Interview Star 8244
+
+本项目多数是一些Java基础知识，底层原理，算法详解。也有上层应用设计，其中不乏一些大厂面试真题。
+
+
+2jib
+https://github.com/GoogleContainerTools/jib Star 3784
+
+
+
+jib是谷歌开源的一款快速而简单的容器镜像构建工具，能使容器技术和 Java 编程语言更加无缝地协同工作，使 Java 开发人员能更轻松地跨用例部署和控制 Java 应用程序。查阅更多项目详情可点击：《谷歌开源 Java 容器化工具，名字就叫——Jib》
+
+
+3data-transfer-project
+https://github.com/google/data-transfer-project Star 1902
+
+Data Transfer Project 旨在创建一个开源的服务到服务数据可移植平台，以便其网站用户和其他人可以轻松将数据从一个平台迁移到另一个平台。它提供了一个通用框架和生态系统，可接受服务提供商的贡献，以实现数据无缝传输到服务之间。
+
+
+4java-design-patterns
+https://github.com/iluwatar/java-design-patterns Star 36619
+
+Design patterns 是程序员在设计应用程序或系统时可用来解决常见问题的最佳实践手册。它可以帮助你加快开发进程，有效防止一些可能导致重大失误的细节问题，不过深入了解 java-design-patterns 之前，你应提前熟悉各种编程/软件设计原则。
+
+
+5spring-boot
+https://github.com/spring-projects/spring-boot Star 27233
+
+从最根本上来讲，Spring Boot 就是一些库的集合，它能够被任意项目的构建系统所使用。简便起见，该框架也提供了命令行界面，它可以用来运行和测试Boot应用。框架的发布版本，包括集成的CLI（命令行界面），可以在Spring仓库中手动下载和安装。
+
+具有如下特性：
+● 创建独立的Spring应用程序
+● 嵌入的Tomcat，无需部署WAR文件
+● 简化Maven配置
+● 自动配置Spring
+● 提供生产就绪型功能，如指标，健康检查和外部配置
+● 绝对没有代码生成和对XML没有要求配置
+
+
+6proxyee-down
+https://github.com/proxyee-down-org/proxyee-down Star 12210
+
+proxyee-down 是一个开源的下载神器，也可以说是百度云神器，不过，它需要安装证书、设置代理，初次使用会略显繁琐，但带来的速度提升也是显而易见的。
+
+
+7elasticsearch
+https://github.com/elastic/elasticsearch Star 33031
+
+Elasticsearch 是一个分布式的 RESTful 风格的搜索和数据分析引擎，能够解决越来越多的用例。作为 Elastic Stack 的核心，它集中存储您的数据，帮助您发现意料之中以及意料之外的情况。它还能让你以一个之前从未有过的速度和规模，去探索你的数据。 它被用作全文检索、结构化搜索、分析以及这三个功能的组合
+
+
+8vjtools
+https://github.com/vipshop/vjtools Star 3425
+
+唯品会Java开发手册，结合唯品会的内部经验，参考《阿里巴巴Java开发手册》《Clean Code》、《Effective Java》等重磅资料进行了大幅定制，包含核心基础类库VJKit ，问题排查工具VJMap 和 VJTop 三部分。
+
+
+9weixin-java-tools
+https://github.com/Wechat-Group/weixin-java-tools Star 8730
+
+全能微信Java开发工具包，支持包括微信支付、开放平台、小程序、企业号和公众号等的开发
+
+
+10incubator-dubbo
+https://github.com/apache/incubator-dubbo Star 20517
+
+Dubbo 是阿里巴巴公司开源的一个高性能优秀的服务框架，使得应用可通过高性能的 RPC 实现服务的输出和输入功能，可以和 Spring 框架无缝集成。
+
+
+11tutorials
+https://github.com/eugenp/tutorials  Star 7189
+
+该项目是一系列小而专注的教程，每个教程都涵盖一个明确的开发领域。大多数教程项目都专注于Spring Framework（和Spring Security）。
+
+
+12apollo
+https://github.com/ctripcorp/apollo Star 6821
+
+Apollo（阿波罗）是携程框架部门研发的分布式配置中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。
+
+
+13guava
+https://github.com/google/guava Star 25746
+
+Guava 中文是石榴的意思，该项目是 Google 的一个开源项目，包含许多 Google 核心的 Java 常用库。
+
+
+14nacos
+https://github.com/alibaba/nacos Star 810
+
+Nacos是一个易于使用的平台，旨在实现动态服务发现，配置和服务管理。它可以帮助开发者轻松构建云本机应用程序和微服务平台。
+
+
+15S-MVP
+https://github.com/UCodeUStory/S-MVP Star 1096
+
+优化版MVP，使用注解泛型简化代码编写，使用模块化协议方便维护，APT过程使用注解解析器利用JavaPoet完成重复模块的编写，利用ASpect+GradlePlugin 完成横向AOP编程，Javassist动态字节码注入+Tinker实现热修复+Retrofit，实现优雅网络操作，利用RxJava轻松玩转数据处理

@@ -1,4 +1,56 @@
+@曹彦格 上生产环境时，需要把学员管理数据库菜单修改一下。sql如下：
+update system_menu set url='/zx/system/systemUserStudent?userType=1' where name like '%学员信息管理%'
+项目审核：放射肿瘤学科看不到
+
+INSERT INTO `sub_sys_prop_val` (`ID`, `SYS_PROP_ID`, `PROP_VAL_ID`) VALUES ('700010926', '3', '700010926');
+
+
+#######
+支付：
+https://gitee.com/robertleepeak/fastpay
+####
+online :/phonenumber/password
+1234546Abc
+###############
+隨堂考試結果
+select * from log_exam_result where  LIMIT 0,20
+###############
+视频观看记录
+select * from log_study_cv_unit_video_census  where SYSTEM_USER_ID=5132724 and  CV_SET_ID=4200392 and CV_ID=4202266 and CV_UNIT_ID=4209081    limit 0,20;
+
+课程单元学习结果表
+select * from log_study_cv_unit where SYSTEM_USER_ID=5132724 and  LOG_STUDY_CV_SET_ID=4200392 and CV_ID=4202266 and CV_UNIT_ID=4209081  limit 0,20;
+##########################
+人工膝关节置换技术基础理论与实践进展   账号：18636369434
+密码：Linghuqin142724
+考试报error
+ select * from exam_paper_question where question_id = 4122087 and paper_id = 3900414;
+
+
+ select * from exam_paper_question where question_id = 4122088 and paper_id = 3900414;
+
+#####################
+线上删除的数据：
+INSERT INTO `exam_prop_val` (`ID`, `TYPE`, `NAME`, `CODE`, `C_TYPE`, `EXT_TYPE`, `IMG_TYPE`) VALUES ('610010803', '8', '记忆', 'RZ-01', '0', NULL, NULL);
+INSERT INTO `exam_prop_val` (`ID`, `TYPE`, `NAME`, `CODE`, `C_TYPE`, `EXT_TYPE`, `IMG_TYPE`) VALUES ('610010804', '8', '理解', 'RZ-02', '0', NULL, NULL);
+INSERT INTO `exam_prop_val` (`ID`, `TYPE`, `NAME`, `CODE`, `C_TYPE`, `EXT_TYPE`, `IMG_TYPE`) VALUES ('610010805', '8', '应用', 'RZ-03', '0', NULL, NULL);
+INSERT INTO `sub_sys_prop_val` (`ID`, `SYS_PROP_ID`, `PROP_VAL_ID`) VALUES ('631007866', '8', '610010803');
+INSERT INTO `sub_sys_prop_val` (`ID`, `SYS_PROP_ID`, `PROP_VAL_ID`) VALUES ('631007867', '8', '610010804');
+INSERT INTO `sub_sys_prop_val` (`ID`, `SYS_PROP_ID`, `PROP_VAL_ID`) VALUES ('631007868', '8', '610010805');
+
+
+INSERT INTO `ZCPD_TEST`.`exam_paper_question` (`ID`, `PAPER_ID`, `QUESTION_ID`, `QUESTION_SCORE`, `SEQ`) VALUES ('3903554', '3900414', '4122088', '10.0', '1');
+ 
+
+INSERT INTO `ZCPD_TEST`.`exam_paper_question` (`ID`, `PAPER_ID`, `QUESTION_ID`, `QUESTION_SCORE`, `SEQ`) VALUES ('3903553', '3900414', '4122087', '10.0', '0'); 
+################# 
+ 
  培训后台的数据统计和培训管理后台的学员管理这两个模块不上线
+ ####
+ 吴志芳：
+ wuzhifang
+ connie0822
+ ####
  
 update system_menu set state=0 where id=3900072;
  
@@ -125,7 +177,8 @@ java -jar springboot-0.0.1-SNAPSHOT.jar --spring.profiles.active=test --server.p
 ps -ef|grep -v grep|grep springboot-0.0.1-SNAPSHOT.jar|awk '{print $2}'|xargs kill -9
 
 nohup java -Xmx256m -Xms128m -Xmn128m -jar eureka-server-0.0.1-SNAPSHOT.jar >eurekaSserver.log 2>&1 &
-nohup java -Xmx256m -Xms128m -Xmn128m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
+nohup java -Xmx4096m -Xms1024m -Xmn1024m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
+nohup java -Xmx2048m -Xms1024m -Xms1024m -jar zuul-0.0.1-SNAPSHOT.jar --server.port=9091 > zuul9091.log 2>&1 &
 
 
 
@@ -133,12 +186,17 @@ nohup java -Xmx512m -Xms256m -Xmn128m -jar eureka-server-0.0.1-SNAPSHOT.jar >eur
 
 nohup java -Xmx1024m -Xms512m -Xmn128m -jar eureka-server-0.0.1-SNAPSHOT.jar >eurekaserver.log 2>&1 &
 
-nohup java -Xmx1024m -Xms512m -Xmn512m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
+nohup java -Xmx1024m -Xms1024m -Xmn1024m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
 
 
+nohup java -Xmx3076m -Xms1024m -Xmn1024m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
 
-nohup java -Xmx512m -Xms256m -Xmn256m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
+nohup java -Xmx4096m -Xms1024m -Xmn1024m -jar springboot-0.0.1-SNAPSHOT.jar  --envCong=145 >springboot9091.log  2>&1 &
 
+nohup java -Xmx4096m -Xms1024m -Xms1024m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
+
+
+nohup java -Xmx1024m -Xms512m -Xmn512m -jar zuul-0.0.1-SNAPSHOT.jar  >zuul.log 2>&1 &
 nohup java -Xmx2048m -Xms1024m -Xmn1024m -jar springboot-0.0.1-SNAPSHOT.jar  --envCong=pre150 >springboot9090.log  2>&1 &
 nohup java -Xmx2048m -Xms1024m -Xmn1024m -jar springboot-0.0.1-SNAPSHOT.jar  --envCong=pre150 --server.port=9096 >springboot9096.log  2>&1 &
 
@@ -166,9 +224,9 @@ DELETE FROM system_account WHERE ACCOUNT_id in(3327559,3327559);
 
 select * from system_account where account_name LIKE '%18813168732%';
 
-SELECT  * from system_timeliness where mobile_phone = 18813168732
+SELECT  * from system_timeliness where mobile_phone = 18813168732;
 
-delete from system_timeliness where mobile_phone = 18813168732
+delete from system_timeliness where mobile_phone = '18813168732';
 
 
 #########################
@@ -180,12 +238,18 @@ root
 Qq123456
 18701680748
 ##########################
- scp -r qiantai jxjy@10.1.27.105:/data/tomcat8/webapps/
+ scp -r qiantai.war jxjy@10.1.27.103:/data/tomcat8/webapps/
  
  
-  scp -r resource jxjy@10.1.27.105:/data/tomcat8/webapps/
-  scp -r resource jxjy@10.1.27.94:/data/tomcat8/webapps/
-  scp -r resource jxjy@10.1.27.103:/data/tomcat8/webapps/
+  scp -r resource.war jxjy@10.1.27.105:/data/tomcat8/webapps/
+  scp -r resource.war jxjy@10.1.27.94:/data/tomcat8/webapps/
+  scp -r resource.war jxjy@10.1.27.103:/data/tomcat8/webapps/
+  
+  
+   scp -r ncmeapp jxjy@10.1.27.105:/data/tomcat8/webapps/
+   
+   scp -r qiantai.war jxjy@10.1.27.105:/data/tomcat8/webapps/
+   scp -r qiantai.war jxjy@10.1.27.94:/data/tomcat8/webapps/
 ################
 内网服务器地址
 192.168.1.78
@@ -235,8 +299,34 @@ admin
 
 cf57a1eb8457427a945820cf31c493c6
 
+#######################
+CC视频官网登录入口：
+
+http://admin.bokecc.com/login.bo
+
+后台账号信息：
+
+生产  dianbo@ncme.org.cn  1qaz2wsx  078E396B1332FD8E  rxG7n4F8E61m92fRGKjIqNASqllNs4wK
+测试  dianbo2@ncme.org.cn  1qaz2wsx  DED171F2AE73F0CC  RygX6fozk92fDe4Cw1kFkc5WkceJcdUb
 
 ######################
+######
+weeho/jenkins
+
+jenkins.weeho.cn
+账号：admin
+密码：cf57a1eb8457427a945820cf31c493c6
+
+伟宏utils工具类
+部署地址
+123.56.233.125  域名：test.weeho.cn
+账号:wxl  wxl
+/usr/local/apache-tomcat-8.5.27/
+
+数据库：
+101.201.208.124
+mysql mysql
+######
 keepalive :https://www.cnblogs.com/MYue/p/7084072.html
 nginx 虚拟IP：     http://localhost:10001/caladd/add?a=6&b=16&accesstoken=1
 http://www.linuxidc.com/Linux/2015-08/122113.htm
@@ -469,3 +559,1591 @@ RESOURCE-910	素材审核-已审核列表，加载时间超过3秒（18秒）/18
 	RESOURCE-907	题库管理-审核试题页面，加载时间超过3秒（8秒）/8秒
 RESOURCE-906	题库管理-题库管理页面，加载时间超过3秒（7秒）/7秒
 STUDYWEB-1168	个人中心-账号管理页面，页面加载时间超过3秒（5秒）/4.5秒
+
+
+SELECT
+	e.*
+FROM
+	expert_group e
+RIGHT JOIN content_edition_ref c ON c.EXPERT_ID = e.ID
+WHERE
+	e.parent = 0
+#AND e.lockstate = 1
+#AND e.state = 1
+GROUP BY
+	e. NAME
+
+
+select * from  expert_group  where parent = 0 and state=1 and id not   in(select EXPERT_ID from content_edition_ref where EXPERT_ID is not null  )
+
+
+select * from  content_edition_ref where EXPERT_ID is   null
+
+select (max(ORDERNUM)+1) from content_edition_ref
+
+2700183
+
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`) 
+VALUES ('10', NULL,2700201, NULL, '1', null, '3300529', NULL);
+
+
+
+
+
+
+
+SELECT
+	e.*
+FROM
+	content_edition_ref c
+LEFT JOIN expert_info e ON e.ID = c.expert_info_id
+WHERE
+	e.lockstate = 1
+AND c.CHECK_STATE = 1
+
+
+select * from content_edition_ref  where CHECK_STATE = 1 and  expert_info_id not in(select id from expert_info where lockstate = 1)
+
+select * from content_edition_ref where EDITION_ID=9
+
+select count(1) from expert_info
+
+
+
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700202', NULL, '1', NULL,null, 110001, NULL);
+
+
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700202', NULL, '1', NULL,null, 110001, NULL);
+
+
+
+
+
+select DISTINCT u.REAL_NAME as realName,e.name as workUnit,e.HOSPITAL_ADDRESS as address,
+        a.account_name as accountName,u.MOBIL_PHONE as mobilPhone,
+        u.grassroot as grassroot,u.id as userId
+        from zx_special_apply za
+        inner join system_user u on za.user_id = u.id
+        left join system_account a on  u.id = a.user_id
+        left join exam_hospital e on u.work_unit_id = e.id
+
+
+where za.special_id =  2100622
+
+
+
+SELECT * FROM log_study_cv_set WHERE CV_SET_ID =5400416 and STAGE_ID=19;
+
+
+
+
+
+
+SELECT
+	t.*, v.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop_val v,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.id = v.prop_val_id
+AND p.id = v.sys_prop_id
+AND tt.prop_type = t.c_type
+AND t.type = 1
+AND t.c_type = 0
+AND t. NAME LIKE '%'
+ORDER BY
+	t. CODE
+
+
+
+
+
+SELECT
+	(
+		SELECT
+			count(1)
+		FROM
+			qm_user_image_prop
+		WHERE
+			PROP_ID = e.id
+	) AS hasProjectNum,
+	e.*, s.id AS prop_val_id
+FROM
+	exam_prop_val e
+LEFT JOIN sub_sys_prop_val s ON s.PROP_VAL_ID = e.ID
+LEFT JOIN prop_val_ref r ON s.ID = r.prop_val2
+LEFT JOIN sub_sys_prop_val ss ON ss.ID = r.PROP_VAL1
+LEFT JOIN exam_prop_val ee ON ee.id = ss.PROP_VAL_ID
+WHERE
+	#r.prop_val1 = 510015
+1=1
+AND ee. NAME LIKE '肾脏病学'
+AND e.ext_type = 1
+ORDER BY
+	e. CODE
+
+select * from cv_set_user_image where cv_set_id=4200450;
+
+
+select * from  qm_user_image_prop  where USERIMAGE_ID in(select USERIMAGE_ID from cv_set_user_image where cv_set_id=4200450)
+
+
+select * from exam_prop_val where id=510029
+select * from exam_prop_val  where name='肾脏病学'
+
+select * from qm_user_image_prop 
+
+
+ 
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700311', NULL, '1', NULL,null, 120031, NULL);
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700312', NULL, '1', NULL,null, 120032, NULL);
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700313', NULL, '1', NULL,null, 120033, NULL);
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700314', NULL, '1', NULL,null, 120034, NULL);
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700315', NULL, '1', NULL,null, 120035, NULL);
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700316', NULL, '1', NULL,null, 120036, NULL);
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700317', NULL, '1', NULL,null, 120037, NULL);
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700318', NULL, '1', NULL,null, 120038, NULL);
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700319', NULL, '1', NULL,null, 120039, NULL);
+INSERT INTO `content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700320', NULL, '1', NULL,null, 120040, NULL);
+
+
+
+ 
+    
+
+
+
+ 
+ 
+120021
+120022
+120023
+120024
+120026
+120027
+120028
+120029
+120030
+120031
+120032
+120033
+120034
+120035
+120036
+120037
+120038
+120039
+120040
+120041
+120042
+120043
+120044
+120045
+120046
+120047
+120048
+120049
+120050
+120051
+120052
+120053
+120054
+120055
+120056
+120057
+120058
+120059
+120060
+120061
+120062
+120063
+120064
+120065
+120066
+120067
+120068
+120069
+120070
+120071
+120072
+120073
+120074
+120075
+120076
+120077
+120078
+120079
+120080
+120081
+120082
+120083
+120084
+120085
+120086
+120087
+120088
+120089
+120090
+120091
+120092
+120093
+120094
+120095
+120096
+120097
+120098
+120099
+120100
+120101
+120102
+120103
+120104
+120105
+120106
+120107
+120108
+120109
+120110
+120111
+120112
+120113
+120114
+120115
+120116
+120117
+120118
+120119
+120120
+120121
+120122
+120123
+120124
+120125
+120126
+120127
+120128
+120129
+120130
+120132
+120133
+120134
+120135
+120136
+120137
+120138
+120139
+120140
+120141
+120142
+120143
+120144
+120145
+120146
+120147
+120148
+120149
+120150
+120151
+120152
+120153
+120154
+120155
+120156
+120157
+120158
+120159
+120160
+120161
+120162
+120163
+120164
+120165
+120166
+120167
+120168
+120169
+120170
+120171
+120172
+120173
+120174
+120175
+120176
+120177
+120178
+120179
+120180
+120181
+120182
+120183
+120184
+120187
+150001
+150002
+150003
+150004
+150005
+150007
+150008
+150009
+150011
+150012
+150013
+150014
+150015
+150016
+150017
+150018
+150019
+150020
+150021
+150022
+150023
+150024
+150025
+150026
+150027
+150028
+150029
+150030
+150031
+150032
+150033
+150035
+150036
+150037
+150038
+150039
+150040
+150041
+150042
+150043
+150044
+150045
+150046
+150047
+150050
+150051
+150052
+150053
+150054
+150055
+150056
+150057
+150058
+150059
+150060
+150061
+150062
+150063
+150064
+150065
+150066
+150067
+150068
+150069
+150070
+150071
+150072
+150073
+150074
+150075
+150076
+150077
+150078
+150079
+150081
+150082
+150083
+150084
+150085
+150086
+150087
+150088
+150089
+150090
+150091
+150092
+150093
+150094
+150095
+150096
+150097
+150098
+150099
+150100
+150101
+150102
+150103
+150104
+150105
+150106
+150107
+150108
+150109
+150110
+150111
+150112
+150113
+150114
+150115
+150116
+150117
+150118
+150119
+150120
+150121
+150122
+150123
+150124
+150125
+150126
+150127
+150128
+150129
+150130
+150131
+150132
+150133
+150134
+150135
+150136
+150137
+150138
+150139
+150140
+150141
+150142
+150144
+150145
+150146
+150147
+150148
+150149
+150150
+150151
+150152
+150159
+150163
+150165
+150167
+150168
+150169
+150170
+150171
+150172
+150173
+150174
+150175
+150178
+150179
+150180
+150181
+150182
+150183
+150184
+150185
+150186
+150187
+150188
+150189
+150190
+150191
+150192
+150193
+150194
+150195
+150196
+150197
+150198
+150199
+150200
+150201
+150202
+150204
+150205
+150206
+150207
+150208
+150209
+150210
+150211
+150212
+150213
+150214
+150215
+150216
+150217
+150218
+150219
+150220
+150221
+150223
+150224
+150225
+150226
+150227
+150228
+150229
+150230
+150231
+150232
+150233
+150234
+150235
+150236
+150237
+150238
+150239
+150240
+150241
+150242
+150244
+150246
+150247
+150248
+150249
+150250
+150251
+150252
+150253
+150254
+150255
+150256
+150257
+150258
+150259
+150260
+150261
+150262
+150263
+150264
+150265
+150266
+150269
+150270
+150271
+150272
+150273
+150274
+150275
+150276
+150277
+150278
+150279
+150280
+150281
+150282
+150283
+150284
+150285
+150286
+150287
+150288
+150289
+150290
+150291
+150292
+150294
+150295
+150296
+150298
+150299
+150300
+150301
+150302
+150303
+150304
+150306
+150307
+150308
+150309
+150310
+150311
+150312
+150313
+150314
+150315
+150316
+150317
+150318
+150319
+150320
+150321
+150323
+150324
+150325
+150326
+150327
+150328
+150329
+150330
+150331
+150332
+150333
+150334
+150335
+150336
+150337
+150338
+150339
+150340
+150341
+150342
+150343
+150344
+150345
+150346
+150347
+150348
+150349
+150350
+150351
+150352
+150354
+150356
+150357
+150359
+150360
+150361
+150362
+150365
+150366
+150367
+150368
+150369
+150370
+150371
+150372
+150373
+150374
+150375
+150376
+150377
+150378
+150379
+150380
+150383
+150384
+150388
+150389
+150390
+150392
+150393
+150394
+150395
+150396
+150397
+150398
+150399
+150401
+150402
+150403
+150404
+150405
+150406
+150407
+150408
+150409
+150410
+150411
+150412
+150413
+150414
+150415
+150416
+150417
+150418
+150419
+150420
+150421
+150422
+150423
+150424
+150425
+150426
+150427
+150428
+150429
+150430
+150431
+150432
+150433
+150434
+150435
+150436
+150437
+150438
+150439
+150440
+150441
+150442
+150443
+150444
+150445
+150446
+150447
+150448
+150449
+150450
+150451
+150452
+150453
+150454
+150455
+150456
+150457
+150458
+150459
+150460
+150461
+150462
+150463
+150464
+150465
+150466
+150467
+150468
+150469
+150470
+150471
+150472
+150473
+150474
+150475
+150476
+150477
+150478
+150479
+150480
+150481
+150482
+150483
+150484
+150485
+150486
+150487
+150488
+150489
+150490
+150491
+150492
+150493
+150495
+150496
+150497
+150498
+150499
+150500
+150501
+150502
+150503
+150504
+150505
+150506
+150507
+150508
+150509
+150510
+150511
+150512
+150513
+150514
+150515
+150516
+150517
+150518
+150519
+150520
+150521
+150522
+150523
+150524
+150525
+150526
+150528
+150534
+150535
+150536
+150537
+150538
+150539
+150540
+150541
+150542
+150543
+150544
+150545
+150546
+150547
+150548
+150549
+150550
+150551
+150552
+150553
+150554
+150555
+150556
+150557
+150558
+150559
+150560
+2550561
+2550563
+2550564
+2550565
+2550566
+2550567
+2550568
+2550569
+2550570
+2550571
+2550572
+2850573
+2850574
+2850575
+2850576
+2850577
+2850578
+2850579
+2850580
+2850581
+2850588
+2850589
+2850590
+2850591
+2850592
+2850593
+2850594
+2850595
+2850596
+2850597
+2850598
+2850599
+2850600
+2850601
+2850602
+2850603
+2850604
+2850605
+2850607
+2850608
+2850609
+2850610
+2850611
+2850612
+2850613
+2850614
+2850615
+2850616
+2850617
+2850619
+2850620
+2850621
+2850622
+2850623
+2850624
+2850625
+2850626
+2850627
+2850628
+2850629
+2850630
+2850631
+2850632
+2850634
+2850636
+2850637
+2850638
+2850639
+2850640
+2850641
+2850642
+2850643
+2850644
+2850645
+2850646
+2850647
+2850648
+2850650
+2850651
+2850653
+3150654
+3150655
+3150656
+3150657
+3150658
+3450659
+3450660
+3450661
+3750661
+3750662
+3750663
+3750664
+3750665
+3750666
+3750667
+3750668
+3750669
+3750670
+3750671
+3750672
+3750673
+3750674
+3750675
+3750676
+3750677
+3750678
+3750679
+3750680
+3750681
+3750682
+3750683
+3750684
+3750685
+3750686
+3750687
+3750688
+3750689
+3750690
+3750691
+3750692
+3750693
+3750694
+3750695
+3750696
+3750697
+3750698
+3750699
+3750700
+3750701
+3750702
+3750703
+3750704
+3750705
+3750706
+3750707
+3750708
+3750709
+3750710
+3750711
+3750712
+3750713
+3750714
+3750715
+3750716
+3750717
+3750718
+3750719
+3750720
+3750721
+3750722
+3750723
+3750724
+3750725
+3750726
+3750727
+3750728
+3750729
+3750730
+3750731
+3750732
+3750733
+3750734
+3750735
+3750736
+3750737
+3750738
+3750739
+3750740
+3750741
+3750742
+3750743
+3750744
+3750745
+3750746
+3750747
+3750748
+3750749
+3750750
+4350751
+4350752
+4350753
+4350754
+4350755
+4350756
+4350757
+4350758
+4350759
+4350760
+4350761
+4350762
+4350763
+4350764
+4350765
+4350766
+4350767
+4350768
+4350769
+4350770
+4350771
+4350772
+4350773
+4350774
+4350775
+4350776
+4350777
+4350778
+4350779
+4350780
+4350781
+4350782
+4350783
+4350784
+4350785
+4350786
+4350787
+4350788
+4350789
+4350790
+4350791
+4350792
+4350793
+4350794
+4350795
+4350796
+4350797
+4350798
+4350799
+4350800
+4350801
+4350802
+4350803
+4350804
+4350805
+4350806
+4350807
+4350808
+4350809
+4350810
+4350811
+4350812
+4350813
+4350814
+4350815
+4350816
+4350817
+4350818
+4350819
+4350820
+4350821
+4350822
+4350823
+4350824
+4350825
+4350826
+4350827
+4350828
+4350829
+4350830
+4350831
+4350832
+4350833
+4350834
+4350835
+4350836
+4350837
+4350838
+4350839
+4350840
+4350841
+4650795
+4650796
+4650797
+4650798
+4650799
+4650800
+4650801
+4650802
+4650803
+4650804
+4650805
+4650806
+4650807
+4650808
+4650809
+4650810
+4650811
+4650812
+4650813
+4650814
+4650815
+4650816
+4650817
+4650818
+4650819
+4650820
+4650821
+4650822
+4650823
+4650824
+4650825
+4650826
+4650827
+4650828
+4650829
+4650830
+4650831
+4650832
+4650833
+4650835
+4650836
+4650837
+4650838
+4650839
+4950795
+4950796
+5250795
+5250796
+5250797
+5250798
+5250799
+5250800
+5250801
+5250802
+5250803
+5250804
+5250806
+5250807
+5250808
+5250809
+5250810
+5250811
+5250812
+5250813
+5250814
+
+
+123456Zcpd
+
+
+
+项目，课程，素材，项目包
+
+select * from cv_set where name like '%远程直播变点播%';
+
+select * from cv where name like '%全国直播测试6-26%';
+
+select * from material_info where FILENAME='推荐的筛查方法' LIMIT 0,20;
+
+select * from zx_special where name like '%河南中医药大学第一附属医院传染病学基地%' LIMIT 0,20;
+
+
+
+############
+
+
+select  count(1) from  case_case;
+select count(1)  FROM case_course_diagnosis;
+select count(1)  FROM case_course_discuss;
+select count(1)  FROM case_course_disease;
+select COUNT(1) from case_patient;
+select COUNT(1) from case_patient_diagnosis;
+
+
+select COUNT(1) from case_patient_prop_val;
+
+
+select count(1) from content_edition;
+
+set aaa=10000
+
+
+
+
+通过项目找到课程：
+select * from CV_SET_SCHEDULE where CV_SET_ID=4200367;
+select * from CV_SCHEDULE where SCHEDULE_ID=4207262;
+通过课程查找单元
+select * from cv_ref_unit where CV_ID=4202110;
+
+
+
+select * from CV_SCHEDULE where CV_ID=4202462;
+ 
+
+select * from CV_SET_SCHEDULE where    cv_SCHEDULE_ID  in (4207584);
+
+
+select  * from cv_set where id=4200551;
+
+select * from CV_SET_SCHEDULE where CV_SET_ID=4202462
+
+
+
+
+
+
+删除课程
+select * from group_class_info where class_parent_id=5400465;
+select * from cv_unit_ref_quality where UNIT_ID=5400465;
+select * from cv_unit where id=5400465;
+select * from cv_ref_unit where cv_id=5400465;
+select * from cv_set_schedule where  CV_SCHEDULE_ID in (select SCHEDULE_ID from cv_schedule where CV_ID = 5400465);
+select * from cv_schedule where cv_id=5400465;
+select * from cv_ref_quality where cv_id=5400465;
+select * from cv where id=5400465;
+
+删除项目 
+select * from CV_SET_SCHEDULE where CV_SET_ID=128;
+SELECT *  FROM cv_set_authorization_region WHERE AUTHORIZATION_ID=1;
+SELECT * FROM  cv_set_authorization_cv_schedule WHERE AUTHORIZATION_ID=299;
+select *  from cv_set_authorization_system_site where AUTHORIZATION_ID=299;
+select * from cv_set_authorization where CV_SET_ID=128;
+select * from cv_set_expert where CV_SET_ID=128;
+select * from cv_set_favorites  where CV_SET_ID=128;
+select * from cv_set_knowledgebase  where CV_SET_ID=128;
+select * from cv_set_org where CV_ID=5400465;
+select * from cv_set_refereebook where CV_SET_ID=128;
+select * from cv_set_referencelately  where CV_SET_ID=128;
+select * FROM cv_set_ref_quality WHERE CV_SET_ID=128;
+SELECT * FROM cv_set_schedule_faceteach WHERE  cv_set_id=128;
+SELECT * FROM cv_set_score WHERE  cv_set_id=128;
+SELECT * FROM cv_set_score_log  WHERE CV_SET_ID=128;
+select * from cv_set_system_site WHERE CV_SET_ID=128;
+select *  from cv_set_unit_discuss  where CV_SET_ID=128;
+select *  from cv_set_unit_note  where CV_SET_ID=128;
+select * from cv_set_user_image where CV_SET_ID=128;
+select  * from cv_set where id=5400465;
+
+素材
+select * from material_prop_val where MATERIAL_ID=2703583;
+select * from material_source_val  where MATERIAL_ID=2703583;
+select * from material_info where id=2703583;
+
+
+项目包
+SELECT * from zx_special_apply where special_id=2100622;
+select * from zx_special_authorization_region where special_id=2100622;
+select * from zx_special_ref_phase where special_id=2100622;
+select * from zx_base_ref_special  where zx_special_id=2100622;
+select * from zx_special where id=2100622
+
+select  * from cv_set where name='常见病的推拿手法'
+
+
+
+select * from cv_set_authorization where CV_SET_ID=5100404;
+
+
+
+ 
+delete  from system_message where MESSAGE_CONTENT = '您好！满满慢慢木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木' limit 0,300000
+ 
+ 
+select id from system_message where MESSAGE_CONTENT = '您好！满满慢慢木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木' limit 0,300000
+
+
+select count(1) from system_message where id>=12040792;
+
+14260022
+
+select * from system_message where id>=12040792 and MESSAGE_CONTENT !='您好！满满慢慢木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木木'
+
+delete   from system_message where  id>=11686890 and id<=12040791
+
+
+select  count(1)  from content_sentence
+
+select * from system_account where user_id=3323933
+
+select * from system_user where  mobil_phone like '%15036178048%';
+ 
+
+select * from system_site
+
+
+select * from  system_account where user_id=20
+
+
+select  * from cv_set_org  where ORG_ID=4500227;
+
+select * from peixun_org where id=4500227;
+delete from cv_set_org where ORG_ID=210;
+delete   from peixun_org where id=210;
+
+scp -r resource.war jxjy@10.1.27.103:/data/tomcat8/webapps/
+
+
+
+scp -r qiantai.war jxjy@10.1.27.103:/data/tomcat8/webapps/
+
+
+
+
+SELECT
+	count(1)
+FROM
+	peixun_org p
+LEFT JOIN system_account s ON p.user_id = s.user_id
+LEFT JOIN exam_hospital h ON p.hospital_id = h.id
+WHERE
+	p.id > 0
+
+
+
+
+SELECT
+	p.*,p.hospital_id , s.account_id,
+	s.account_name,
+	s.account_password,
+	s.account_remark,
+	s.account_status 
+	#,h. NAME AS hospital_name
+FROM
+	peixun_org p
+LEFT JOIN system_account s ON p.user_id = s.user_id
+#LEFT JOIN exam_hospital h ON p.hospital_id = h.id
+WHERE
+	p.id > 0
+ORDER BY
+	id DESC
+LIMIT 0,
+ 20
+
+
+select  * from system_menu where name='面授项目统计'
+
+
+
+select * from expert_group  where id in(367,368,369)；
+
+SELECT * from system_card where card_number in(18010000112,18010000071,18010000052,18010000009,17010272747,17010272737,17010271891);
+
+select * from system_card_order
+
+
+delete from system_card where card_number in(18010000112,18010000071,18010000052,18010000009,17010272747,17010272737,17010271891);
+
+
+
+
+select  count(1) from  case_case;
+select count(1)  FROM case_course_diagnosis;
+select count(1)  FROM case_course_discuss;
+select count(1)  FROM case_course_disease;
+select COUNT(1) from case_patient;
+select COUNT(1) from case_patient_diagnosis;
+select COUNT(1) from case_patient_prop_val;
+select count(1) from content_edition;
+
+
+
+select * from cv_set
+
+
+
+
+select  * from cv_set_org  where ORG_ID=210;
+
+select * from peixun_org where id=210;
+
+
+select tbl_ref.* from content_edition as tbl_edition  
+										LEFT JOIN content_edition_ref as tbl_ref ON tbl_ref.EDITION_ID = tbl_edition.id 
+										left join expert_group e on e.id=tbl_ref.expert_id 
+										where tbl_ref.CHECK_STATE=1 and tbl_ref.EDITION_ID=10 and e.state = 1
+
+
+367,368,369
+
+ SELECT
+	ID,
+	CARD_START_INT,
+	CARD_END_INT,
+	CARD_SUM,
+	CREATE_DATE,
+	DESCRIPTION
+FROM
+	system_card_create_record r
+ORDER BY
+	id DESC;
+
+SELECT id from system_card where CARD_TYPE=22
+
+delete  from system_card where   CARD_TYPE in(29,900030,900031,900032,900033,900034)
+
+
+delete  from  system_paycard_credit  where CARD_TYPE_id in(29,900030,900031,900032,900033,900034)
+delete  from system_paycard_organ where CARD_TYPE_id in(29,900030,900031,900032,900033,900034)
+select * from system_card_type
+
+select * from system_menu where name='hhhh';
+
+select * from system_role_menu where MENU_ID= 3900073
+
+delete  from system_card_user where CARD_ID in(SELECT id from system_card where CARD_TYPE in(29,900030,900031,900032,900033,900034))
+
+
+delete  from system_card_create_record where CARD_START_INT in(18010000112,18010000071,18010000052,18010000009,17010272747,17010272737,17010271891)
+
+
+骨外科学，没有审核素材
+
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5105385', '510028');
+INSERT INTO `material_prop_val` (`MATERIAL_ID`, `PROP_ID`) VALUES ('5105384', '510028');
+
+
+
+
+
+
+select * from cv where name not  in('测试课程图片','测试课程','测试面授1','测试面授课程001','点播','面授','直播测试课程001','测试临床','直播','zhibo','面授1','测试面授1',
+'大大大','热尔无若','zhizhi','直播包','测试','111','测试0705直播','测试直播0705','测试直播回放','测试回放','测试点播','段友请您留步',
+'测试直播PC','测试面授1','点播008','面授008','建个课程看看网速中不中','生成点播测试','两个直播','两个直播2','点播测试','点播测试1','学');
+
+
+
+
+
+
+select * from cv where CREATE_DATE>='2018-07-04' ORDER BY  id  DESC;
+
+
+
+
+select * from cv_set where CREATE_DATE>='2018-07-04'
+
+select * from cv_set where name not  in('测试面授项目001','特然','测试临床项目001','测试远程1','包含直播的测试项目','点播','面授','测试面授医学脑科','测试直播PC','测试面授医学精神科','测试面授医学内科'
+'zhizhizhi','0705远程','面授哈哈1','测试直播','测试0705直播','测试直播0705','测试直播回放','测试回放','测试点播','段友请您留步','测试直播','测试临床医学外科','点播008','面授008','临床008','测试直播学习卡',
+'测试临床','测试0704面授','测试0704临床','直播','zhiboa','面授流程01','面授流程02','远程有学分','直播生成点播','测试0705','测试0705临床',
+'两个直播点播测试','面授','点播测试','点播','临床','点播测试1','测试推荐项目','推荐项目测试0705','嗡嗡嗡','测试数据0706','面授项目','临床项目',
+'test0708','zhizhizhi','直播测试','直播点播测试','测试','1111111444','奥233','胡的测试','测的是','项目','ceshi0711',
+'0720-002','test-0720001','2323','warewe','123','魏汝稳','任务3','23423423','直播0704','1111','121212121','ceshi','aa','21323213','ceshi 1'
+);
+
+ 
+select * from zx_special where name not  in( '测试远程面授临床专项001','测试培训','点播加面授','临床','测试数据0704','zhiboa','0705远程测试','看证书','测试项目包心脏手术手术'
+,'面授点播临床','临面点','测试0705','项目包看证书','测试项目包','报名登录页面','项目包流程通宵');
+
+
+SELECT
+	t.*, cast(t. CODE AS signed) AS codenum,
+	v.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop_val v,
+	prop_val_ref r,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.id = v.prop_val_id
+AND v.id = r.prop_val2
+AND p.id = v.sys_prop_id
+AND tt.prop_type = t.c_type
+AND r.prop_val1 = 700010926
+AND t. NAME LIKE '%'
+ORDER BY
+	t.id DESC
+LIMIT 0,
+20 
+
+
+SELECT
+	count(1)
+FROM
+	exam_prop_val t,
+	sub_sys_prop_val v,
+	prop_val_ref r,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.id = v.prop_val_id
+AND v.id = r.prop_val2
+AND p.id = v.sys_prop_id
+AND tt.prop_type = t.c_type
+AND r.prop_val1 = 700010926
+AND t. NAME LIKE '%'
+
+
+select * from exam_prop_val where id=700010926；
+
+SELECT DISTINCT
+	t.id,
+	t.question_label_id,
+	t.parent_id,
+	t.content,
+	t.state,
+	t.grade,
+	t.differ,
+	t.analyse,
+	t.source,
+	t.seq,
+	DATE_FORMAT(
+		t.create_date,
+		'%Y-%m-%d %H:%i:%S'
+	) AS create_date,
+	t.author,
+	t.checker,
+	DATE_FORMAT(
+		t.online_date,
+		'%Y-%m-%d %H:%i:%S'
+	) AS online_date,
+	t.surname,
+	t.opinion
+FROM
+	exam_question t,
+	exam_question_type t1,
+	exam_sys_quest_type_quest t2
+WHERE
+	t.id = t2.question_id
+AND t1.id = t2.sub_type_id
+AND t.parent_id = 0
+AND t2.state = 1
+AND t.state = 2
+
+AND EXISTS (
+	SELECT
+		1
+	FROM
+		exam_question_type tx
+	WHERE
+		tx.id = t2.sub_type_id
+	AND tx.ID IN (1)
+)
+AND (
+	t.id IN (
+		SELECT
+			question_id
+		FROM
+			EXAM_QUESTION_UNIT
+		WHERE
+			prop_val_id IN (700037637)
+	)
+)
+ORDER BY
+	t.QUESTION_LABEL_ID ASC
+LIMIT 0,
+ 20
+
+700010926
+
+
+select * from cv_set_authorization where id=152;
+
+select *  from EXAM_QUESTION_UNIT where question_id=5334043  LIMIT 0,20
+
+update  EXAM_QUESTION_UNIT set PROP_VAL_ID=700010926 where question_id=5334043 ;
+
+update  EXAM_QUESTION_UNIT set PROP_VAL_ID=700037637 where question_id=5334043 ;
+
+700010926
+700037637==》 700010926
+

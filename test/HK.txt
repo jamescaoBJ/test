@@ -1,0 +1,369 @@
+SELECT
+	t.*, v.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop_val v,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.id = v.prop_val_id
+AND p.id = v.sys_prop_id
+AND tt.prop_type = t.c_type
+AND t.type = 20;
+
+
+
+select * from exam_prop_val where id=700010961;
+select * from sub_sys_prop_val where prop_val_id=111000001;
+
+select 
+select * from sub_sys_prop_val where prop_val_id=111000001;
+
+INSERT INTO `sub_sys_prop_val` (`SYS_PROP_ID`, `PROP_VAL_ID`) VALUES ('20', '700010961');
+
+
+
+SELECT
+	t.*, v.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop_val v,
+	prop_val_ref r,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.id = v.prop_val_id
+AND v.id = r.prop_val2
+AND p.id = v.sys_prop_id
+AND tt.prop_type = t.c_type
+AND r.prop_val1 = 700037671
+AND t.ext_type = 1
+ORDER BY
+	t. CODE
+
+
+select * from  exam_prop_val  where id in(700010988,
+700010989,
+700010990)
+ 
+select * from  exam_prop_val where name='香港' and c_type=3;
+
+select * from  exam_prop_val where name='北京市' ;
+
+
+select * from  exam_prop_val  where id in(700010939,
+700010961,
+700010962)
+
+700037672
+
+
+
+
+
+
+
+
+
+
+
+SELECT
+	t.*, v.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop_val v,
+	prop_val_ref r,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.id = v.prop_val_id
+AND v.id = r.prop_val2
+AND p.id = v.sys_prop_id
+AND tt.prop_type = t.c_type
+AND r.prop_val1 = 700010962
+ 
+
+select   * from prop_val_ref where prop_val1 = 700037672
+
+select * from prop_val_ref where prop_val1 = 111000001;
+
+SELECT * from sub_sys_prop_val where id=111000032;
+
+select * from exam_prop_val where id=111000032;
+
+
+
+select   * from prop_val_ref where prop_val1 = 700037672;
+
+select * from prop_val_ref where prop_val1 = 111000001;
+
+###香港
+INSERT INTO prop_val_ref(`PROP_VAL1`, `PROP_VAL2`) VALUES ('700037672', '700010961');
+INSERT INTO `sub_sys_prop_val` (`ID`, `SYS_PROP_ID`, `PROP_VAL_ID`) VALUES ('700010961', '20', '700010961');
+#### 澳门
+
+INSERT INTO prop_val_ref(`PROP_VAL1`, `PROP_VAL2`) VALUES ('700037673', '700010962');
+INSERT INTO `sub_sys_prop_val` (`ID`, `SYS_PROP_ID`, `PROP_VAL_ID`) VALUES ('700010962', '20', '700010962');
+
+
+###台湾省
+
+INSERT INTO prop_val_ref(`PROP_VAL1`, `PROP_VAL2`) VALUES ('700010939', '700010939');
+INSERT INTO `sub_sys_prop_val` (`ID`, `SYS_PROP_ID`, `PROP_VAL_ID`) VALUES ('700010939', '20', '700010939');
+
+
+SELECT * from sub_sys_prop_val where id=111000032;
+
+
+
+select * from exam_prop_val where name='香港'---700010961
+
+
+
+select * from  exam_prop_val  where id in(700010939,
+700010961,
+700010962)
+
+
+
+
+select * from  exam_prop_val  where id in(700637690,
+700637691,
+700637692,
+700637693,
+700637694,
+700637695,
+700637696,
+700637697,
+700637698)
+
+
+update exam_prop_val set C_TYPE=1 where id in(700637690,
+700637691,
+700637692,
+700637693,
+700637694,
+700637695,
+700637696,
+700637697,
+700637698);
+
+
+
+update exam_prop_val set C_TYPE=1  where id in(700010988,
+700010989,
+700010990)
+
+update exam_prop_val set C_TYPE=1  where id in(700637675)
+
+
+ 
+INSERT INTO `sub_sys_prop_val` (`ID`, `SYS_PROP_ID`, `PROP_VAL_ID`) VALUES ('700010961', '20', '701837732');
+
+update exam_prop_val set EXT_TYPE=1 where id (700637675,700637676);
+ 
+
+SELECT
+	t.*, v.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop_val v,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.id = v.prop_val_id
+AND p.id = v.sys_prop_id
+AND tt.prop_type = t.c_type
+AND t.type = 20;
+
+
+select * from sub_sys_prop_val where id in(700010939,700010961,700037672,700037650,700037673);
+
+select * from exam_prop_val where id in(700010939,700037650);
+
+select * from prop_val_ref where prop_val2 in(700010939,700037650);
+
+update prop_val_ref set PROP_VAL1=700010939 where PROP_VAL2=700010939
+
+select * from exam_prop_val where id=700010939
+
+select * from sub_sys_prop_val where id in(700010962,700037673)
+
+delete  FROM sub_sys_prop_val  where id=700037650;
+
+
+
+
+SELECT
+	t.*, v.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop_val v,
+	prop_val_ref r,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.id = v.prop_val_id
+AND v.id = r.prop_val2
+AND p.id = v.sys_prop_id
+AND tt.prop_type = t.c_type
+AND r.prop_val1 = 700037671
+AND t.ext_type = 1
+
+
+SELECT
+	t.*, v.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop_val v,
+	prop_val_ref r,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.id = v.prop_val_id
+AND v.id = r.prop_val2
+AND p.id = v.sys_prop_id
+AND tt.prop_type = t.c_type
+AND r.prop_val1 = 700010939
+AND t. NAME LIKE '%'
+AND t.ext_type = 1;
+
+
+SELECT
+	t.*, v.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop_val v,
+	prop_val_ref r,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.id = v.prop_val_id
+AND v.id = r.prop_val2
+AND p.id = v.sys_prop_id
+AND tt.prop_type = t.c_type
+AND r.prop_val1 = 111000001
+AND t.ext_type = 1;
+
+SELECT
+	t.*, v.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop_val v,
+	prop_val_ref r,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.id = v.prop_val_id
+AND v.id = r.prop_val2
+AND p.id = v.sys_prop_id
+AND tt.prop_type = t.c_type
+AND r.prop_val1 = 700037672
+AND t.ext_type = 1;
+
+
+select * from exam_prop_val where name='香港';
+
+select * from exam_prop_val where id=701837732
+
+select max(id)+1 from exam_prop_val 
+INSERT INTO exam_prop_val (`ID`, `TYPE`, `NAME`, `CODE`, `C_TYPE`, `EXT_TYPE`, `IMG_TYPE`) VALUES ('701837732', '21', '北京市', '1', '3', '1', NULL);
+
+
+select * from exam_prop_val where name='北京市';
+
+
+SELECT
+	t.*, v.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop_val v,
+	prop_val_ref r,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.id = v.prop_val_id
+AND v.id = r.prop_val2
+AND p.id = v.sys_prop_id
+AND tt.prop_type = t.c_type
+AND r.prop_val1 = 700010939
+AND t.ext_type = 1;
+
+
+
+select * from prop_val_ref where prop_val1=700010939;
+
+delete  from prop_val_ref where PROP_VAL2=700010939
+
+
+
+
+select * from prop_val_ref where prop_val1 = 111000001;
+
+select  * from  sub_sys_prop_val where id=111000032;
+
+INSERT INTO `sub_sys_prop_val` (`ID`, `SYS_PROP_ID`, `PROP_VAL_ID`) VALUES ('700010961', '20', '701837732');
+
+select * from exam_prop_val where id=111000032
+
+700010961
+ 
+
+select * from prop_val_ref where prop_val1 = 700010939;
+
+select  * from  sub_sys_prop_val where id=700637690;
+
+INSERT INTO sub_sys_prop_val (`PROP_VAL1`, `PROP_VAL2`) VALUES ('111000001', '111000032');
+
+
+select * from exam_prop_val where id in(700637675,111000032,700637690)
+
+select * from prop_val_ref where prop_val1 = 700037672;
+
+select  * from  sub_sys_prop_val where id=700010961;
+
+701837732
+
+
+
+INSERT INTO `sub_sys_prop_val` (`ID`, `SYS_PROP_ID`, `PROP_VAL_ID`) VALUES ('700010961', '20', '701837732');
+
+update exam_prop_val set EXT_TYPE=1 where id (700637675,700637676);
+
+update exam_prop_val set EXT_TYPE=1 where id in (
+700637690,
+700637691,
+700637692,
+700637693,
+700637694,
+700637695,
+700637696,
+700637697,
+700637698,
+700010939)
+
+select * from exam_prop_val where name='澳门';
+
+select * from exam_prop_val where name='台湾省';
+
+select * from exam_prop_val where name like '%台北%';
+
+select * from exam_prop_val where name='香港';

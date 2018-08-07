@@ -13,7 +13,7 @@ source 分别执行就好
 ###########
 
 
-1.mysql -uroot -p -h127.0.0.1 -P3323 -D cpd_test
+1.mysql -uroot -p -h10.1.27.240 -P3323 -D cpd_test
 2.source /root/data/drop.sql
 3.show tables;判断表是否删除干净
 4.source /root/data/20180620/create_info0502.sql
@@ -44,10 +44,37 @@ source 分别执行就好
 7.mysql -utest1 -p -h127.0.0.1 -P3323 -D ncme_test </root/data/20180625/data_cpd_test.sql
 
 ########################
+1.mysql -utest1 -p -h10.1.27.240 -P3323 -D ncme_test
+2.source /root/data/drop.sql;
+3.show tables;判断表是否删除干净
+4.source /root/data/20180625/create_info0502.sql
+5.show tables;判断表是否全
+6.exit;
+7.mysql -utest1 -p -h127.0.0.1 -P3323 -D ncme_test </root/data/20180625/data_cpd_test.sql
+
+#######################
+mysql -utest1 -p -h127.0.0.1 -P3323 -D ncme_test </root/data/20180625/data_cpd_test.sql
+###
 
   drop table content_sentence_type;     
   drop table zx_certificate;           
   drop table zx_examine_import_result;
+  
+source /root/data/20180716/create_info.SQL
+mysql -uroot -p -h10.1.27.240 -P3323 -D cpd_test </root/data/20180716/data_cpd_test.sql
+mysql -utest1 -p -h10.1.27.240 -P3323 -D ncme_test </root/data/20180716/data_cpd_test.sql
+
+sed -i '/^\/\*/d' data_cpd_test.sql
+
+
+datasource.url=jdbc:mysql://10.1.27.240:3323/ncme_test
+datasource.username=test1
+datasource.password=123456
+
+datasource.url=jdbc:mysql://10.1.27.240:3323/cpd_test
+datasource.username=root
+datasource.password=1N%HQ#QX8VLD0roW
+  
   
   
   scp -r ncmeapp jxjy@10.1.27.105:/data/preEnv/preTomcat/webapps
@@ -67,3 +94,13 @@ source 分别执行就好
 export JAVA_HOME=/data/jdk1.8.0_102
 export CLASSPATH=$JAVA_HOME/lib:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 export PATH=$PATH:$JAVA_HOME/bin
+
+mysqldump -uzroot -p -h10.1.27.252  -P3323 --default-character-set=utf8 --single-transaction --no-create-db --skip-lock-tables --skip-add-locks --skip-disable-keys -t -c --hex-blob -B zcpd_test >/root/data/20180716/data_cpd_test.sql
+
+mysqldump -uroot -p -h10.1.27.240 -P3323 --skip-lock-tables CPD_TEST >/data/mysql/mysqldata3306/mydata/20180801/DB.SQL
+
+命令行导出
+##表结构
+mysqldump -uzroot -p -h10.1.27.252 -P3323 --default-character-set=utf8 --skip-lock-tables --skip-add-locks --skip-disable-keys  --hex-blob --no-create-db  --set-gtid-purged=off --skip-opt --single-transaction --create-options --skip-set-charset -d zcpd_test >/data/mysql/mysqldata3306/mydata/20180801/DB.SQL
+##表数据
+mysqldump -uzroot -p -h10.1.27.252  -P3323 --default-character-set=utf8 --single-transaction -t -c --hex-blob -B zcpd_test >/root/data/20180716/data_cpd_test.sql

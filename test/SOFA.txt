@@ -1,0 +1,63 @@
+SOFA项目地址：https://github.com/alipay
+https://mp.weixin.qq.com/s/YXF2-GvK1gV0YYhzrWgKaA
+
+蚂蚁金服黑科技 SOFA 中间件开源，打造蚂蚁金融生态
+
+开源最前线  7月4日
+开源最前线（ID：OpenSourceTop） 猿妹 整编
+综合自：GitHub、蚂蚁金服等
+
+前不久，SOFA 中间件宣布正式开源。
+
+SOFA ( Scalable Open Financial Architecture )是蚂蚁金服自主研发的金融级分布式中间件，数据、消息、微服务是蚂蚁金服自主研发的金融级分布式中间件SOFA (Scalable Open Financial Architecture)的三大方向。
+
+
+
+SOFA包含了构建金融级云原生架构所需的各个组件，包括微服务研发框架，RPC 框架，服务注册中心，分布式定时任务，限流/熔断框架，动态配置推送，分布式链路追踪，Metrics监控度量，分布式高可用消息队列，分布式事务框架，分布式数据库代理层等组件，是一套分布式架构的完整的解决方案，也是在金融场景里锤炼出来的最佳实践。
+
+
+
+
+SOFA 开源生态
+
+SOFABoot
+
+目前 SOFA 已经开源了 SOFABoot，它是 SOFA 基于 Spring Boot 提供的一个研发框架，它在 Spring Boot 的基础上，提供了诸如 Readiness Check，类隔离，日志空间隔离等等能力。在增强了 Spring Boot 的同时，SOFABoot 提供了让用户可以在 Spring Boot 中非常方便地使用 SOFA 中间件的能力。
+
+SOFABoot 的编译环境的要求为 JDK7 或者 JDK8，需要采用 Apache Maven 3.2.5 或者更高的版本进行编译。
+
+
+SOFARPC 
+
+SOFARPC 是一个高可扩展性、高性能、生产级的 Java RPC 框架。在蚂蚁金服 SOFARPC 已经经历了十多年及五代版本的发展。SOFARPC 致力于简化应用之间的 RPC 调用，为应用提供方便透明、稳定高效的点对点远程服务调用方案。
+
+为了用户和开发者方便的进行功能扩展，SOFARPC 提供了丰富的模型抽象和可扩展接口，包括过滤器、路由、负载均衡等等。同时围绕 SOFARPC 框架及其周边组件提供丰富的微服务治理方案。SOFARPC 编译需要 JDK 7 及以上、Maven 3.2.5 及以上，运行需求 JDK 6 及以上。
+
+
+SOFABolt
+
+
+SOFABolt 是蚂蚁金融服务集团开发的一套基于 Netty 实现的网络通信框架。 这些年蚂蚁金服在微服务与消息中间件在网络通信上解决过很多问题，积累了很多经验，并持续的进行着优化和完善，并尽力把总结出的解决方案沉淀到 SOFABolt 这个基础组件里。
+
+目前该产品已经运用在了蚂蚁中间件的微服务 (SOFARPC)、消息中心、分布式事务、分布式开关、以及配置中心等众多产品上。
+
+
+SOFALookout
+
+SOFALookout 是一个利用多维度的 metrics 对目标系统进行度量和监控的项目。SOFALookout 的多维度 metrics 参考Metrics2.0 标准。SOFALookout 项目分为客户端部分与服务器端部分。
+
+客户端是一个 Java 的类库，可以将它植入您的应用代码中采集 metrics 信息，客户端更多详情。
+
+服务端代码部分，将于下一版本提供。通过 SOFALookout 的服务，可以对 metrics 数据进行收集、加工、存储和查询等处理，另外结合 grafana，可做数据可视化展示。
+
+
+SOFATracer
+
+SOFATracer 是一个用于分布式系统调用跟踪的组件，通过统一的 traceId 将调用链路中的各种网络调用情况以日志的方式记录下来，以达到透视化网络调用的目的。这些日志可用于故障的快速发现，服务治理等。
+
+接下去，蚂蚁金服还会陆续开源 SOFAMesh，SOFA 体系下的 Service Mesh 解决方案；SOFA JarsLink 2.0，SOFA 的动态模块的方案；SOFAActs，SOFA 的测试框架。
+
+
+SOFA 应用领域
+
+目前天弘基金，信美互信，南京银行，PayTM、DANA 钱包等等公司、机构都在使用 SOFA 来构建他们的分布式架构，这些公司、机构都是国内外非常大型的一些机构，并且全部都是金融领域的一些公司，这也充分说明了金融行业对于 SOFA 的肯定。

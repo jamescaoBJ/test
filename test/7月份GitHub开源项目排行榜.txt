@@ -1,0 +1,84 @@
+本篇文章为大家盘点了7月份最热门的GitHub 项目，一起来看看你都知道哪些，或者有哪些你已经在使用的了。
+
+
+1system-design-primer
+https://github.com/donnemartin/system-design-primer Star 38191
+
+该项目是关于如何设计大型系统，以及如何应对系统设计面试。系统设计是一个很宽泛的话题。在互联网上，关于系统设计原则的资源也是多如牛毛。这个仓库就是这些资源的组织收集，它可以帮助你学习如何构建可扩展的系统。
+
+在很多科技公司中，除了代码面试，系统设计也是技术面试过程中的一个必要环节。实践常见的系统设计面试题并且把你的答案和例子的解答进行对照：讨论，代码和图表。
+
+
+2cheat.sh
+https://github.com/chubin/cheat.sh Star 11309
+
+
+
+cheat.sh 是一个网站，更是一个实用的速查工具。cheat.sh 具有以下这些功能特性：
+● 简洁的 curl/browser 界面
+● 涵盖 55 种编程语言，一些 DBMSes 和 1000 多个最重要的 UNIX/Linux 命令
+● 无需安装，随处可用
+● 超快，通常在 100 毫秒内即可返回答案
+● 可以直接在代码编辑器中使用，无需打开浏览器
+● ……
+
+
+3InterviewMap
+https://github.com/InterviewMap/InterviewMap Star 6237
+
+
+
+最佳的面试地图。目前的内容包括JS，网络，浏览器相关，性能优化，安全性，框架，Git，数据结构，算法等。该图谱涉及的知识点有基础，有深入，也有源码解析，该图谱不仅能让你的面试如虎添翼，更能在平时学习中查漏补缺。
+
+
+4ndb
+https://github.com/GoogleChromeLabs/ndb Star 6048
+
+ndb是针对Node.js的改进调试体验，由Chrome DevTools维护，兼容性方面，ndb要求Node> = 8.0.0。Node> = 10时效果最佳。
+
+
+5termtosvg
+https://github.com/nbedos/termtosvg Star 6046
+
+termtosvg是一个用Python编写的Linux终端记录器，它能够将命令行会话呈现为独立的SVG动画。
+
+
+6javascript-algorithms
+https://github.com/trekhleb/javascript-algorithms Star 30666
+
+本仓库包含了多种基于 JavaScript 的算法与数据结构。每种算法和数据结构都有自己的 README 并提供相关说明以及进一步阅读和 YouTube 视频。
+
+
+7open-source-mac-os-apps
+https://github.com/serhii-londar/open-source-mac-os-apps Star 12654
+
+
+
+macOS开源应用程序列表，包含许多本机和跨平台应用程序，旨在找到免费的macOS开源应用程序，涵盖音频、浏览器、数据库、JSON解析等模块
+
+
+8browsh
+https://github.com/browsh-org/browsh Star 8890
+
+
+
+一个完全交互，实时，现代的基于文本的浏览器，呈现给TTY和浏览器，Browsh的不同之处在于它由真正的浏览器（即无头Firefox）支持，以创建纯文本版本的网页和Web应用程序。Browsh还可以使用MoSH进一步降低带宽并提高连接的稳定性。
+
+
+9Front-End-Performance-Checklist
+https://github.com/thedaviddias/Front-End-Performance-Checklist Star 5169
+
+一个前端性能检查表，该检查表分成，高中低三个优先检查等级，可用于测试或监控网站或应用程序的性能和优化测试、网站速度测试和网站分析等。
+
+
+10mkcert
+https://github.com/FiloSottile/mkcert Star 7360
+
+mkcert是一个用于制作本地可信开发证书的简单工具。它不需要配置。
+
+
+11Interview-Notebook
+https://github.com/CyC2018/Interview-Notebook 
+Star 30028
+
+中山大学郑永川构建的一个准备秋招的项目，该项目包含了九大模块，从算法到操作系统、网络、面向对象以及数据库、Java、分布式、工具、编码实践。点击查阅更多项目详情：《这是个将近3万人点赞，涉及9大模块，专为程序员准备的面试宝典》

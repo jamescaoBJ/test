@@ -1,0 +1,90 @@
+对于容器安全性，你会发现许多开源工具可以帮助你避免遭遇安全问题，但也不可小瞧了去，你还是需要知道哪些开源工具更实用，本文我们将介绍十个实用的Docker安全工具
+
+
+1. Docker Bench for Security
+
+Docker Bench for Security是一个脚本，用于检查有关在生产中部署Docker容器的许多常见最佳解决方案。Docker Bench的测试基于行业标准  CIS基准测试，帮助实现手动漏洞测试的繁琐过程自动化。你可以按如下方式启动容器：
+
+docker run -it --net host --pid host --userns host --cap-add audit_control \ -e DOCKER_CONTENT_TRUST=$DOCKER_CONTENT_TRUST \ -v /var/lib:/var/lib \ -v /var/run/docker.sock:/var/run/docker.sock \ -v /usr/lib/systemd:/usr/lib/systemd \ -v /etc:/etc --label docker_bench_security \ docker/docker-bench-security
+
+你也可以从Docker主机运行此实用程序，通过Docker Compose克隆它，或直接运行它。不过它有一个缺点就是缺乏机器可读性，如  Docker Bench Test，drydock和Actuary，都是在改进Docker Bench的基础上创建的。（项目地址：https://github.com/docker/docker-bench-security）
+
+
+2. Clair
+
+API驱动的静态容器安全性分析，具有庞大的CVE数据库
+
+Clair 是一个容器漏洞分析服务。它提供一个能威胁容器漏洞的列表，并且在有新的容器漏洞发布出来后会发送通知给用户。Clair引入了许多漏洞数据源，例如Debian Security Bug Tracker，Ubuntu CVE Tracker和  Red Hat Security Data。由于Clair拥有如此多的CVE数据库，因此其测试非常全面（项目地址：https://coreos.com/clair/docs/latest/）
+
+
+3. Cilium
+
+Cilium就是保护网络连接。主要是面向容器而使用，用于提供并透明地保护应用程序工作负载（如应用程序容器或进程）之间的网络连接和负载均衡。Cilium与Linux容器平台（如Docker和Kubernetes）兼容，增加了安全可见性和逻辑控制。它由BPF  （以前称为Berkeley数据包过滤器）提供支持，这是一种Linux内核技术。（项目地址：https://github.com/cilium/cilium）
+
+以下是如何使用本地更改部署Cilium：
+
+$ kubectl create -f ./cilium.yaml clusterrole "cilium" created serviceaccount "cilium" created clusterrolebinding "cilium" created configmap "cilium-config" created secret "cilium-etcd-secrets" created daemonset "cilium" created $ kubectl get ds --namespace kube-system NAME DESIRED CURRENT READY NODE-SELECTOR AGE cilium 1 1 1 <none> 2m
+
+
+4. Anchore
+
+一种使用CVE数据和用户定义的策略检查容器安全性的工具
+
+Anchore Engine是一种用于分析容器图像的工具。除了基于CVE的安全漏洞报告之外，Anchore Engine还可以使用自定义策略评估Docker镜像。
+
+Anchore打包为Docker容器映像，可以独立运行，也可以在Kubernetes等业务流程平台上运行。它还有用于CI / CD的Jenkins和GitLab集成。Anchore输出漏洞详细信息，威胁级别，CVE标识符和其他相关信息的列表。由于用户定义的规则是使用  Anchore Cloud Service  图形用户界面（GUI）创建的，因此它的运行方式与SaaS类似。（项目地址：https://github.com/anchore/anchore-engine）
+
+
+5. OpenSCAP Workbench
+
+用于为各种平台创建和维护安全策略的环境
+
+OpenSCAP是IT管理员和安全审核员的生态系统，包含许多开放式安全基准指南和开源工具。由于OpenSCAP比此列表中的其他工具更广泛，因此对于希望为整个平台创建安全策略的团队而言，它是一个不错的选择。（项目地址：https://www.open-scap.org/）
+
+
+6. Dagda
+
+用于在Docker容器中扫描漏洞，特洛伊木马，病毒和恶意软件的工具
+
+Dagda是另一种用于容器安全性静态分析的工具。其CVE源包括OWASP依赖性检查，Red Hat Oval和攻击性安全漏洞利用数据库。要使用Dagda扫描Docker容器，首先要使用漏洞数据填充Mongo数据库。执行此命令以分析单个Docker镜像：
+
+python3 dagda.py check --docker_image jboss/wildfly
+
+你可以远程运行它，或者不断调用它来监视活动的Docker容器。输出显示漏洞数，严重性级别和其他详细信息以帮助修复。Dagda的好处之一是广泛覆盖漏洞数据。这意味着可以直接访问大量更新的综合漏洞利用集合。（项目地址：https://github.com/eliasgranderubio/dagda）
+
+
+7. Notary
+
+Notary 包括服务器和客户端，用于运行和与受信任的集合进行交互。Notary 的目标是使互联网更加安全，方便人们发布和验证内容。我们经常依靠 TLS 来保护与内部存在缺陷的 Web 服务器的通信，因为服务器的任何妥协都可以使恶意内容替代合法内容。
+
+使用 Notary，发布商可以使用高度安全的密钥离线签名内容。一旦发布商准备提供内容，他们可以将其签名的受信任的集合推送到公证服务器。（项目地址：http://github.com/theupdateframework/notary）
+
+
+8. Grafaes
+
+用于帮助管理内部安全策略的元数据API
+
+该容器安全工具于2017年底发布，由IBM和Google开发。开发人员可以使用Grafaes（称为“组件元数据API ”）  来定义虚拟机和容器的元数据。IBM的Vulnerability Advisor也集成到项目中。Grafaes是开源的，而且但它由大型软件提供商维护 - 这对长期支持是有益的。（项目地址：http://grafeas.io/）
+
+
+9. Sysdig Falco
+
+Sysdig Falco是一个开源的应用行为活动监测器，可以用来检测你的应用程序中的异常活动。并且Falcos可以连续监测应用、主机、网络传输中的任意一个节点的数据流，Falcos也支持一组可定制的规则。
+
+Sysdig Falco可以检测任何行为，包括使Linux系统调用。由于sysdig核心解码和状态跟踪功能，Sysdig Falco可以通过具体的系统调用，使其触发报警。（项目地址：https://github.com/draios/falco/）
+
+
+10. Banyanops Collector
+
+Docker容器映像的静态分析框架
+
+在Banyanops的支持下，Collector是一个开源实用程序，可用于“窥视”Docker容器图像文件。使用Collector，开发人员可以收集容器数据，实施安全策略等。（项目地址：https://www.banyanops.com/）
+
+
+其他开源工具选择
+
+Dockscan：具有少量提交的安全漏洞扫描程序
+
+Batten：类似于Docker Bench的安全工具包，但具有非活动支持
+
+InSpec：InSpec是一款人类和机器可读语言的基础设施开源测试框架

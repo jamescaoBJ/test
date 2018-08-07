@@ -103,3 +103,66 @@ SELECT csar.*,
 
 		ccc.cv_set_id,
 		ccc.id
+###############
+名师
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700202', NULL, '1', NULL, NULL, '110002', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700204', NULL, '1', NULL, NULL, '120011', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700205', NULL, '1', NULL, NULL, '150086', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700206', NULL, '1', NULL, NULL, '150047', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700207', NULL, '1', NULL, NULL, '120021', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700208', NULL, '1', NULL, NULL, '120022', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700209', NULL, '1', NULL, NULL, '120023', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700210', NULL, '1', NULL, NULL, '120034', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700211', NULL, '1', NULL, NULL, '120038', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700212', NULL, '1', NULL, NULL, '120040', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700213', NULL, '1', NULL, NULL, '150038', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700214', NULL, '1', NULL, NULL, '120050', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700215', NULL, '1', NULL, NULL, '120051', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700216', NULL, '1', NULL, NULL, '150496', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700217', NULL, '1', NULL, NULL, '120055', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700218', NULL, '1', NULL, NULL, '120056', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700219', NULL, '1', NULL, NULL, '120057', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700220', NULL, '1', NULL, NULL, '120060', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700221', NULL, '1', NULL, NULL, '120067', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700222', NULL, '1', NULL, NULL, '150119', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700223', NULL, '1', NULL, NULL, '150183', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700224', NULL, '1', NULL, NULL, '110052', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700225', NULL, '1', NULL, NULL, '3750661', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700226', NULL, '1', NULL, NULL, '120075', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700227', NULL, '1', NULL, NULL, '120078', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700228', NULL, '1', NULL, NULL, '150002', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700229', NULL, '1', NULL, NULL, '120091', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700230', NULL, '1', NULL, NULL, '120094', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700231', NULL, '1', NULL, NULL, '120095', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700232', NULL, '1', NULL, NULL, '4350768', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700233', NULL, '1', NULL, NULL, '150333', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700234', NULL, '1', NULL, NULL, '120100', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700235', NULL, '1', NULL, NULL, '150380', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700237', NULL, '1', NULL, NULL, '120120', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700238', NULL, '1', NULL, NULL, '120128', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700240', NULL, '1', NULL, NULL, '110044', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700241', NULL, '1', NULL, NULL, '120170', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700242', NULL, '1', NULL, NULL, '120171', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700243', NULL, '1', NULL, NULL, '120175', NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('9', NULL, '2700244', NULL, '1', NULL, NULL, '110047', NULL);
+		
+		
+###专委会新增数据
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('10', NULL, '2400312', NULL, '1', NULL, '506', NULL, NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('10', NULL, '2400313', NULL, '1', NULL, '360', NULL, NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('10', NULL, '2400314', NULL, '1', NULL, '362', NULL, NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('10', NULL, '2400315', NULL, '1', NULL, '452', NULL, NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('10', NULL, '2700182', NULL, '1', NULL, '356', NULL, NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('10', NULL, '2700183', NULL, '1', NULL, '358', NULL, NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('10', NULL, '2700184', NULL, '1', NULL, '359', NULL, NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('10', NULL, '2700185', NULL, '1', NULL, '361', NULL, NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('10', NULL, '2700186', NULL, '1', NULL, '363', NULL, NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('10', NULL, '2700187', NULL, '1', NULL, '364', NULL, NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('10', NULL, '2700191', NULL, '1', NULL, '459', NULL, NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('10', NULL, '2700192', NULL, '1', NULL, '474', NULL, NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('10', NULL, '2700193', NULL, '1', NULL, '485', NULL, NULL);
+INSERT INTO `ZCPD_TEST`.`content_edition_ref` (`EDITION_ID`, `REF_ID`, `ORDERNUM`, `CV_ID`, `CHECK_STATE`, `sort`, `EXPERT_ID`, `expert_info_id`, `special_id`) VALUES ('10', NULL, '2700194', NULL, '1', NULL, '492', NULL, NULL);
+		
+		
+		
+		

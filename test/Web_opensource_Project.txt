@@ -1,0 +1,81 @@
+7 月份最受 Web 开发者欢迎的开源项目排行已经出炉啦，在本月的名单中，项目的平均Star为1528，话不多说，一起来看看都有哪些项目：
+
+
+1Browsh v1.0
+https://github.com/browsh-org/browsh Star 8014
+
+
+
+Browsh 是一个基于文本的现代浏览器。它能渲染现代浏览器所能渲染的任何东西：HTML5、CSS3、JS、视频甚至 WebGL。
+
+
+2Carbon-now-cli
+https://github.com/mixn/carbon-now-cli Star 2293
+
+
+
+carbon.now.cli是一个很棒的工具，可以让你通过优秀的用户界面生成美丽的源代码图像，让你自定义字体，主题，窗口控件等方面。
+
+
+3Bit v13.0
+https://github.com/teambit/bit Star 3533
+
+
+
+Bit与Git和NPM配合使用，可以轻松地在项目之间共享和同步代码。
+
+
+4Pickr
+https://github.com/Simonwep/pickr  Star1011
+
+
+
+一个简便的颜色选择器，支持Node.js，占用内存很小只有8KB，没有jQuery。
+
+
+5Custom-elements-everywhere
+https://github.com/webcomponents/custom-elements-everywhere Star 313
+
+
+
+自定义元素+框架互操作性测试。由webcomponents.org提供
+
+
+6Comlink-loader
+https://github.com/GoogleChromeLabs/comlink-loader Star 281
+
+
+
+Webpack加载器使用Comlink无缝地将模块卸载到Worker线程，支持任意的对象，类和函数。
+
+
+7Statcode
+https://github.com/shobrook/statcode Star 239
+
+
+
+一个源码统计器,让你对你程序里的注释,代码所占比例一目了然，statcode适用于MacOS，Linux和Windows
+
+
+8Vscode-lit-html
+https://github.com/mjbvz/vscode-lit-html Star 132
+
+
+
+Vscode-lit-html可以在lit-html和其他框架中使用IntelliSense和语言支持需要VS Code 1.20+。当您使用VS Code的内置版本的TypeScript时，它可以开箱即用。
+
+
+9Fonticon
+https://github.com/devgg/FontIcon Star 70
+
+
+
+用于从Font Awesome图标创建favicon和图像的工具。生成的图标可以在浏览器中实时预览。
+
+
+10Broadcast-channel
+https://github.com/pubkey/broadcast-channel Star 64
+
+
+
+BroadcastChannel 是 W3C 规范中的一部分，其中依赖的 MessageEvent 对象也是。适用于新旧浏览器，，WebWorkers和NodeJs 
