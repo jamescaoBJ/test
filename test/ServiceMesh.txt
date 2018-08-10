@@ -1,0 +1,2 @@
+https://mp.weixin.qq.com/s/g9btv0Dw4S3ZqZjbPXh1eg
+目前流行的 Service Mesh 开源软件有 Linkerd、Envoy 和 Istio，而最近 Buoyant（开源 Linkerd 的公司）又发布了基于 Kubernetes 的 Service Mesh 开源项目 Conduit。

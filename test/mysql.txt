@@ -26,7 +26,7 @@ mysql -uroot -proot
 
 
 
-mysql -uroot -p -h127.0.0.1 -P3306 -D cpd_test </root/data/201806120/data_cpd_test0620.sql 
+mysql -uroot -p -h127.0.0.1 -P3306 -D zcpd_test </root/data/201806120/data_cpd_test0620.sql 
 
 
 

@@ -1,3 +1,47 @@
+#####
+grep 关键字  文件名字
+如： grep 后台管理系统  catalina.out
+#####
+项目学完了，课程当然也写完了。但是课程被删除，项目没有申请学分按钮
+SELECT * FROM cv_schedule WHERE SCHEDULE_ID IN ( SELECT CV_SCHEDULE_ID FROM cv_set_schedule WHERE CV_SET_ID = 3000294 );
+SELECT * FROM log_study_cv t WHERE t.STATE = 2 AND t.CV_SET_ID = 3000294 AND t.SYSTEM_USER_ID = 5432613;
+ 
+#####
+git创建新分支
+从dev创建  git checkout  -b online0808
+git push origin online0808
+
+###############
+ The current branch online0808 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin online0808
+
+ git push --set-upstream origin online0808
+
+
+
+#####
+VPN地址：
+125.208.29.50
+####
+登录sql
+
+SELECT ACCOUNT_NAME AS USERNAME,ACCOUNT_PASSWORD AS PASSWORD,ACCOUNT_STATUS AS ENABLED FROM SYSTEM_ACCOUNT WHERE ACCOUNT_NAME ='lilin5400' and ACCOUNT_STATUS = 1;
+
+
+SELECT
+	u.ACCOUNT_NAME AS USERNAME,
+	r.ROLE_NAME AS AUTHORITY
+FROM
+	SYSTEM_ACCOUNT u
+LEFT JOIN SYSTEM_ACCOUNT_ROLE p ON p.ACCOUNT_ID = u.ACCOUNT_ID
+JOIN SYSTEM_ROLE r ON r.ROLE_ID = p.ROLE_ID
+WHERE
+	u.ACCOUNT_NAME ='lilin5400' 
+AND u.ACCOUNT_STATUS = 1
+AND (r.`STATUS` = 1 OR r.`STATUS` = 0)
+####
 @曹彦格 上生产环境时，需要把学员管理数据库菜单修改一下。sql如下：
 update system_menu set url='/zx/system/systemUserStudent?userType=1' where name like '%学员信息管理%'
 项目审核：放射肿瘤学科看不到
@@ -39,6 +83,7 @@ INSERT INTO `sub_sys_prop_val` (`ID`, `SYS_PROP_ID`, `PROP_VAL_ID`) VALUES ('631
 INSERT INTO `sub_sys_prop_val` (`ID`, `SYS_PROP_ID`, `PROP_VAL_ID`) VALUES ('631007868', '8', '610010805');
 
 
+INSERT INTO `ZCPD_TEST`.`sub_sys_prop_val` (`ID`, `SYS_PROP_ID`, `PROP_VAL_ID`) VALUES ('700037637', '3', '700010926');
 INSERT INTO `ZCPD_TEST`.`exam_paper_question` (`ID`, `PAPER_ID`, `QUESTION_ID`, `QUESTION_SCORE`, `SEQ`) VALUES ('3903554', '3900414', '4122088', '10.0', '1');
  
 
@@ -264,6 +309,10 @@ D:\workspace
 passphrase:caoyg
 
 ######################
+10.1.27.94  	jxjy	LC7mTBv6b5SX%yVa	 （生产）环境/data/tomcat8;8核16G 
+10.1.27.105	jxjy	k5a*r%$7KB5hcPVc	（生产）环境/data/tomcat8;
+10.1.27.103	jxjy	mplcF*o@p%ZYiYSV	（生产）环境/data/tomcat8;
+######################
  cp -r /data/admin /data/devTomcat8/webapps/
  cp -r /data/resource  /data/devTomcat8/webapps/
  cp -r /data/qiantai /data/devTomcat8/webapps/
@@ -346,6 +395,8 @@ http://blog.csdn.net/hguisu/article/details/51072683
 二期开发环境dev.ncme.org.cn：10.1.27.106   jxjy   OYG4cwP8p4JQGc!d   data/devTomcat8 8090 dev开发服务器
 二期的数据库暂时用  10.1.27.106:3306/ncme_v2 账号：root 密码：root
 
+################
+10.1.27.95   jxjy  SxjQgvp$dyO^vN34
 ################
 url=jdbc:mysql://10.1.27.240:3323/cpd_test?useUnicode=true&amp;characterEncoding=utf-8
 username=root

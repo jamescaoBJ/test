@@ -22,7 +22,7 @@ source 分别执行就好
 7.mysql -uroot -p -h127.0.0.1 -P3323 -D cpd_test </root/data/20180620/data_cpd_test.sql
 #############
 
-
+ mysql -uroot -p -h127.0.0.1 -P3306 -f -D zcpd_test </data/backup/database/data_zcpd_test.sql;
 
 1.mysql -uzroot -p -h10.1.27.252 -P3323 -D zcpd_test
 2.source /root/data/drop.sql
