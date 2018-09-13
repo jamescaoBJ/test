@@ -38,16 +38,16 @@ source 分别执行就好
 1.mysql -utest1 -p -h127.0.0.1 -P3323 -D ncme_test
 2.source /root/data/drop.sql;
 3.show tables;判断表是否删除干净
-4.source /root/data/20180625/create_info0502.sql
+4.source /root/data/20180813/create_info.sql;
 5.show tables;判断表是否全
 6.exit;
-7.mysql -utest1 -p -h127.0.0.1 -P3323 -D ncme_test </root/data/20180625/data_cpd_test.sql
+7.mysql -utest1 -p -h127.0.0.1 -P3323 -D ncme_test </root/data/20180813/data_zcpd_test.sql
 
 ########################
 1.mysql -utest1 -p -h10.1.27.240 -P3323 -D ncme_test
 2.source /root/data/drop.sql;
 3.show tables;判断表是否删除干净
-4.source /root/data/20180625/create_info0502.sql
+4.source /root/data/20180625/create_info.sql
 5.show tables;判断表是否全
 6.exit;
 7.mysql -utest1 -p -h127.0.0.1 -P3323 -D ncme_test </root/data/20180625/data_cpd_test.sql
@@ -56,9 +56,40 @@ source 分别执行就好
 mysql -utest1 -p -h127.0.0.1 -P3323 -D ncme_test </root/data/20180625/data_cpd_test.sql
 ###
 
+mysql -uzroot -p -h10.1.27.252 -P3323 -D zcpd_test
+datasource.url=jdbc:mysql://10.1.27.252:3323/zcpd_test
+datasource.username=zroot
+datasource.password=hVVii#O%1!N2@eS6
+
   drop table content_sentence_type;     
   drop table zx_certificate;           
   drop table zx_examine_import_result;
+  drop table gp_base_service_ability;
+  
+  
+  
+    drop table gp_base_service_ability;
+      drop table gp_lession_category;
+        drop table qx_deadline;
+          drop table qx_manager;
+            drop table qx_stu_state;
+              drop table qx_upload_file;
+                drop table qx_user_abnormal_information;
+                  drop table system_account_user_workinfo;
+                    drop table zx_certificate;
+                    drop table zx_examine_import_result;
+                    drop table zx_special_click;
+                    
+                      drop table system_test;
+                    drop table content_sentence_type;
+                    drop table zx_special_click;
+                    drop table system_account_user_workinfo;
+                    drop table qx_upload_file_bak;
+                    
+                             |
+|            |
+|  |
+| 
   
 source /root/data/20180716/create_info.SQL
 mysql -uroot -p -h10.1.27.240 -P3323 -D cpd_test </root/data/20180716/data_cpd_test.sql

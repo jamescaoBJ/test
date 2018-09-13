@@ -1,3 +1,53 @@
+#######
+项目授权
+SELECT DISTINCT
+	t.ID AS authorizationId,
+	t.CV_SET_ID AS cvSetId,
+	t1.`NAME` AS cvSetName,
+	t.CV_SET_SERIAL_NUMBER AS serialNumber,
+	t1.FORMA AS forma,
+	t.CV_SET_LEVEL AS LEVEL,
+	t.CV_SET_SCORE AS score,
+	t.CV_SET_COST_TYPE AS costType,
+	t.CV_SET_COST AS cost,
+	t1.MAKER AS maker,
+	t.CV_SET_START_DATE AS startDate,
+	t.CV_SET_END_DATE AS endDate,
+	t.CV_SET_SIGN AS sign,
+	t1.`STATUS` AS STATUS
+FROM
+	cv_set_authorization t
+LEFT JOIN cv_set AS t1 ON t1.ID = t.CV_SET_ID
+LEFT JOIN cv_set_user_image AS c ON t1.ID = c.CV_SET_ID
+LEFT JOIN qm_user_image_prop AS u ON c.USERIMAGE_ID = u.USERIMAGE_ID
+WHERE
+	1 = 1
+ORDER BY
+	t.modify_date DESC LIMIT 0,15
+#####
+删除項目
+SELECT  * from cv_set where name='医疗质量安全项目';
+
+
+delete from cv_set_schedule where CV_SET_ID=6900519;
+
+delete from cv_set_expert where CV_SET_ID=6900519;
+
+delete from cv_set_user_image where CV_SET_ID=6900519;
+
+delete from cv_set_org where CV_ID=6900519;
+
+delete from log_study_cv_set where CV_SET_ID=6900519;
+delete from cv_set_score where CV_SET_ID=5700440;
+delete from cv_set_score_log where CV_SET_ID=5700440;
+
+delete from cv_set  where ID=6900519;
+
+#####
+http://gogs.weeho.cn
+管理员账号
+git
+weeho@666
 #####
 VPN地址：
 125.208.29.50
@@ -16,6 +66,12 @@ SELECT * FROM log_study_cv t WHERE t.STATE = 2 AND t.CV_SET_ID = 3000294 AND t.S
 git创建新分支
 从dev创建  git checkout  -b online0808
 git push origin online0808
+
+
+
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
 
 ###############
  The current branch online0808 has no upstream branch.
@@ -47,6 +103,95 @@ WHERE
 	u.ACCOUNT_NAME ='lilin5400' 
 AND u.ACCOUNT_STATUS = 1
 AND (r.`STATUS` = 1 OR r.`STATUS` = 0)
+
+
+
+
+
+
+select * from exam_hospital where id=4357248
+
+
+#医院等级字典
+select * from exam_prop_val where type=23 and c_type=2;
+
+select case h.PropId 
+
+when 110000001 then '三级特等'
+when 110000002 then '三级甲等'
+when 110000003 then '三级乙等'
+when 110000004 then '三级丙等'
+when 110000005 then '二级甲等'
+when 110000006 then '二级乙等'
+when 110000007 then '二级丙等'
+when 110000008 then '一级甲等'
+when 110000009 then '一级乙等'
+when 1100000010 then '一级丙等'
+when 1100000011 then '未定级'
+end 'PropId'
+,count(1) n
+from exam_hospital h GROUP BY  PropId;
+ 
+
+ #用户学历情况
+select case u.education 
+
+when 1 then '高中'
+when 2 then '中专'
+when 3 then '大专'
+when 4 then '本科'
+when 5 then '硕士'
+when 6 then '博士'
+when 7 then '博士后'
+when 8 then '其它'
+else '无'
+end 'education'
+,count(1) n
+from system_user u GROUP BY  education;
+
+
+
+ 
+
+
+
+
+SELECT
+	t.*, cast(t. CODE AS signed) AS codenum,
+	t.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.type = p.id
+AND tt.prop_type = t.c_type
+AND t.type = 9
+AND t.c_type = 0
+AND t.ext_type =5###-----替换就行
+ORDER BY
+	t. NAME; 
+
+----医疗人员职称1
+----护理人员职称2
+----药学人员职称3
+----公共卫生人员职称4
+----技术人员职称5
+----中医人员职称6
+----教师7
+----研究人员8
+----其他9 
+
+-----查看专家职称汇总
+select  job,count(1) from expert_info where JOB in(610010677,
+610010679,
+610010678,
+610010681,
+610010680,
+610010682)  GROUP BY JOB;
+ 
 ####
 @曹彦格 上生产环境时，需要把学员管理数据库菜单修改一下。sql如下：
 update system_menu set url='/zx/system/systemUserStudent?userType=1' where name like '%学员信息管理%'
@@ -153,6 +298,13 @@ root
 YTZiMzEzZmUzOWQ2OTJkN2FkY2E4ODY0
 
 #################
+
+####################
+10.1.27.250 操作系统
+root
+YTZiMzEzZmUzOWQ2OTJkN2FkY2E4ODY0
+
+#################
 redis服务
 10.1.27.98  端口 6379
 10.1.27.106 端口 6379
@@ -223,6 +375,8 @@ update log_study_cv_set set  STATE=2 where CV_SET_ID=102 and SYSTEM_USER_ID=2347
 caoyange@weeho.cn
 #1qaz2wsx3EDC4RFV
 #######
+nohup java -Xmx2048m -Xms1024m -Xmn1024m -jar zuul-0.0.1-SNAPSHOT.jar   --server.port=9091 >zuul9091.log 2>&1 &
+nohup java -Xmx4096m -Xms1024m -Xmn1024m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
 java -jar springboot-0.0.1-SNAPSHOT.jar  --server.port=8003
 java -jar springboot-0.0.1-SNAPSHOT.jar --spring.profiles.active=test --server.port=8000
 ps -ef|grep -v grep|grep springboot-0.0.1-SNAPSHOT.jar|awk '{print $2}'|xargs kill -9
@@ -280,6 +434,34 @@ SELECT  * from system_timeliness where mobile_phone = 18813168732;
 delete from system_timeliness where mobile_phone = '18813168732';
 
 
+DELETE FROM system_user_config  where user_id =7245603 ;
+DELETE FROM system_user_job_val  where user_id =7245603 ;
+DELETE FROM system_user_prop_val  where user_id =7245603 ;
+DELETE FROM system_account  where user_id =7245603 ;
+DELETE FROM system_user WHERE id =7245603 ;
+DELETE FROM system_message WHERE SYSTEM_USER_ID =7245603 ;
+
+##########################
+
+## 查找学科，以及子学科
+SELECT
+	t.*, cast(t. CODE AS signed) AS codenum,
+	v.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name,
+r.PROP_VAL2
+FROM
+	exam_prop_val t,
+	sub_sys_prop_val v,
+	prop_val_ref r,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.id = v.prop_val_id
+AND v.id = r.prop_val2
+AND p.id = v.sys_prop_id
+AND tt.prop_type = t.c_type
+AND r.prop_val1 = 510052;
 #########################
 vmware
 root
@@ -417,6 +599,14 @@ hVVii#O%1!N2@eS6
 数据库地址：10.1.27.240:3323/CPD_TEST   root  1N%HQ#QX8VLD0roW  外网：111.206.238.131
 10.1.27.240：3324 用户名/密码：wjw_user1/123456
 ###############
+http://admin.bokecc.com/login.bo
+
+后台账号信息：
+
+生产  dianbo@ncme.org.cn  1qaz2wsx  078E396B1332FD8E  rxG7n4F8E61m92fRGKjIqNASqllNs4wK
+测试  dianbo2@ncme.org.cn  1qaz2wsx  DED171F2AE73F0CC  RygX6fozk92fDe4Cw1kFkc5WkceJcdUb
+
+###############
 nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar &
 
 
@@ -428,7 +618,7 @@ nohup java -Xmx1024m -Xms512m -Xmn512m -jar zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>
 
 nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT9096.jar >springboot9096.log 2>&1 &
 
-nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT9091.jar >springboot9091.log 2>&1 &
+
 
 
 nohup java -Xmx1024m -Xms512m -Xmn128m -jar springboot-0.0.1-SNAPSHOT.jar >springboot9090.log 2>&1 &
@@ -2193,6 +2383,9 @@ LIMIT 0,
 700010926
 
 
+
+
+
 select * from cv_set_authorization where id=152;
 
 select *  from EXAM_QUESTION_UNIT where question_id=5334043  LIMIT 0,20
@@ -2203,4 +2396,27 @@ update  EXAM_QUESTION_UNIT set PROP_VAL_ID=700037637 where question_id=5334043 ;
 
 700010926
 700037637==》 700010926
+
+
+
+合同备案摘要页：
+
+合同原件
+发票原件
+交房入住证明：物业
+身份证
+户口本
+结婚证
+出生证明
+
+原件和复印件
+
+化工路水仙路：石佛派出所：86082793
+
+
+高新置业公司：备案信息表
+86258635-0
+五龙口南路
+桐柏路
+北 1000米
 

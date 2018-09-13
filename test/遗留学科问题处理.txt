@@ -1,0 +1,549 @@
+
+###题库，素材，病例，专家管理
+#----查看一级学科
+SELECT
+	t.*, cast(t. CODE AS signed) AS codenum,
+	t.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.type = p.id
+AND tt.prop_type = t.c_type
+AND t.type = 1
+AND t.c_type = 0
+ORDER BY
+	t. NAME;
+#---临床内科学
+#select * from  exam_prop_val where id=510002;
+SELECT
+	t.*, cast(t. CODE AS signed) AS codenum,
+	v.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop_val v,
+	prop_val_ref r,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.id = v.prop_val_id
+AND v.id = r.prop_val2
+AND p.id = v.sys_prop_id
+AND tt.prop_type = t.c_type
+AND r.prop_val1 = '510002'
+ORDER BY
+	t. NAME
+LIMIT 0,
+ 50;
+
+
+###我的项目/我的学科/项目管理/项目审核/项目授权/课程管理/项目发布:学科 ：与资源中不同的
+SELECT
+	t.*, cast(t. CODE AS signed) AS codenum,
+	t.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.type = p.id
+AND tt.prop_type = t.c_type
+AND t.type = 1
+AND t.c_type != 9
+ORDER BY
+	t. NAME;
+
+#三级学科和资源中是一致的
+SELECT
+	t.*, cast(t. CODE AS signed) AS codenum,
+	v.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop_val v,
+	prop_val_ref r,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.id = v.prop_val_id
+AND v.id = r.prop_val2
+AND p.id = v.sys_prop_id
+AND tt.prop_type = t.c_type
+AND r.prop_val1 = 510002
+ORDER BY
+	t. NAME
+LIMIT 0,
+ 20;
+ 
+ ###递归子学科
+SELECT
+	t.*, cast(t. CODE AS signed) AS codenum,
+	v.id AS prop_val_id,
+	p. NAME AS typeName,
+	tt.prop_type_name AS c_type_name
+FROM
+	exam_prop_val t,
+	sub_sys_prop_val v,
+	prop_val_ref r,
+	sub_sys_prop p,
+	exam_prop_type tt
+WHERE
+	t.id = v.prop_val_id
+AND v.id = r.prop_val2
+AND p.id = v.sys_prop_id
+AND tt.prop_type = t.c_type
+AND r.prop_val1 =510070 
+ORDER BY
+	t.id DESC
+LIMIT 0,
+ 20
+
+####、
+题库管理和试题审核的查询
+素材管理,素材审核的查询
+专家管理查询
+病例管理和审核病例的查询
+远程项目统计的查询
+临床实践统计的查询
+面授项目统计的查询
+项目发布的查询
+流程管理的查询
+项目授权的查询
+项目审核的查询
+项目管理的查询
+
+
+都是一样的逻辑 递归了子学科
+
+
+
+专委会的学科查询，没有递归
+e.id IN (
+		SELECT
+			groupid
+		FROM
+			EXPERT_GROUP_PROP_VAL
+		WHERE
+			PROPID IN (510019)
+	)
+
+培训管理的查询 没有递归
+
+SELECT
+	id,
+	NAME
+FROM
+	zx_special
+WHERE
+	1 = 1
+AND is_reported = 1
+AND subject_master_id =510072
+AND STATUS NOT IN (0)
+AND is_reported = 1;
+
+
+我的项目没有递归
+
+SELECT DISTINCT
+	t.*
+FROM
+	cv_set AS t
+JOIN cv_set_user_image AS c
+JOIN qm_user_image_prop AS u ON t.ID = c.CV_SET_ID
+AND c.USERIMAGE_ID = u.USERIMAGE_ID
+AND t. NAME LIKE ?
+AND t. STATUS IN (1, 2, 3, 4, 5, 6)
+AND t.maker LIKE ?
+AND t. NAME LIKE ?
+AND t.ID = c.CV_SET_ID
+AND u.PROP_ID IN (510019);
+
+qiantai 
+
+cme列表学科没有递归
+SELECT
+	t.ID,
+	csa.CV_SET_SERIAL_NUMBER AS SERIAL_NUMBER,
+	csa.CV_SET_LEVEL AS LEVEL,
+	csa.CV_SET_SCORE AS SCORE,
+	csa.CV_SET_SIGN AS SIGN,
+	csa.CV_SET_COST_TYPE AS cost_type,
+	csa.CV_SET_COST AS COST,
+	csa.CV_SET_START_DATE AS START_DATE,
+	csa.CV_SET_END_DATE AS END_DATE,
+	csa.CV_SET_BREAK_DAYS AS BREAK_DAYS,
+	t. NAME,
+	t.FORMA,
+	t. CODE,
+	t.FILE_PATH,
+	t.INTRODUCTION,
+	t.ANNOUNCEMENT,
+	t.KNOWLEDGE_NEEDED,
+	t.KNOWLEDGE_BASE,
+	t.REFERENCE,
+	t.REFERENCE_LATELY,
+	t.OPINION,
+	t.REPORT,
+	t.OPINION_TYPE,
+	t. STATUS,
+	t.TYPE,
+	t.MAKER,
+	t.DELI_MAN,
+	t.CREATE_DATE,
+	t.DELI_DATE,
+	t.PROVINCEID,
+	t.CITYID,
+	t.RELATION_QUIZ,
+	t.cv_set_type
+FROM
+	cv_set t
+LEFT JOIN cv_set_authorization csa ON csa.CV_SET_ID = t.id
+LEFT JOIN cv_set_authorization_region csar ON csar.AUTHORIZATION_ID = csa.id
+WHERE
+	1 = 1
+AND csa.CV_SET_START_DATE <= CURDATE()
+AND csa.CV_SET_END_DATE >= CURDATE()
+AND t. STATUS =5
+AND t.forma != 5
+AND t.id IN (
+	SELECT
+		ccc.CV_SET_ID
+	FROM
+		cv_set_authorization_region csar
+	LEFT JOIN cv_set_authorization ccc ON ccc.id = csar.AUTHORIZATION_ID
+	GROUP BY
+		ccc.cv_set_id,
+		ccc.id
+	HAVING
+		count(1) = (
+			SELECT
+				count(1)
+			FROM
+				exam_prop_val epv
+			WHERE
+				epv.type = 20
+		)
+)
+AND t.id IN (
+	SELECT DISTINCT
+		(CV_SET_ID)
+	FROM
+		cv_set_authorization csa
+	LEFT JOIN cv_set_authorization_system_site csass ON csass.AUTHORIZATION_ID = csa.ID
+	LEFT JOIN system_site ss ON csass.SYSTEM_SITE_ID = ss.id
+	WHERE
+		ss.DOMAIN_NAME ='predeploy.ncme.org.cn'
+)
+AND t.id IN (
+	SELECT DISTINCT
+		(cvim.cv_set_id)
+	FROM
+		CV_SET_USER_IMAGE cvim
+	WHERE
+		USERIMAGE_ID IN (
+			SELECT
+				ip.userimage_id
+			FROM
+				qm_user_image_prop ip
+			WHERE
+				prop_id IN (
+					SELECT DISTINCT
+						sspv.ID
+					FROM
+						sub_sys_prop_val sspv
+					LEFT JOIN exam_prop_val epv ON epv.ID = sspv.PROP_VAL_ID
+					WHERE
+						epv.`NAME` ='精神卫生学'
+				)
+		)
+)
+GROUP BY
+	t.id
+ORDER BY
+	t.create_date DESC,
+	t.id DESC
+LIMIT 0,
+ 20
+ ##########
+ 
+ #题库管理的学科查询功能：
+SELECT
+	count(DISTINCT t.id)
+FROM
+	exam_question t,
+	exam_question_type t1,
+	exam_sys_quest_type_quest t2
+WHERE
+	t.id = t2.question_id
+AND t1.id = t2.sub_type_id
+AND t.parent_id = 0
+AND t2.state = 1
+AND t.content LIKE ?
+AND t.create_date >= ?
+AND (
+	t.id IN (
+		SELECT
+			question_id
+		FROM
+			EXAM_QUESTION_UNIT
+		WHERE
+			prop_val_id IN (
+				510019,
+				632000233,
+				632000237,
+				632000234,
+				610010684,
+				632000232,
+				632000231,
+				610010688,
+				610010687,
+				610010686,
+				610010685,
+				510080,
+				632000229,
+				632000228,
+				632000227,
+				510226,
+				510225,
+				510079,
+				632000226,
+				510078,
+				510077,
+				510224,
+				510223,
+				510222,
+				510221,
+				510076,
+				701837730,
+				632000225,
+				632000224,
+				632000223,
+				632000222,
+				632000221,
+				510075,
+				632000219,
+				632000218,
+				632000217,
+				632000216,
+				632000215,
+				632000214,
+				632000213,
+				510220,
+				510219,
+				510218,
+				510074,
+				632000212,
+				632000211,
+				632000210,
+				632000209,
+				632000208,
+				632000207,
+				632000206,
+				632000203,
+				632000202,
+				632000201,
+				632000200,
+				632000199,
+				632000198,
+				632000197,
+				510217,
+				510073,
+				632000196,
+				632000195,
+				632000194,
+				632000193,
+				632000192,
+				632000191,
+				632000190,
+				632000189,
+				510216,
+				510215,
+				510214,
+				510072,
+				632000188,
+				632000187,
+				632000186,
+				632000185,
+				632000184,
+				632000183,
+				632000182,
+				632000181,
+				510213,
+				510212,
+				510211,
+				510210,
+				510209,
+				510208,
+				510207,
+				510206,
+				510205,
+				510071,
+				632000180,
+				632000179,
+				632000178,
+				632000177,
+				632000176,
+				632000175,
+				632000173,
+				632000172,
+				632000170,
+				632000169,
+				632000168,
+				632000167,
+				632000166,
+				632000165,
+				632000164,
+				632000163,
+				510204,
+				510070,
+				632000162,
+				632000161,
+				632000160,
+				632000159,
+				632000158,
+				632000157,
+				632000156,
+				632000155,
+				632000154,
+				632000153,
+				510203,
+				510069
+			)
+	)
+)
+ORDER BY
+	t.id DESC;
+	
+	
+	
+
+###
+
+专项基地查询，学科没递归
+
+
+SELECT
+	ID,
+	NAME,
+	CODE,
+	CONNECT_PERSON,
+	CONNECT_TEL,
+	SUBJECT,
+	ORGID,
+	CREATETIME,
+	category,
+	categoryname
+FROM
+	zx_base
+WHERE
+	1 = 1
+AND SUBJECT = 510019
+ORDER BY
+	createtime DESC
+LIMIT 0,
+ 20;
+
+#####专项：培训管理菜单查询/考核设置查询/结果查询的逻辑：和其他地方都不同
+
+
+SELECT
+	e.id,
+	e. NAME,
+	e. CODE,
+	e.subject_master_id,
+	e.subject_ids,
+	e.start_date,
+	e.end_date,
+	e.intro,
+	e.cover_url,
+	e. STATUS,
+	e.url,
+	e.is_reported,
+	sign
+FROM
+	zx_special e
+WHERE
+	1 = 1
+AND (
+	e.subject_master_id =510019
+	OR e.subject_ids LIKE concat(concat('%' ,'510019'), '%')
+)
+ORDER BY
+	e.id DESC
+LIMIT 0,
+ 20;
+ 
+
+
+###专项学员信息管理
+select DISTINCT USER_ID from system_user_prop_val where PROP_ID in (510019) ;
+ 
+ 
+
+
+SELECT
+	u.*, a.account_name,
+	u.id user_id,
+	a.account_id,
+	a.account_remark,
+	a.account_status
+FROM
+	system_user u
+LEFT JOIN exam_hospital e ON u.WORK_UNIT_ID = e.ID
+LEFT JOIN system_user_config c ON u.id = c.user_id
+LEFT JOIN system_account a ON u.id = a.user_Id
+WHERE
+	u.id > 0
+AND u.Real_Name LIKE '%宋小花%'
+AND u.id IN (
+	21615,
+	21986,
+	22220,
+	3925313,
+	5125651,
+	5125652,
+	5125662,
+	21865,
+	22016,
+	3323933,
+	3925246,
+	4225428,
+	5426164,
+	5426228,
+	5726250,
+	21399,
+	21640,
+	21645,
+	21806,
+	22064,
+	23518,
+	3925387,
+	3925513,
+	5125649,
+	5125654,
+	5426173,
+	5426185,
+	5426229,
+	5726242,
+	5726243,
+	21515,
+	21701,
+	22376,
+	22953,
+	4225473,
+	5426175,
+	5426233
+)
+AND u.user_Type = 1
+ORDER BY
+	u.reg_date DESC
+LIMIT 0,
+ 20
