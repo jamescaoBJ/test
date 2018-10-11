@@ -1,3 +1,27 @@
+<p class="clear cas_anniu " style="margin-bottom:10px;"><span class="fl" style="width:8em;text-align:right;display:inline-block;"><font color="red">*</font>学习地图三级：</span><input type="text" name="add_name" id="add_name" style="
+    margin-right: 15px;
+"><input type="text" id="search_name" class="fl"><a herf="javascript:void(0);" id="search_icd" class="fl" style="cursor:pointer;margin-left: 25px;"> 查询</a></p>
+
+ 
+#######
+项目期数表：cv_set_schedule_faceteach
+
+
+#########
+、
+SELECT ID,NAME FROM EXAM_ICD_PROP WHERE name like '%,%'
+SELECT ID,NAME FROM EXAM_ICD_PROP WHERE id in(26261)
+update EXAM_ICD_PROP set name='胆囊癌切除、T管引流' where id=26261
+#########
+CC视频官网登录入口：
+
+http://admin.bokecc.com/login.bo
+
+后台账号信息：
+
+生产  dianbo@ncme.org.cn  1qaz2wsx  078E396B1332FD8E  rxG7n4F8E61m92fRGKjIqNASqllNs4wK
+测试  dianbo2@ncme.org.cn  1qaz2wsx  DED171F2AE73F0CC  RygX6fozk92fDe4Cw1kFkc5WkceJcdUb
+#############
 #######
 项目授权
 SELECT DISTINCT
@@ -148,8 +172,58 @@ else '无'
 end 'education'
 ,count(1) n
 from system_user u GROUP BY  education;
+###
+SELECT
+	t4. NAME AS jobName,
+	t3.`NAME` AS propNames,
+	t2.* 
+FROM
+	cv_set_expert t 
+JOIN expert_info t2 ON t.expert_id = t2.id 
+LEFT JOIN expert_prop_val v ON v.EXPERTID = t2.id
+LEFT JOIN exam_prop_val t3 ON t3.id = v.PROPID 
+LEFT JOIN exam_prop_val t4 ON t2.job = t4.id
+WHERE
+	t.cv_set_id =7500502
+AND t.type =1
+GROUP BY
+	t2.id 
 
+项目负责人
+select * from cv_set_expert
 
+INSERT INTO `ICME`.`cv_set_expert` (`CV_SET_ID`, `EXPERT_ID`, `TYPE`) VALUES ('7500502', '7350899', '1');
+###
+书籍推荐
+ 
+INSERT INTO  cv_set_knowledgebase(`cv_set_id`, `source_id`, `knowledgebase_name`, `knowledgebase_url`) VALUES ('7500502', '385', NULL, NULL);
+
+指南共识
+INSERT INTO cv_set_refereebook (`cv_set_id`, `source_id`, `book_name`, `book_url`) VALUES ('7500502', '385', NULL, NULL);
+最新文献
+INSERT INTO cv_set_referencelately(`cv_set_id`, `source_id`, `reference_name`, `reference_url`) VALUES ('7500502', '380', NULL, NULL);
+#####
+授课教师
+INSERT INTO `ICME`.`cv_ref_teacher` (`CV_ID`, `EXPERT_ID`, `TYPE`) VALUES ('7202714', '7350903', '1');
+###
+SELECT
+	l.*, u.REAL_NAME,
+	a.ACCOUNT_NAME,
+	u.user_avatar,
+	u.sex,
+	((l.SCORE4 + l.SCORE3) / 20) AS sort_avg
+FROM
+	cv_set_score_log l
+LEFT JOIN system_user u ON l.SYSTEM_USER_ID = u.ID
+LEFT JOIN system_account a ON a.USER_ID = u.ID
+WHERE
+	l.CV_SET_ID =7500502
+ORDER BY
+	l.SCORE_DATE DESC
+
+项目评价表
+select * from cv_set_score_log
+###
 
  
 
@@ -258,6 +332,13 @@ update system_menu set state=0 where id in (600067,2700069,2700071)
 生产机-10	4核8G	10.1.27.150	jxjy	hky$%657(yhdefer 已做limit	springboot1
 生产机-11	4核8G	10.1.27.51	jxjy	fyjtr%4745cDfdg	   已做limit	springboot2
 生产机-11	4核8G	10.1.27.112	jxjy	Ty4cY^GFdcIfoN0IJ_
+
+
+生产机-13	4核8G	 10.1.27.82	jxjy	alw5445nhjj5#$5ge
+生产机-12	8核16G    10.1.27.79	jxjy	d32%gr2q3rGT&#78
+生产机-14	8核16G    10.1.27.83	jxjy	hkj$%dsgfY@4325fg
+
+
 ########################
 select count(DISTINCT t.id)  from cv_set t left join cv_set_authorization csa on csa.CV_SET_ID = t.id left join cv_set_authorization_region csar on csar.AUTHORIZATION_ID = csa.id where 1=1 AND csa.CV_SET_START_DATE <= CURDATE() AND csa.CV_SET_END_DATE >= CURDATE() and t.status =5 and t.forma != 5  and t.id in (select DISTINCT(ccc.CV_SET_ID) from cv_set_authorization_region csar left join cv_set_authorization ccc on ccc.id = csar.AUTHORIZATION_ID where csar.PROP_VAL_ID = 111000001)  and t.id in (select DISTINCT(CV_SET_ID) from cv_set_authorization csa left join cv_set_authorization_system_site csass on csass.AUTHORIZATION_ID = csa.ID left join system_site ss on csass.SYSTEM_SITE_ID=ss.id where ss.DOMAIN_NAME='dev.ncme.org.cn')  and t.id in (select distinct(cvim.cv_set_id) from CV_SET_USER_IMAGE cvim where USERIMAGE_ID in (select ip.userimage_id from qm_user_image_prop ip where prop_id in (select DISTINCT sspv.ID from sub_sys_prop_val sspv LEFT JOIN exam_prop_val epv ON epv.ID = sspv.PROP_VAL_ID where epv.`NAME` ='精神病与精神卫生学')))
 VPN 账号
@@ -441,7 +522,7 @@ DELETE FROM system_account  where user_id =7245603 ;
 DELETE FROM system_user WHERE id =7245603 ;
 DELETE FROM system_message WHERE SYSTEM_USER_ID =7245603 ;
 
-##########################
+##########################666
 
 ## 查找学科，以及子学科
 SELECT
@@ -500,6 +581,11 @@ passphrase:caoyg
 10.1.27.94  	jxjy	LC7mTBv6b5SX%yVa	 （生产）环境/data/tomcat8;8核16G 
 10.1.27.105	jxjy	k5a*r%$7KB5hcPVc	（生产）环境/data/tomcat8;
 10.1.27.103	jxjy	mplcF*o@p%ZYiYSV	（生产）环境/data/tomcat8;
+$######
+院长网机器
+10.1.27.79
+jxjy
+d32%gr2q3rGT&#78
 ######################
  cp -r /data/admin /data/devTomcat8/webapps/
  cp -r /data/resource  /data/devTomcat8/webapps/
@@ -596,7 +682,7 @@ cpd_test
 hVVii#O%1!N2@eS6
 ###################
 
-数据库地址：10.1.27.240:3323/CPD_TEST   root  1N%HQ#QX8VLD0roW  外网：111.206.238.131
+数据库地址：10.1.27.240:3323/CPD_TEST   root  1N%HQ#QX8VLD0roW  外网：111.206.238.131/125.208.29.51
 10.1.27.240：3324 用户名/密码：wjw_user1/123456
 ###############
 http://admin.bokecc.com/login.bo
@@ -883,6 +969,7 @@ SELECT * FROM log_study_cv_set WHERE CV_SET_ID =5400416 and STAGE_ID=19;
 
 
 
+select * from sub_sys_prop;----字典类型表
 
 
 
