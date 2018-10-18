@@ -1,0 +1,42 @@
+导出数据
+
+mysqldump -uroot -p -hip  -P3323 --default-character-set=utf8 --single-transaction --no-create-db --skip-lock-tables --skip-add-locks --skip-disable-keys -t -c --hex-blob -B database_name >data_zcpd_test.sql
+
+导出表结构
+mysqldump -uroot -p -h127.0.0.1 -P3323 --default-character-set=utf8 --skip-lock-tables --skip-add-locks --skip-disable-keys  --hex-blob --no-create-db  --set-gtid-purged=off --skip-opt --single-transaction --create-options --skip-set-charset -d database_name >create_info.sql　
+
+
+
+
+首先看下备份的表结构及数据文件是否有use database 语句，有的话记得删除
+sed -i '/^LOCK TABLES/d' data_zcpd_test.sql
+sed -i '/^UNLOCK TABLES/d' data_zcpd_test.sql
+sed -i '/^\/\*/d' data_zcpd_test.sql
+sed -i '1i\SET FOREIGN_KEY_CHECKS=0;'  data_zcpd_test.sql
+sed -i '$a\SET FOREIGN_KEY_CHECKS=1;'  data_zcpd_test.sql
+
+做完以上动作之后，先导表结构在导数据文件
+
+
+
+
+
+
+mysqldump -uroot -p -h10.1.27.106 -P3306 --default-character-set=utf8 --skip-lock-tables --skip-add-locks --skip-disable-keys  --hex-blob --no-create-db  --set-gtid-purged=off --skip-opt --single-transaction --create-options --skip-set-charset -d cpd_test_0716 >create_info.sql　
+
+
+mysqldump -uroot -p -h10.1.27.106 -P3306 --default-character-set=utf8 --single-transaction --no-create-db --skip-lock-tables --skip-add-locks --skip-disable-keys -t -c --hex-blob -B cpd_test_0716 >data_zcpd_test.sql
+
+
+
+导入步骤：
+
+
+1.mysql -uzroot -p -h10.1.27.252 -P3323 -D zcpd_test
+2.source /root/data/drop.sql
+3.show tables;判断表是否删除干净
+4.source /root/data/20180625/create_info0502.sql
+5.show tables;判断表是否全
+6.exit;
+7.mysql -uzroot -p -h10.1.27.252 -P3323 -D zcpd_test </root/data/20180625/data_cpd_test.sql
+#############

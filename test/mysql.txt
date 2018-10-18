@@ -23,15 +23,20 @@ mysql -uroot -p12345678
 
 mysql -uroot -proot
 
-
+mysql 导出
+mysqldump -h10.1.27.97 -unmhm_test -pIBr*pnzyGHDZJFqS6 -P3306 --databases nmhm_test  > all_database.sql
 
 
 mysql -uroot -p -h127.0.0.1 -P3306 -D zcpd_test </root/data/201806120/data_cpd_test0620.sql 
 
 
+mysql -uicme -p -h127.0.0.1 -P3323 -D icme </root/data/20181017/all_database.sql
+
+mysql -u icme -h 101.3.20.33 -p'H_password' -P3306 test  </home/test/0101_0630_up_subjects.sql
 
 
-
+3323
+mysql -uroot -p -h127.0.0.1 -P3306 -D zcpd_test </root/data/201806120/data_cpd_test0620.sql 
 
 mysql -uroot -p -h10.1.27.240 -P3323 -D cpd_test </data/sql/sub_sys_prop_val.sql
 

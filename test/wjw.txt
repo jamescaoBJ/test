@@ -290,7 +290,8 @@ select * from log_study_cv_unit_video_census  where SYSTEM_USER_ID=5132724 and  
 课程单元学习结果表
 select * from log_study_cv_unit where SYSTEM_USER_ID=5132724 and  LOG_STUDY_CV_SET_ID=4200392 and CV_ID=4202266 and CV_UNIT_ID=4209081  limit 0,20;
 ##########################
-人工膝关节置换技术基础理论与实践进展   账号：18636369434
+线上账号：18618180935
+  账号：18636369434
 密码：Linghuqin142724
 考试报error
  select * from exam_paper_question where question_id = 4122087 and paper_id = 3900414;
@@ -675,7 +676,34 @@ http://blog.csdn.net/hguisu/article/details/51072683
 url=jdbc:mysql://10.1.27.240:3323/cpd_test?useUnicode=true&amp;characterEncoding=utf-8
 username=root
 password=1N%HQ#QX8VLD0roW
+#################
+10.1.27.97 
+密码：XRYXd$02@8*1VijH
+操作系统用户：jxjy
+########################
+院长网生产环境数据库：
+mysql 生产数据库  10.1.27.97 
+端口
+3306
+用户名密码 
+nmhm
+pCFZWswGpAy$6jxF
+数据库名称 nmhm
 
+
+jdbc:mysql://10.1.27.97:3306/nmhm?useUnicode=true&amp;characterEncoding=utf-8
+nmhm
+pCFZWswGpAy$6jxF
+####################
+院长网测试环境数据库：
+jdbc:mysql://10.1.27.97:3306/nmhm_test?useUnicode=true&amp;characterEncoding=utf-8
+nmhm_test
+IBr*pnzyGHDZJFqS6
+@@
+datasource.url=jdbc:mysql://10.1.27.97:3306/nmhm_test
+datasource.username=nmhm_test
+datasource.password=IBr*pnzyGHDZJFqS6
+########################
 
 jdbc:mysql://10.1.27.97:3306/cpd_test?useUnicode=true&amp;characterEncoding=utf-8
 cpd_test
