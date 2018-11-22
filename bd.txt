@@ -5,3 +5,58 @@ http://demo.qiysd.com/login.html
 用户名：demo
 密码：demo
 #############
+C:\Users\Administrator\.jenkins\secrets\initialAdminPassword
+Jenkins初始密码：
+8056187ab53a44eca54a97759adfae73
+admin/cyg123456789/
+
+##########
+jenkins
+b4b7b76fd49b417ca12ae1dbc1e8f11b
+##########
+svn://svnbucket.com/wangmao/nuanshu
+svn地址
+###############
+公司邮箱
+caoyange@ibiandan.cn
+Cyg22668800
+##############
+Axure的用户名：
+caoyange@ibiandan.cn
+123456789
+https://gbkqw1.axshare.com
+###############
+阿里云
+https://www.aliyun.com/?accounttraceid=f0a14419-ca23-4ce5-ac28-ef047155fe42
+jamescloudaccount
+cyg22668800
+###############
+git仓库地址
+https://code.aliyun.com/biandankj/tfy.git
+jamesbiandan
+cyg22668800
+###############
+svn://svnbucket.com/wangmao/nuanshu/nuanshu_ems
+############
+虚拟机linux 用户名 root  密码：Ibiandan0629@. 
+数据库 
+root
+bdkj2018
+47.92.226.176 
+#############
+
+alter table sys_dept
+ add customer_Id bigint(20) DEFAULT 0 COMMENT '组织关联的客户类型id，如果主公司是0，其他是客户id' AFTER name;
+alter table sys_dept  drop _id
+###############
+alter table sys_user_role add  create_by bigint(20) DEFAULT NULL COMMENT '创建者';
+alter table sys_user_role add  update_by bigint(20) DEFAULT NULL COMMENT '更新者';
+alter table sys_user_role add create_Date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间';
+alter table sys_user_role add lastupdate_Date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间';
+
+alter table sys_menu add  state int(11) DEFAULT 1 COMMENT '使用状态 0:未启用，1:启用' after parent_id;
+######
+java -jar jenkins.war --ajp13Port=-1 --httpPort=8888
+######
+HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@56fe30c6 (No operations allowed after connection closed.)
+#########
