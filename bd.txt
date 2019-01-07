@@ -1,4 +1,19 @@
 #############
+jira
+caoyange@ibiandan.cn
+@cyg22668800
+管理员账号：james/ @cyg22668800
+#############
+fineReport：
+username：  james_fineReport
+password: 22668800
+
+管理员账号：james
+管理员密码：123456789	
+web界面地址：
+http://localhost:8075/webroot/decision#directory
+
+#############
 启云试用账号
 http://demo.qiysd.com/login.html
 公司名称：UPEMS
@@ -21,6 +36,15 @@ svn地址
 caoyange@ibiandan.cn
 Cyg22668800
 ##############
+http://www.thingjs.com/
+注册邮箱：caoyange@ibiandan.cn
+密码：cyg123456789
+用户名：jamesCao/手机号
+
+
+http://www.thingjs.com/admin/#/myScene  登录自己账号后地址
+http://www.3dmomoda.com/zone/indexAll/
+##############
 Axure的用户名：
 caoyange@ibiandan.cn
 123456789
@@ -35,6 +59,12 @@ git仓库地址
 https://code.aliyun.com/biandankj/tfy.git
 jamesbiandan
 cyg22668800
+极光推送
+系统默认用户名：ab3c48c59ca42358
+登录名字username:caoyange@ibiandan.cn
+password:cyg226688James
+key:55d6a8e5947621b9c8d17ebe
+DevSecret: aebd0ccd389d648fe0c64349
 ###############
 svn://svnbucket.com/wangmao/nuanshu/nuanshu_ems
 ############
@@ -43,6 +73,13 @@ svn://svnbucket.com/wangmao/nuanshu/nuanshu_ems
 root
 bdkj2018
 47.92.226.176 
+jenkins:
+
+bb0ce6940c724b80a9b18ded12c22eb0
+password:
+/root/.jenkins/secrets/initialAdminPassword
+/usr/app/tfc
+ nohup java -jar jenkins.war --ajp13Port=-1 --httpPort=8088 >jenkins.log 2>&1 &
 #############
 
 alter table sys_dept
@@ -59,4 +96,97 @@ alter table sys_menu add  state int(11) DEFAULT 1 COMMENT '使用状态 0:未启用，1:
 java -jar jenkins.war --ajp13Port=-1 --httpPort=8888
 ######
 HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@56fe30c6 (No operations allowed after connection closed.)
+HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@76fe44f6 (No operations allowed after connection closed.)
 #########
+clean install -Dmaven.test.skip=true
+
+
+nohup java -Xmx512m -Xms512m -Xmn128m -jar clouddo-server-0.0.1.jar >server.log 2>&1 &
+
+
+nohup java -Xmx512m -Xms512m -Xmn128m -jar clouddo-zuul-0.0.1.jar >zuul.log 2>&1 &
+
+nohup java -Xmx512m -Xms512m -Xmn128m -jar clouddo-base-0.0.1-SNAPSHOT.jar >base.log 2>&1 &
+
+nohup java -Xmx512m -Xms512m -Xmn128m -jar clouddo-cms-0.0.1-SNAPSHOT.jar >cms.log 2>&1 &
+
+
+nohup java -Xmx512m -Xms512m -Xmn128m -jar clouddo-customer-0.0.1-SNAPSHOT.jar >customer.log 2>&1 &
+##################
+windows 查看端口
+netstat -ano|findstr '8189'
+windows  杀死进程 
+taskkill /pid 13064 /f 8189
+##################
+arthas的网页版界面(不乱码)
+http://127.0.0.1:8563/
+
+启动步骤：
+进入：E:\james\tools\alibaba
+输入 ：java -jar arthas-boot.jar
+按照序号进行输入即可
+
+查看某个类下面的某个方法的返回值
+
+查看 com.james包下面的TestRestApi类中的test方法的参数和返回值：params是参数，returnObj是返回值
+watch  com.james.TestRestApi test '{params,returnObj}'
+
+
+查看 com.james包下面的TestRestApi类中的test方法的参数，返回值，异常信息：params是传参参数，returnObj是返回值参数,throwExp是异常信息参数
+watch  com.james.TestRestApi test '{params,returnObj,throwExp}' -e -x 2（必须明确有异常才能使用e,否则所有信息都不会打印出来）
+
+watch  com.james.TestRestApi test '{params,returnObj,throwExp}' -x 2（可以输出异常信息）
+
+watch方法参数说明：
+
+[b]	在方法调用之前观察
+[e]	在方法异常之后观察
+[s]	在方法返回之后观察
+[f]	在方法结束之后(正常返回和异常返回)观察
+[E]	开启正则表达式匹配，默认为通配符匹配
+[x:]	指定输出结果的属性遍历深度，默认为 1
+
+监控某个方法，调用时间时间，成功与否
+monitor -c 5 .james.TestRestApi test
+
+控某个方法内部所有方法的调用性能情况
+trace com.james.TestRestApi test
+
+
+#################
+需要研究的东西
+ 1：京东 sharding sphere：数据库分布式中间件
+ GitHub：https://github.com/shardingjdbc/sharding-jdbc
+ 码云：https://gitee.com/shardingjdbc/sharding-jdbc
+2：maven sharding
+3：spring boot fat 
+4： 阿里 Pandora Boot
+
+2017年是各类新型数据库的落地年，各种NewSQL纷纷结束蛰伏期并开始商业化输出，特别是各类基于 MySQL 生态和兼容 MySQL 协议的新数据库产品也开始不断发展并开始商业输出，
+有包括在 OLTP 上进一步优化的 POLARDB、Aurora、X-DB等等，还有兼容 OLTP 和 OLAP 场景的 HTAP 上优化的 HybridDB、TiDB、BaikalDB 等等。
+HTAP ：17年10月腾讯云联合 PingCAP 发布基于 TiDB 的 HTAP 数据库
+#######
+https://www.cnblogs.com/zhongshiqiang/p/6076363.html
+数据库中间件
+数据库中间件有以下几种：
+
+	分布式数据库分表分库：分布式数据库中间件除了基本的分表分库功能，还可以丰富一下，比如讲读写分离或者水平扩容功能集成在一起，或者比如读写分离本身也可以作为一个独立的中间件。（Cobar, MyCAT, TDDL, DRDS, DDB）
+	数据增量订阅与消费：Canal
+	数据库同步（全量、增量、跨机房、复制）：Otter, JingoBus, DRC
+	跨数据库（数据源）迁移：（yugong, DataX）
+
+真正的分布式数据库：aurora tidb、PolarDB
+分表分库类的中间件主要有两种形式向应用提供服务：
+
+一种是以JDBC的jar包形式为Java应用提供直接依赖，Java应用通过提供的JDBC包实现透明访问分布式数据库集群中的各个分库分表，典型代表网易的DDB和阿里的TDDL.
+另一种是为应用部署独立的服务来满足应用分库分表的需求，在这种方式下通过标准JDBC访问Proxy，而Proxy则根据MySQL标准通信协议对客户端请求解析，还原应用SQL请求，然后通过本地访问数据库集群，最后再将得到的结果根据MySQL标准通信协议编码返回给客户端。典型代表阿里的Cobar, Cobar变种MyCAT, 阿里的DRDS，网易的DDB proxy模式以及DDB的私有云模式。
+Cobar
+Cobar 是提供关系型数据库（MySQL）分布式服务的中间件，它可以让传统的数据库得到良好的线性扩展，并看上去还是一个数据库，对应用保持透明。
+
+Cobar以Proxy的形式位于前台应用和实际数据库之间，对前台的开放的接口是MySQL通信协议。将前台SQL语句变更并按照数据分布规则发到合适的后台数据分库，再合并返回结果，模拟单库下的数据库行为。
+
+
+
+阿里的开发：北纬30度=》团队产品有
+ dubbo, arthas, pandora boot 还有内部的 rpc, dubbo plus
+#################
