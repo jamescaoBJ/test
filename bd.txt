@@ -1,8 +1,12 @@
 #############
+深圳计通动环演示软件  件  http://demo.szjiton.net:8001   账   账号：admin   没有密码
+#############
 jira
 caoyange@ibiandan.cn
 @cyg22668800
-管理员账号：james/ @cyg22668800
+管理员账号：admin/ @cyg22668800
+ServerId:BXP5-QB6L-0W6D-P2TY
+License:AAABdw0ODAoPeNp9kU1vgkAQhu/8CpJe2sMSwGirCUkr7EGDHxX6lfQy4qjb6EJmF1v/fRE01YoeZ3fmned95ybKpdkHabq26TY6zftOwzH9KC5qp20sCFEu0yxDskKRoFTIZ0KLVHp8GPPJeNKLuDHM11Ok0fxFISmPOYafSg2JHsIavQTSLcgFPoqpADkDaSXS+BIE1tnYOKdkCQoD0Ojt9jPbYa5j7DfH2wxLSX80GPCJ33sKD1/8JxO0PZpzmWsfMPgAxKqeI0LaIPUCr/s+brLnbitk9lsrYGM3/qggM0pneaKtXcFUOtffQGgVqmKDnqYcq7bL4dREWGekYJQaJcjkgpkrNGdB7vcUvsJeEPEhCx23fd9qNh+MovJOX64IRxpII3lzWCk0RrQAKRSUDg8pGj5h+fL/aKuK4bVA2vW7J0Fg4ZUyEmqfYYAqIZGVyv0CwYz2COZtdaK7z47JN7DKy10V86Uj1MV7vPx47k+zqn8BeIcMbjAsAhQE2tzkEg5iLpiWVPOZfgoVlUK5jAIUB7eY2iDtWmqm3PkDBFSCBhJmCOM=X02ia
 #############
 fineReport：
 username：  james_fineReport
