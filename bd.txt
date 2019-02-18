@@ -28,7 +28,8 @@ C:\Users\Administrator\.jenkins\secrets\initialAdminPassword
 Jenkins初始密码：
 8056187ab53a44eca54a97759adfae73
 admin/cyg123456789/
-
+本地Jenkins用户名和密码：
+admin/cyg22668800/
 ##########
 jenkins
 b4b7b76fd49b417ca12ae1dbc1e8f11b
@@ -117,6 +118,8 @@ nohup java -Xmx512m -Xms512m -Xmn128m -jar clouddo-cms-0.0.1-SNAPSHOT.jar >cms.l
 
 nohup java -Xmx512m -Xms512m -Xmn128m -jar clouddo-customer-0.0.1-SNAPSHOT.jar >customer.log 2>&1 &
 ##################
+linux  查看端口：
+netstat -tunlp |grep 8090
 windows 查看端口
 netstat -ano|findstr '8189'
 windows  杀死进程 
