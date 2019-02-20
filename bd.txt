@@ -75,6 +75,7 @@ svn://svnbucket.com/wangmao/nuanshu/nuanshu_ems
 ############
 虚拟机linux 用户名 root  密码：Ibiandan0629@. 
 数据库 
+
 root
 bdkj2018
 47.92.226.176 
