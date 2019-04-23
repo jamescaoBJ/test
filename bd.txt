@@ -1,3 +1,40 @@
+###############
+MQtt 启动路径：F:\james\MQTT\emqttd\bin>emqttd console
+控制台访问路径是：http://localhost:18083###admin/public
+运行Emqtt-Springbot的server和client进行发送和接收。也可以用控制台的菜单模拟：http://localhost:18083/#/websocket
+###############
+公司华为云账号
+15036156971/gzx168816.#
+91410100MA3XDEYT5N
+####################
+基于telegraf+influxdb+grafana进行postgresql数据库监控
+https://www.bbsmax.com/A/obzbWOeBJE/
+https://www.cnblogs.com/liugh/p/6683488.html
+telegraf启动命令：  telegraf -config telegraf.conf
+####
+https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-4.2.0.windows-x64.zip
+https://dl.grafana.com/oss/release/grafana-6.1.3.windows-amd64.zip
+Grafana：
+http://localhost:3000
+6.1.3版本####admin/test123456##http://localhost:3000
+4.2.0版本：admin/admin
+####
+配置Grafana参考文档：https://www.cnblogs.com/imyalost/p/9873641.html
+influxdb：
+启动命令：influxd -config influxdb.conf
+https://dl.influxdata.com/influxdb/releases/influxdb-1.2.2_windows_amd64.zip ##admin/admin###http://localhost:8083/
+
+https://dl.influxdata.com/influxdb/releases/influxdb-1.5.4_windows_amd64.zip
+#############
+https://www.showdoc.cc/leidi?page_id=1451788865389059
+密码：123456
+caoyange@ibiandan.cn
+#############
+索为公司账号
+qq邮箱/test123456
+#############
+http://console.usr.cn/main.html#/product
+穿透云:james_test/test123456
 #############
 华夏信用卡
 查询;226688
@@ -31,7 +68,10 @@ Teambition
 http://aladinfo.cn
 username:tomcat
 password:12345789
-
+#############
+218.29.54.78
+root/enkjedcQAZ  
+数据库： root  enkjedcQAZ
 #############
 zabbix+dubbox+ns(日志)
 
@@ -64,11 +104,14 @@ http://demo.qiysd.com/login.html
 #############
 alter table sys_dept add customer_Id bigint(20) DEFAULT 0 COMMENT '组织关联的客户类型id，如果主公司是0，其他是客户id' AFTER name;
 alter table sys_dept  drop _id
-###############alter table sys_user_role add  create_by bigint(20) DEFAULT NULL COMMENT '创建者';
+###############
+alter table sys_user_role add  create_by bigint(20) DEFAULT NULL COMMENT '创建者';
 alter table sys_user_role add  update_by bigint(20) DEFAULT NULL COMMENT '更新者';
 alter table sys_user_role add create_Date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间';
 alter table sys_user_role add lastupdate_Date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改时间';
 alter table sys_menu add  state int(11) DEFAULT 1 COMMENT '使用状态 0:未启用，1:启用' after parent_id;
+ 重命列名：alter table sys_dict change column type subType varchar(50) DEFAULT '1';
+  删除列：alter table sys_dict drop column description;
 ######
 java -jar jenkins.war --ajp13Port=-1 --httpPort=8888
 ######HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@56fe30c6 (No operations allowed after connection closed.)HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@76fe44f6 (No operations allowed after connection closed.)
@@ -80,7 +123,7 @@ nohup java -Xmx512m -Xms512m -Xmn128m -jar clouddo-base-0.0.1-SNAPSHOT.jar >base
 nohup java -Xmx512m -Xms512m -Xmn128m -jar clouddo-cms-0.0.1-SNAPSHOT.jar >cms.log 2>&1 &
 nohup java -Xmx512m -Xms512m -Xmn128m -jar clouddo-customer-0.0.1-SNAPSHOT.jar >customer.log 2>&1 &
 ##################
-windows 查看端口netstat -ano|findstr '8189'windows  杀死进程taskkill /pid 13064 /f 8189
+windows 查看端口netstat -ano|findstr '8189' windows  杀死进程taskkill /pid 13064 /f 8189
 ##################
 arthas
 的网页版界面(不乱码)http://127.0.0.1:8563/启动步骤：进入：E:\james\tools\alibaba输入 ：java -jar arthas-boot.jar按照序号进行输入即可查看某个类下面的某个方法的返回值查看 com.james包下面的TestRestApi类中的test方法的参数和返回值：params是参数，returnObj是返回值watch  com.james.TestRestApi test '{params,returnObj}'查看 com.james包下面的TestRestApi类中的test方法的参数，返回值，异常信息：params是传参参数，returnObj是返回值参数,throwExp是异常信息参数watch  com.james.TestRestApi test '{params,returnObj,throwExp}' -e -x 2（必须明确有异常才能使用e,否则所有信息都不会打印出来）watch  com.james.TestRestApi test '{params,returnObj,throwExp}' -x 2（可以输出异常信息）watch方法参数说明：[b]  在方法调用之前观察[e]  在方法异常之后观察[s]  在方法返回之后观察[f]  在方法结束之后(正常返回和异常返回)观察[E]  开启正则表达式匹配，默认为通配符匹配[x:] 指定输出结果的属性遍历深度，默认为 1监控某个方法，调用时间时间，成功与否monitor -c 5 .james.TestRestApi test控某个方法内部所有方法的调用性能情况trace com.james.TestRestApi test
@@ -128,7 +171,17 @@ admin/cyg22668800/
 ##########
 jenkins
 b4b7b76fd49b417ca12ae1dbc1e8f11b
-##########
+############
+查看Linux内核版本：
+ cat /proc/version
+############
+公司Jenkins
+192.168.3.10
+user:administrator
+password:Ibiandan@2017!.
+jenkins账号：
+admin/biandan_admin
+############
 svn://svnbucket.com/wangmao/nuanshu
 svn地址
 ###############
@@ -213,8 +266,12 @@ nohup java -Xmx512m -Xms512m -Xmn128m -jar clouddo-cms-0.0.1-SNAPSHOT.jar >cms.l
 
 
 nohup java -Xmx512m -Xms512m -Xmn128m -jar clouddo-customer-0.0.1-SNAPSHOT.jar >customer.log 2>&1 &
+######################
+nginx 重新加载
+nginx -s reload
 ##################
 linux  查看端口：
+netstat -antp | grep 9000
 netstat -tunlp |grep 8090
 windows 查看端口
 netstat -ano|findstr '8189'

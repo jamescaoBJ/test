@@ -1,0 +1,88 @@
+DROP procedure IF EXISTS `syn_system_prop`;
+DELIMITER ;;
+CREATE  procedure `syn_system_prop`(in t_id int,in pt_id int,out result VARCHAR(200)) 
+BEGIN
+    select group_concat(id,'')  from sys_equipment_property_config where equip_id in(select id from sys_equipment_location where equip_type=pt_id)  INTO result;
+
+END
+;;
+DELIMITER ;
+
+ 
+
+call syn_system_prop(1,41,@result);
+
+select @result; 
+
+ ################
+DROP procedure IF EXISTS `syn_system_prop`;
+DELIMITER ;;
+CREATE  procedure `syn_system_prop`(in p_id int,in pt_id int) 
+BEGIN
+     declare d_id int(11);#设备id
+		 declare r_id int(11);#字典id：设备属性id
+		 declare done int default 0;#用于判断游标是否还有下一个值
+		 declare curs cursor for(select id from sys_equipment_location where equip_type=pt_id);
+     declare continue handler for not FOUND set done = 1;#游标结束的标志
+		 SET r_id =p_id;
+     open curs;
+		 repeat
+						fetch curs into d_id;
+						if not done THEN 
+							insert into sys_equipment_property_config(equip_Id,type,name,memo) select d_id,r_id,name,remarks from sys_dict where id=r_id;
+						end if;
+						until done
+     end repeat;
+     close curs;
+END
+;;
+DELIMITER ;
+#########
+新增系统报警信息时候，自动同步到对应的设备上面
+DROP procedure IF EXISTS `syn_system_prop_warning`;
+DELIMITER ;;
+CREATE  procedure `syn_system_prop_warning`(in p_id int,in pt_id int) 
+BEGIN
+     declare d_id int(11);#设备id
+		 declare r_id int(11);#字典id：设备属性id
+		 declare done int default 0;#用于判断游标是否还有下一个值
+		 declare curs cursor for(select id from sys_equipment_location where equip_type in(select parent_id from sys_dict where id=pt_id));
+         declare continue handler for not FOUND set done = 1;#游标结束的标志
+		 SET r_id =p_id;
+     open curs;
+		 repeat
+						fetch curs into d_id;
+						if not done THEN 
+						  insert into sys_equipment_warning_config(equip_Id,type,name,name_value,subtype,memo) select d_id,type,name,name_value,subtype,memo from sys_template_warning_config where id=r_id;
+						end if;
+						until done
+     end repeat;
+     close curs;
+END
+;;
+DELIMITER ;
+#####
+DROP procedure IF EXISTS `syn_del_system_prop`;
+DELIMITER ;;
+CREATE  procedure `syn_del_system_prop`(in p_id int) 
+BEGIN
+				delete from  sys_equipment_property_config where type=p_id;
+END
+;;
+DELIMITER ;
+##############
+DROP procedure IF EXISTS `syn_del_system_prop_warning`;
+DELIMITER ;;
+CREATE  procedure `syn_del_system_prop_warning`(in p_id int) 
+BEGIN
+				delete from  sys_equipment_warning_config where type=p_id;
+END
+;;
+DELIMITER ;
+#######
+<select id="syncDeleteSysProToEquip" parameterType="map"  statementType="CALLABLE" >
+        <![CDATA[ 
+      		call syn_del_system_prop(#{id,mode=IN,jdbcType=INTEGER});
+        ]]>
+	</select>
+</mapper>
