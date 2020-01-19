@@ -1,0 +1,23 @@
+drop PROCEDURE if exists strings_to_array;
+create PROCEDURE strings_to_array(s_str varchar(12000), s_split varchar(3))
+begin
+  
+  drop table if exists list;
+  create temporary table list(id INT not null);
+  set @i = length(s_str) - length(replace(s_str,s_split,''));  -- 算出分隔符的总数
+  set @left_str = s_str;
+  while @i>0                -- 有多少个分隔符就循环多少遍
+  do 
+  set @sub_str = substr(@left_str,1,instr(@left_str,s_split)-1);            -- 得到分隔符前面的字符串
+  set @left_str = substr(@left_str,length(@sub_str)+length(s_split)+1);     -- 得到分隔符后面的字符串
+  set @n = trim(@sub_str);
+  insert into list(id) values(@n);
+  set @i = @i - 1;      
+  end while;
+  set @n = trim(@left_str);
+  insert into list(id) values(@n);
+end;
+ 
+CALL strings_to_array('0,1,2,29,7,9,14',',');
+select * from list;
+DROP TEMPORARY TABLE IF EXISTS list;

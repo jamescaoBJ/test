@@ -19,11 +19,11 @@ DROP procedure IF EXISTS `syn_system_prop`;
 DELIMITER ;;
 CREATE  procedure `syn_system_prop`(in p_id int,in pt_id int) 
 BEGIN
-     declare d_id int(11);#Éè±¸id
-		 declare r_id int(11);#×Öµäid£ºÉè±¸ÊôÐÔid
-		 declare done int default 0;#ÓÃÓÚÅÐ¶ÏÓÎ±êÊÇ·ñ»¹ÓÐÏÂÒ»¸öÖµ
+     declare d_id int(11);#ï¿½è±¸id
+		 declare r_id int(11);#ï¿½Öµï¿½idï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½id
+		 declare done int default 0;#ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Î±ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Öµ
 		 declare curs cursor for(select id from sys_equipment_location where equip_type=pt_id);
-     declare continue handler for not FOUND set done = 1;#ÓÎ±ê½áÊøµÄ±êÖ¾
+     declare continue handler for not FOUND set done = 1;#ï¿½Î±ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½Ö¾
 		 SET r_id =p_id;
      open curs;
 		 repeat
@@ -38,16 +38,16 @@ END
 ;;
 DELIMITER ;
 #########
-ÐÂÔöÏµÍ³±¨¾¯ÐÅÏ¢Ê±ºò£¬×Ô¶¯Í¬²½µ½¶ÔÓ¦µÄÉè±¸ÉÏÃæ
+ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢Ê±ï¿½ï¿½ï¿½Ô¶ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½
 DROP procedure IF EXISTS `syn_system_prop_warning`;
 DELIMITER ;;
 CREATE  procedure `syn_system_prop_warning`(in p_id int,in pt_id int) 
 BEGIN
-     declare d_id int(11);#Éè±¸id
-		 declare r_id int(11);#×Öµäid£ºÉè±¸ÊôÐÔid
-		 declare done int default 0;#ÓÃÓÚÅÐ¶ÏÓÎ±êÊÇ·ñ»¹ÓÐÏÂÒ»¸öÖµ
+     declare d_id int(11);#ï¿½è±¸id
+		 declare r_id int(11);#ï¿½Öµï¿½idï¿½ï¿½ï¿½è±¸ï¿½ï¿½ï¿½ï¿½id
+		 declare done int default 0;#ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Î±ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Öµ
 		 declare curs cursor for(select id from sys_equipment_location where equip_type in(select parent_id from sys_dict where id=pt_id));
-         declare continue handler for not FOUND set done = 1;#ÓÎ±ê½áÊøµÄ±êÖ¾
+         declare continue handler for not FOUND set done = 1;#ï¿½Î±ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½Ö¾
 		 SET r_id =p_id;
      open curs;
 		 repeat
@@ -67,6 +67,8 @@ DELIMITER ;;
 CREATE  procedure `syn_del_system_prop`(in p_id int) 
 BEGIN
 				delete from  sys_equipment_property_config where type=p_id;
+				delete from  sys_equipment_warning_config where type=p_id;
+				delete from sys_template_warning_config where type=p_id;
 END
 ;;
 DELIMITER ;
@@ -75,7 +77,7 @@ DROP procedure IF EXISTS `syn_del_system_prop_warning`;
 DELIMITER ;;
 CREATE  procedure `syn_del_system_prop_warning`(in p_id int) 
 BEGIN
-				delete from  sys_equipment_warning_config where type=p_id;
+				delete from  sys_equipment_warning_config where dict_Id=p_id;
 END
 ;;
 DELIMITER ;
@@ -86,3 +88,137 @@ DELIMITER ;
         ]]>
 	</select>
 </mapper>
+
+########
+DROP procedure IF EXISTS `batch_insert_spotTask`;
+DELIMITER ;;
+create procedure batch_insert_spotTask(in p_parts  VARCHAR(300),in p_plan_id int,in p_rid int,in prd_id int,in p_content  VARCHAR(300)) 
+begin
+			DECLARE p_start_Date Date;
+			DECLARE p_end_Date Date;
+			select start_Date,end_Date into p_start_Date,p_end_Date  from sys_spot_plan where id=p_plan_id;
+			while p_start_Date<=p_end_Date DO
+						INSERT into sys_spot_task(start_Date,end_Date, plan_id,equip_Id,standard_Id,cycle_Id,task_result_type,result_detail_type,parts,content)
+						select p_start_Date,p_start_Date,id, equip_Id, standard_Id, cycle_Id, p_rid,prd_id,p_parts,p_content from sys_spot_plan where id=p_plan_id;
+						set p_start_Date=date_add(p_start_Date, interval 1 day); 
+			end while;
+end
+;;
+@@@@@@@@@@@@
+DROP procedure IF EXISTS `batch_insert_spotTask`;
+DELIMITER ;;
+create procedure batch_insert_spotTask(in p_parts  VARCHAR(300),in p_plan_id int,in p_rid int,in prd_id int) 
+begin
+			declare i int default 0;
+			DECLARE p_start_Date Date;
+			DECLARE p_end_Date Date;
+			select start_Date,end_Date into p_start_Date,p_end_Date  from sys_spot_plan where id=p_plan_id;
+			while p_start_Date<=p_end_Date DO
+						set p_start_Date=date_add(p_start_Date, interval i day); 
+						INSERT into sys_spot_task(start_Date,end_Date, plan_id,equip_Id,standard_Id,cycle_Id,task_result_type,result_detail_type,parts)
+						select p_start_Date,p_start_Date,id, equip_Id, standard_Id, cycle_Id, p_rid,prd_id,p_parts from sys_spot_plan where id=p_plan_id;
+						IF i<1 THEN 
+							set i=i+1;     
+						END IF ;
+			end while;
+end
+;;
+############
+
+DROP procedure IF EXISTS `batch_insert_repairTask`;
+DELIMITER ;;
+create procedure batch_insert_repairTask(in p_tempTitle VARCHAR(300),in p_pland_id int,in p_repDs int) 
+begin
+			declare i int default 0;
+			while i<p_repDs DO
+				insert into  sys_repair_task(tempTitle,start_Date,end_Date,state,plan_id,equip_Id)
+				select p_tempTitle, date_add(start_Date, interval i day) , date_add(end_Date, interval i day),0,id,equip_Id from sys_repair_plan where id=p_pland_id;
+			 set i=i+1;   
+			end while;
+end
+;;
+@@
+#####
+DROP procedure IF EXISTS `batch_insert_repairTask`;
+DELIMITER ;;
+create procedure batch_insert_repairTask(in p_tempTitle VARCHAR(300),in p_pland_id int) 
+begin 
+			DECLARE p_start_Date Date;
+			DECLARE p_end_Date Date;
+			select start_Date,end_Date into p_start_Date,p_end_Date  from sys_repair_plan where id=p_pland_id;
+			while p_start_Date<=p_end_Date DO
+						
+						insert into  sys_repair_task(tempTitle,start_Date,end_Date,plan_id,equip_Id)
+						select p_tempTitle,p_start_Date ,p_start_Date,id,equip_Id from sys_repair_plan where id=p_pland_id;
+						set p_start_Date=date_add(p_start_Date, interval 1 day); 
+			end while;
+end
+;;
+#####
+
+DROP procedure IF EXISTS `batch_insert_repairTask`;
+DELIMITER ;;
+create procedure batch_insert_repairTask(in p_tempTitle VARCHAR(300),in p_pland_id int) 
+begin
+      declare i int default 0;
+			DECLARE p_start_Date Date;
+			DECLARE p_end_Date Date;
+			select start_Date,end_Date into p_start_Date,p_end_Date  from sys_repair_plan where id=p_pland_id;
+			while p_start_Date<=p_end_Date DO
+						set p_start_Date=date_add(p_start_Date, interval i day); 
+						insert into  sys_repair_task(tempTitle,start_Date,end_Date,plan_id,equip_Id)
+						select p_tempTitle,p_start_Date ,p_start_Date,id,equip_Id from sys_repair_plan where id=p_pland_id;
+						IF i<1 THEN 
+							set i=i+1;     
+						END IF ;
+			end while;
+end
+;;
+#######
+
+
+DROP procedure IF EXISTS `batch_insert_maintenanceTask`;
+DELIMITER ;;
+create procedure batch_insert_maintenanceTask(in p_tempTitle VARCHAR(300),in p_type int,in p_pland_id int) 
+begin 	
+			DECLARE p_start_Date Date;
+			DECLARE p_end_Date Date;
+			select start_Date,end_Date into p_start_Date,p_end_Date  from sys_maintenance_plan where id=p_pland_id;
+			while p_start_Date<=p_end_Date DO
+						
+						insert into  sys_maintenance_task(tempTitle,type,start_Date,end_Date,plan_id,equip_Id)
+						select p_tempTitle,p_type, p_start_Date,p_start_Date,id,equip_Id from sys_maintenance_plan where id=p_pland_id;
+						set p_start_Date=date_add(p_start_Date, interval 1 day); 
+			end while;
+end
+;;
+@@@@@@@@@
+DROP procedure IF EXISTS `batch_insert_maintenanceTask`;
+DELIMITER ;;
+create procedure batch_insert_maintenanceTask(in p_tempTitle VARCHAR(300),in p_type int,in p_pland_id int) 
+begin 	declare i int default 0;
+			DECLARE p_start_Date Date;
+			DECLARE p_end_Date Date;
+			select start_Date,end_Date into p_start_Date,p_end_Date  from sys_maintenance_plan where id=p_pland_id;
+			while p_start_Date<=p_end_Date DO
+						set p_start_Date=date_add(p_start_Date, interval i day); 
+						insert into  sys_maintenance_task(tempTitle,type,start_Date,end_Date,plan_id,equip_Id)
+						select p_tempTitle,p_type, p_start_Date,p_start_Date,id,equip_Id from sys_maintenance_plan where id=p_pland_id;
+						IF i<1 THEN 
+							set i=i+1;     
+						END IF ;
+			end while;
+end
+;;
+##################
+DROP procedure IF EXISTS `syn_equip_all`;
+DELIMITER ;;
+CREATE  procedure `syn_equip_all`(in p_t_id int,in p_s_id int) 
+BEGIN
+    insert into sys_equipment_location_config(location_id,batteryNumber,sid,code_address,data_port,memo) select p_t_id,batteryNumber,sid,code_address,data_port,memo from sys_equipment_location_config where location_id=p_s_id;
+		insert into sys_equipment_property_config(equip_Id,type,name,address,units,memo) select p_t_id,type,name,address,units,memo from sys_equipment_property_config where equip_Id=p_s_id;
+		insert into sys_equipment_warning_config(equip_Id,name,name_value,type,subtype,is_customerFlag,customer_Prop_Id,dict_Id,memo) select p_t_id,name,name_value,type,subtype,is_customerFlag,customer_Prop_Id,dict_Id,memo from sys_equipment_warning_config where equip_Id=p_s_id;
+END
+;;
+DELIMITER ;
+ #############
