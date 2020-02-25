@@ -1,11 +1,11 @@
-�ֱ��ֿ�����м����Ҫ��������ʽ��Ӧ���ṩ����
+分表分库类的中间件主要有两种形式向应用提供服务：
 
-һ������JDBC��jar����ʽΪJavaӦ���ṩֱ��������JavaӦ��ͨ���ṩ��JDBC��ʵ��͸�����ʷֲ�ʽ���ݿ⼯Ⱥ�еĸ����ֿ�ֱ������ʹ������׵�DDB�Ͱ����TDDL.
+一种是以JDBC的jar包形式为Java应用提供直接依赖，Java应用通过提供的JDBC包实现透明访问分布式数据库集群中的各个分库分表，典型代表网易的DDB和阿里的TDDL.
 
-��һ����ΪӦ�ò�������ķ���������Ӧ�÷ֿ�ֱ������������ַ�ʽ��ͨ����׼JDBC����Proxy����Proxy�����MySQL��׼ͨ��Э��Կͻ��������������ԭӦ��SQL����\
-Ȼ��ͨ�����ط������ݿ⼯Ⱥ������ٽ��õ��Ľ������MySQL��׼ͨ��Э����뷵�ظ��ͻ��ˡ����ʹ��������Cobar,hotdb, Cobar����MyCAT, �����DRDS�����׵�DDB proxyģʽ�Լ�DDB��˽����ģʽ��
+另一种是为应用部署独立的服务来满足应用分库分表的需求，在这种方式下通过标准JDBC访问Proxy，而Proxy则根据MySQL标准通信协议对客户端请求解析，还原应用SQL请求，\
+然后通过本地访问数据库集群，最后再将得到的结果根据MySQL标准通信协议编码返回给客户端。典型代表阿里的Cobar,hotdb, Cobar变种MyCAT, 阿里的DRDS，网易的DDB proxy模式以及DDB的私有云模式。
 
 
-DDB��ȫ��Distributed Database��
+DDB（全称Distributed Database）
 
-Hibernate Shards��Ibatis-Sharding
+Hibernate Shards、Ibatis-Sharding

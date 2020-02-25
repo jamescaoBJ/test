@@ -1,16 +1,16 @@
-πŸÕ¯£∫http://www.mycat.io/
+ÂÆòÁΩëÔºöhttp://www.mycat.io/
 
-∆Ù∂Ø£∫
+ÂêØÂä®Ôºö
 
-G:\tools\mycat\bin£∫
+G:\tools\mycat\binÔºö
 startup_nowrap.bat
 
 login mycat
 mysql -uroot -p123456789 -h127.0.0.1 -P8066 -DTESTDB
-∏√–≈œ¢‘⁄
+ËØ•‰ø°ÊÅØÂú®
 
-G:\tools\mycat\conf÷–
-»Áœ¬
+G:\tools\mycat\conf‰∏≠
+Â¶Ç‰∏ã
 
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -25,20 +25,20 @@ G:\tools\mycat\conf÷–
 <!DOCTYPE mycat:server SYSTEM "server.dtd">
 <mycat:server xmlns:mycat="http://io.mycat/">
     <system>
-    <property name="useSqlStat">0</property>  <!-- 1Œ™ø™∆Ù µ ±Õ≥º∆°¢0Œ™πÿ±’ -->
-    <property name="useGlobleTableCheck">0</property>  <!-- 1Œ™ø™∆Ù»´º”∞‡“ª÷¬–‘ºÏ≤‚°¢0Œ™πÿ±’ -->
+    <property name="useSqlStat">0</property>  <!-- 1‰∏∫ÂºÄÂêØÂÆûÊó∂ÁªüËÆ°„ÄÅ0‰∏∫ÂÖ≥Èó≠ -->
+    <property name="useGlobleTableCheck">0</property>  <!-- 1‰∏∫ÂºÄÂêØÂÖ®Âä†Áè≠‰∏ÄËá¥ÊÄßÊ£ÄÊµã„ÄÅ0‰∏∫ÂÖ≥Èó≠ -->
 
         <property name="sequnceHandlerType">2</property>
-      <!--  <property name="useCompression">1</property>--> <!--1Œ™ø™∆Ùmysql—πÀı–≠“È-->
-        <!--  <property name="fakeMySQLVersion">5.6.20</property>--> <!--…Ë÷√ƒ£ƒ‚µƒMySQL∞Ê±æ∫≈-->
+      <!--  <property name="useCompression">1</property>--> <!--1‰∏∫ÂºÄÂêØmysqlÂéãÁº©ÂçèËÆÆ-->
+        <!--  <property name="fakeMySQLVersion">5.6.20</property>--> <!--ËÆæÁΩÆÊ®°ÊãüÁöÑMySQLÁâàÊú¨Âè∑-->
     <!-- <property name="processorBufferChunk">40960</property> -->
     <!--
     <property name="processors">1</property>
     <property name="processorExecutor">32</property>
      -->
-        <!--ƒ¨»œŒ™type 0: DirectByteBufferPool | type 1 ByteBufferArena-->
+        <!--ÈªòËÆ§‰∏∫type 0: DirectByteBufferPool | type 1 ByteBufferArena-->
         <property name="processorBufferPoolType">0</property>
-        <!--ƒ¨»œ «65535 64K ”√”⁄sqlΩ‚Œˆ ±◊Ó¥ÛŒƒ±æ≥§∂» -->
+        <!--ÈªòËÆ§ÊòØ65535 64K Áî®‰∫ésqlËß£ÊûêÊó∂ÊúÄÂ§ßÊñáÊú¨ÈïøÂ∫¶ -->
         <!--<property name="maxStringLiteralLength">65535</property>-->
         <!--<property name="sequnceHandlerType">0</property>-->
         <!--<property name="backSocketNoDelay">1</property>-->
@@ -48,39 +48,39 @@ G:\tools\mycat\conf÷–
             <property name="serverPort">8066</property> <property name="managerPort">9066</property>
             <property name="idleTimeout">300000</property> <property name="bindIp">0.0.0.0</property>
             <property name="frontWriteQueueSize">4096</property> <property name="processors">32</property> -->
-        <!--∑÷≤º Ω ¬ŒÒø™πÿ£¨0Œ™≤ªπ˝¬À∑÷≤º Ω ¬ŒÒ£¨1Œ™π˝¬À∑÷≤º Ω ¬ŒÒ£®»Áπ˚∑÷≤º Ω ¬ŒÒƒ⁄÷ª…Êº∞»´æ÷±Ì£¨‘Ú≤ªπ˝¬À£©£¨2Œ™≤ªπ˝¬À∑÷≤º Ω ¬ŒÒ,µ´ «º«¬º∑÷≤º Ω ¬ŒÒ»’÷æ-->
+        <!--ÂàÜÂ∏ÉÂºè‰∫ãÂä°ÂºÄÂÖ≥Ôºå0‰∏∫‰∏çËøáÊª§ÂàÜÂ∏ÉÂºè‰∫ãÂä°Ôºå1‰∏∫ËøáÊª§ÂàÜÂ∏ÉÂºè‰∫ãÂä°ÔºàÂ¶ÇÊûúÂàÜÂ∏ÉÂºè‰∫ãÂä°ÂÜÖÂè™Ê∂âÂèäÂÖ®Â±ÄË°®ÔºåÂàô‰∏çËøáÊª§ÔºâÔºå2‰∏∫‰∏çËøáÊª§ÂàÜÂ∏ÉÂºè‰∫ãÂä°,‰ΩÜÊòØËÆ∞ÂΩïÂàÜÂ∏ÉÂºè‰∫ãÂä°Êó•Âøó-->
         <property name="handleDistributedTransactions">0</property>
         
             <!--
-            off heap for merge/order/group/limit      1ø™∆Ù   0πÿ±’
+            off heap for merge/order/group/limit      1ÂºÄÂêØ   0ÂÖ≥Èó≠
         -->
         <property name="useOffHeapForMerge">1</property>
 
         <!--
-            µ•ŒªŒ™m
+            Âçï‰Ωç‰∏∫m
         -->
         <property name="memoryPageSize">1m</property>
 
         <!--
-            µ•ŒªŒ™k
+            Âçï‰Ωç‰∏∫k
         -->
         <property name="spillsFileBufferSize">1k</property>
 
         <property name="useStreamOutput">0</property>
 
         <!--
-            µ•ŒªŒ™m
+            Âçï‰Ωç‰∏∫m
         -->
         <property name="systemReserveMemorySize">384m</property>
 
 
-        <!-- «∑Ò≤…”√zookeeper–≠µ˜«–ªª  -->
+        <!--ÊòØÂê¶ÈááÁî®zookeeperÂçèË∞ÉÂàáÊç¢  -->
         <property name="useZKSwitch">true</property>
 
 
     </system>
     
-    <!-- »´æ÷SQL∑¿ª«Ω…Ë÷√ -->
+    <!-- ÂÖ®Â±ÄSQLÈò≤ÁÅ´Â¢ôËÆæÁΩÆ -->
     <!--
     <firewall>
        <whitehost>
@@ -96,7 +96,7 @@ G:\tools\mycat\conf÷–
         <property name="password">123456789</property>
         <property name="schemas">TESTDB</property>
         
-        <!-- ±Ìº∂ DML »®œﬁ…Ë÷√ -->
+        <!-- Ë°®Á∫ß DML ÊùÉÈôêËÆæÁΩÆ -->
         <!--         
         <privileges check="false">
             <schema name="TESTDB" dml="0110" >

@@ -1,0 +1,93 @@
+crontab -e
+
+*/2 * * * * /data/database/databaseBack.sh
+
+
+例子： 
+5 0 * * *   /root/dbback/databaseBack.sh#每天早上00:05执行一次
+*/1 * * * * /root/dbback/databaseBack.sh#每一分钟执行一次
+
+1. crontab -l 
+列出当前的crontab任务
+2. crontab -d 
+删除当前的crontab任务
+3. crontab -e (solaris5.8上面是 crontab -r) 
+编辑一个crontab任务
+
+
+查看crontab服务状态：service crond status
+
+手动启动crontab服务：service crond start
+
+怎么查看crond服务是否开机启动命令：chkconfig --list | grep crond
+
+
+首先查看系统中没有安装crontab which crontab 
+
+我们看到了crontab的安装路径，这说明系统中已经安装了crontab，如果没有此路径，可以使用下面的命令安装crontab：
+
+yum install vixie-cron
+yum install crontabs
+
+
+chmod u+x databaseBack.sh
+
+crontab -r 删除任务
+https://blog.csdn.net/mameng1988/article/details/82787157
+
+
+
+
+mysqldump -uroot -proot proline | gzip > /root/backup/proline_$(date+%Y%m%d_%H%M%S).sql.gz
+
+
+一、设置crond.serivice服务为开机自启动
+步骤1：查看crond.serivce服务的自启动状态
+[root@localhost ~]# systemctl is-enabled crond.service
+disabled
+
+此时crond.serivce的自启动状态为disabled
+
+ 
+
+步骤2：开启crond.serivce服务自启动
+
+[root@localhost ~]# systemctl enable crond.service
+
+[root@localhost ~]# systemctl is-enabled crond.service
+enabled
+
+ 
+
+列出所有的启动文件：
+
+systemctl list-unit-files
+
+ 
+
+列出所有状态为enable的启动文件
+
+systemctl list-unit-files | grep enable
+
+ 
+
+关闭crond.serivce的自启动状态
+
+systemctl disable crond.service
+
+二、开启和关闭crond.service服务
+步骤1：查看crond.service的启动状态
+
+systemctl status crond.service
+
+ 
+
+开启crond.service服务命令
+
+systemctl start crond.service
+
+ 
+
+停止crond.service服务命令
+
+systemctl stop crond.service
