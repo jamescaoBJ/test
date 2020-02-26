@@ -1,15 +1,17 @@
 crontab -e
 
 */2 * * * * /data/database/databaseBack.sh
-
-
+###
+time=$(date "+%Y%m%d%H%M%S")
+mysqldump -h127.0.0.1 -P3306 -uroot -proot --databases proline > /root/dbback/proline_$time.sql
+###
 例子： 
 5 0 * * *   /root/dbback/databaseBack.sh#每天早上00:05执行一次
 */1 * * * * /root/dbback/databaseBack.sh#每一分钟执行一次
 
 1. crontab -l 
 列出当前的crontab任务
-2. crontab -d 
+2. crontab -r 
 删除当前的crontab任务
 3. crontab -e (solaris5.8上面是 crontab -r) 
 编辑一个crontab任务
@@ -35,13 +37,6 @@ chmod u+x databaseBack.sh
 crontab -r 删除任务
 https://blog.csdn.net/mameng1988/article/details/82787157
 
-
-
-
-mysqldump -uroot -proot proline | gzip > /root/backup/proline_$(date+%Y%m%d_%H%M%S).sql.gz
-
-
-一、设置crond.serivice服务为开机自启动
 步骤1：查看crond.serivce服务的自启动状态
 [root@localhost ~]# systemctl is-enabled crond.service
 disabled
