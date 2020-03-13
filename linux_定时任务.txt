@@ -86,3 +86,19 @@ systemctl start crond.service
 停止crond.service服务命令
 
 systemctl stop crond.service
+############################
+定时任务删除linux日志：
+/biandan/log.sh
+DAYDEL=`date -d "1 day ago" +%Y-%m-%d`
+rm -rf /data/admin/controller/*$DAYDEL*
+rm -rf /data/admin/mobileController/*$DAYDEL*
+rm -rf /data/base/*$DAYDEL*
+rm -rf /data/cms/*$DAYDEL*
+rm -rf /data/collectionData/*$DAYDEL*
+rm -rf /data/collectionProxy/*$DAYDEL*
+rm -rf /data/equipment/*$DAYDEL*
+rm -rf /data/zuul/*$DAYDEL*
+
+###########
+25 0 * * *   /biandan/log.sh#每天早上00:25执行一次
+############################

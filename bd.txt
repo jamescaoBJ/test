@@ -1,6 +1,31 @@
-﻿#################
+﻿###################
+拖拽方式开发项目：湘北智造
+https://www.xjrsoft.com/case.html?case
+手机号
+##################
+linux 清空文件的命令：
+> 文件名
+如：> acess.log
+####################
+linux查看当前路径下哪些文件占用比较大，命令：
+find . -xdev -type f | cut -d "/" -f 2 | sort | uniq -c | sort -n
+####################
+springboot比较全的借鉴项目：
+https://github.com/LiHaodong888/SpringBootLearn
+####################
+2018-2019年度中国工业互联网前十位：
+海尔、东方国信、用友网络、树根互联、航天云网、浪潮云、华为、工业富联、阿里云、徐工信息
+#################
+蘑菇物联ICRM登陆地址，账号
+https://crm.mogulinker.com/mgmt/login.jhtml
+18100337383/112233445566
+#################
 121.36.86.45#豫吉食品公司服务器
 root/Bmwh20200119. 
+#################
+黄涛项目样例
+http://192.144.161.227:2106
+，用户名：admin，密码：123456
 #################
 华为云：test
 Test!@3$%67890test
@@ -16,12 +41,23 @@ http://www.hightopo.com/
 ################
 Istio
 ############
+新密供暖华为云账号
+121.36.228.143
+操作系统：root/yunruiOsSystem_pw
+数据库：root/xinxigongnuan_platform
+https://console.huaweicloud.com/
+华为云账号：18860370144/yr116688
+emq-dashboard:
+james/james
+############
 中蓝华为云服务器：
 IP：121.36.93.63
 用户名：root
 密码：ZhongLan!@3$%67890
 CREATE DATABASE zhonglanhuanbaoDB DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 update user set password=PASSWORD("zhonglanhuanbaoDB") where User='root';
+中蓝百度地图的账号：
+18339911756/zhonglan888
 ############
 http://localhost:8886
 ############
@@ -49,6 +85,8 @@ os:root/qwertyasdfgh123456@
 新服务器：
 root/AqwertyB123456@
 database:root/tianfucloudDB
+emq-dashboard:
+james/126adminjames
 ###########
 https://www.huaweicloud.com/product/ief.html
 https://www.huaweicloud.com/product/ei_industrial.html

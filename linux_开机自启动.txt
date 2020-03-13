@@ -1,0 +1,31 @@
+root@ecs0001 ~]# more /etc/rc.local 
+#!/bin/bash
+# THIS FILE IS ADDED FOR COMPATIBILITY PURPOSES
+#
+# It is highly advisable to create own systemd services or udev rules
+# to run scripts during boot instead of using this file.
+#
+# In contrast to previous versions due to parallel execution during boot
+# this script will NOT be run after all other services.
+#
+# Please note that you must run 'chmod +x /etc/rc.d/rc.local' to ensure
+# that this script will be executed during boot.
+
+touch /var/lock/subsys/local
+source /etc/profile
+nohup java -Xmx64m -Xms64m -jar /zhonglan/clouddo-server-0.0.1-SNAPSHOT.jar >server.log 2>&1 &
+nohup java -Xmx64m -Xms64m -jar /zhonglan/clouddo-zuul-0.0.1-SNAPSHOT.jar >zuul.log 2>&1 &
+nohup java -Xmx128m -Xms128m -jar /zhonglan/collectionData-2.0.4.RELEASE.jar >collection.log 2>&1 &
+nohup java -Xmx64m -Xms64m -jar /zhonglan/clouddo-base-0.0.1-SNAPSHOT.jar >base.log 2>&1 &
+nohup java -Xmx64m -Xms64m -jar /zhonglan/clouddo-cms-0.0.1-SNAPSHOT.jar >cms.log 2>&1 &
+nohup java -Xmx64m -Xms64m -jar /zhonglan/collection-proxy-1.0-SNAPSHOT.jar >proxy.log 2>&1 &
+nohup java -Xmx128m -Xms128m -jar /zhonglan/clouddo-admin-controller-0.0.1-SNAPSHOT.jar >admin.log 2>&1 &
+nohup java -Xmx64m -Xms64m -jar /zhonglan/clouddo-admin-mobileController-0.0.1-SNAPSHOT.jar >mobileAdmin.log 2>&1 &
+nohup java -Xmx128m -Xms128m -jar /zhonglan/clouddo-equipment-api-0.0.1-SNAPSHOT.jar >equipment.log 2>&1 &
+nohup java -Xmx64m -Xms64m -jar /zhonglan/clouddo-equipment-mobile-api-0.0.1-SNAPSHOT.jar >mobileequipment.log 2>&1 &
+nohup  /usr/local/redis/bin/redis-server /usr/local/redis/redis.conf >redis.log 2>&1 &
+nohup /usr/local/nginx/sbin/nginx >nginx_info.log 2>&1 &
+
+
+chmod +777 /etc/rc.local
+chmod +777 /etc/rd/rc.d/local

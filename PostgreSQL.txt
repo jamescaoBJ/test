@@ -1,0 +1,6 @@
+目录：F:\james\PostgreSQL\pgsql\bin下执行：
+1:初始化:initdb -U postgres -A password -E utf8 -W -D F:\james\PostgreSQL\data
+2:注册系统服务（admin）：pg_ctl.exe register -N 'pgsql' -D F:\james\PostgreSQL\data
+3：启动服务：pg_ctl -D ^"F^:^\james^\PostgreSQL^\\data^" -l logfile start
+
+用户名和密码都是：postgres
