@@ -1,0 +1,4 @@
+1:登陆redis: ./redis-cli -h 127.0.0.1 -p 6379 (/usr/local/redis/bin)
+2:授权： auth "zhonglanhuanbaoDB"
+3:查看所有keys: keys *
+4:查看某个值：get  key
