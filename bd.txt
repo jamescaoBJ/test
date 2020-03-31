@@ -73,6 +73,15 @@ scp /var/upload.tar.gz root@114.116.230.126:/usr/local
 担小妹
 woaini0629
 https://rdc.aliyun.com
+###########
+银河铝业服务器：
+服务器IP：39.100.22.52
+远程密码：YHLY12yhly
+阿里云账号和密码需要确认：
+https://cucc.wocloud.cn/zhuzhan/A-caclucation/20181227/3636.html
+https://pboss.wocloud.cn/#/login
+760ALY016546
+Aa15637112237*
 ##########
 华为云：
 119.3.241.106

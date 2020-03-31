@@ -102,3 +102,13 @@ rm -rf /data/zuul/*$DAYDEL*
 ###########
 25 0 * * *   /biandan/log.sh#每天早上00:25执行一次
 ############################
+[root@ecs-b5c3 ~]# crontab -l
+5 0 * * *   /root/dbback/databaseBack.sh
+#########
+
+########
+[root@ecs0001 controller]# crontab -l
+*/55 * * * * /zhonglan/log.sh >> /zhonglan/logdetial.log 2>&1
+##########
+crontab -e编辑后，需要重启service crond restart
+##########
