@@ -20,9 +20,6 @@ https://github.com/LiHaodong888/SpringBootLearn
 https://crm.mogulinker.com/mgmt/login.jhtml
 18100337383/112233445566
 #################
-121.36.86.45#豫吉食品公司服务器
-root/Bmwh20200119. 
-#################
 黄涛项目样例
 http://192.144.161.227:2106
 ，用户名：admin，密码：123456
@@ -37,7 +34,7 @@ http://www.hightopo.com/
 ################
 Istio
 ############
-中蓝百度地图的账号：
+百度地图的账号：
 18339911756/zhonglan888
 ############
 http://localhost:8886
@@ -336,7 +333,7 @@ HikariPool-1 - Failed to validate connection com.mysql.jdbc.JDBC4Connection@76fe
 clean install -Dmaven.test.skip=true
 mysql初次登陆修改密码
 ####
-中蓝环保
+database
 CREATE DATABASE zhonglanhuanbaoDB DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 update user set password=PASSWORD("zhonglanhuanbaoDB") where User='root';
 centos的服务器是192.168.3.100
