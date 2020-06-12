@@ -1,28 +1,10 @@
-############
-公司云效账号
-推荐码：https://rdc.aliyun.com/company/join?code=f2a938b13391fdd2b33f47c53671b5c9
-担小妹
-woaini0629
-https://rdc.aliyun.com
-############
-############
-jamesaccount:阿里云账号
-Access Key Secret：BQYMxGm2tQbWBFLZ0Bib7brYFOwv47
-AccessKey ID：LTAIryZse3rGMrj4 
+
 ##############
 有人DTU的注册信息
 qq邮箱：
 1qaz2wsx3edc4rfv
-==========
-研华账号和密码：
-https://portal-sso.ali.wise-paas.com.cn/web/portals.html
-caoyange@ibiandan.cn
-jamesCao@007007
-##########
-119.3.241.106
-db：root/biandanDatabase
-os:root/qwertyasdfgh123456@
-华为云：tianfucloud/1qaz2wsx3edc
+========== 
+########## 
 ###########
 https://www.huaweicloud.com/product/ief.html
 https://www.huaweicloud.com/product/ei_industrial.html
@@ -91,10 +73,7 @@ influxdb��
 https://dl.influxdata.com/influxdb/releases/influxdb-1.2.2_windows_amd64.zip ##admin/admin###http://localhost:8083/
 
 https://dl.influxdata.com/influxdb/releases/influxdb-1.5.4_windows_amd64.zip
-#############
-https://www.showdoc.cc/leidi?page_id=1451788865389059
-123456
-caoyange@ibiandan.cn
+############# 
 #############
 ��Ϊ��˾�˺�
 qq����/test123456
@@ -157,16 +136,12 @@ keytool -genkeypair -alias tianfucloud -keyalg RSA -keystore E:\tianfucloud.key
 
 ������Կ��
 
-keytool -export -alias certificatekey -keystore shfqkeystore.jks -rfc -file shfqcert.cer
-#############���ڼ�ͨ������ʾ���  ��  http://demo.szjiton.net:8001   ��   �˺ţ�admin   û������
-#############jiracaoyange@ibiandan.cn@cyg22668800����jira ��½�˺ţ�����Ա�˺ţ�admin/@cyg22668800ServerId:BXP5-QB6L-0W6D-P2TYLicense:AAABdw0ODAoPeNp9kU1vgkAQhu/8CpJe2sMSwGirCUkr7EGDHxX6lfQy4qjb6EJmF1v/fRE01YoeZ3fmned95ybKpdkHabq26TY6zftOwzH9KC5qp20sCFEu0yxDskKRoFTIZ0KLVHp8GPPJeNKLuDHM11Ok0fxFISmPOYafSg2JHsIavQTSLcgFPoqpADkDaSXS+BIE1tnYOKdkCQoD0Ojt9jPbYa5j7DfH2wxLSX80GPCJ33sKD1/8JxO0PZpzmWsfMPgAxKqeI0LaIPUCr/s+brLnbitk9lsrYGM3/qggM0pneaKtXcFUOtffQGgVqmKDnqYcq7bL4dREWGekYJQaJcjkgpkrNGdB7vcUvsJeEPEhCx23fd9qNh+MovJOX64IRxpII3lzWCk0RrQAKRSUDg8pGj5h+fL/aKuK4bVA2vW7J0Fg4ZUyEmqfYYAqIZGVyv0CwYz2COZtdaK7z47JN7DKy10V86Uj1MV7vPx47k+zqn8BeIcMbjAsAhQE2tzkEg5iLpiWVPOZfgoVlUK5jAIUB7eY2iDtWmqm3PkDBFSCBhJmCOM=X02ia#############fineReport��username��  james_fineReportpassword: 22668800����Ա�˺ţ�james����Ա���룺123456789  web�����ַ��http://localhost:8075/webroot/decision#directory
-#############���������˺�
+keytool -export -alias certificatekey -keystore shfqkeystore.jks -rfc -file shfqcert.
 http://demo.qiysd.com/login.html
 ��˾���ƣ�UPEMS
 �û�����demo
 ���룺demo
-#############C:\Users\Administrator\.jenkins\secrets\initialAdminPasswordJenkins��ʼ���룺8056187ab53a44eca54a97759adfae73admin/cyg123456789/##########local_jenkins:admin/b4b7b76fd49b417ca12ae1dbc1e8f11b���£�6b867f91da584a74a8c6ed9b650853c6admin/cyg22668800/##########svn://svnbucket.com/wangmao/nuanshusvn��ַ###############��˾����caoyange@ibiandan.cnCyg22668800##############http://www.thingjs.com/ע�����䣺caoyange@ibiandan.cn���룺cyg123456789�û�����jamesCao/�ֻ���http://www.thingjs.com/admin/#/myScene  ��¼�Լ��˺ź��ַhttp://www.3dmomoda.com/zone/indexAll/##############Axure���û�����caoyange@ibiandan.cn123456789https://gbkqw1.axshare.com###############������https://www.aliyun.com/?accounttraceid=f0a14419-ca23-4ce5-ac28-ef047155fe42jamescloudaccountcyg22668800###############git�ֿ��ַhttps://code.aliyun.com/biandankj/tianfucloud.gitjamesbiandan/cyg123456789��������ϵͳĬ���û�����ab3c48c59ca42358��¼����username:caoyange@ibiandan.cnpassword:cyg226688Jameskey:55d6a8e5947621b9c8d17ebeDevSecret: aebd0ccd389d648fe0c64349###############svn://svnbucket.com/wangmao/nuanshu/nuanshu_ems
-############�����linux �û��� root  ���룺Ibiandan0629@.���ݿ�rootbdkj201847.92.226.176jenkins:bb0ce6940c724b80a9b18ded12c22eb0password:/root/.jenkins/secrets/initialAdminPassword/usr/app/tfc nohup java -jar jenkins.war --ajp13Port=-1 --httpPort=8088 >jenkins.log 2>&1 &
+#############C:\Users\Administrator\.jenkins\secrets\initialAdminPasswordJenkins��ʼ���룺8056187ab53a44eca54a97759adfae73admin/cyg123456789/##########local_jenkins:admin/b4b7b76fd49b417ca12ae1dbc1e8f11b���£�6b867f91da584a74a8c6ed9b650853c6admin/cyg22668800/##########svn://svnbucket.com/wangmao/nuanshusvn��ַ###############��˾����#http://www.thingjs.com/ע��û�����jamesCao/�ֻ���http://www.thingjs.com/admin/#/myScene  ��¼�Լ��˺ź��ַhttp://www.3dmomoda.com/zone/indexAll/##############Axure###############������###############git�ֿ����������ϵͳĬ���û�����ab3c48c59ca42358��¼�����linux �û��� root  ���룺nohup java -jar jenkins.war --ajp13Port=-1 --httpPort=8088 >jenkins.log 2>&1 &
 #############
 alter table sys_dept add customer_Id bigint(20) DEFAULT 0 COMMENT '��֯�����Ŀͻ�����id���������˾��0�������ǿͻ�id' AFTER name;
 alter table sys_dept  drop _id
@@ -231,13 +206,6 @@ https://www.cnblogs.com/zhongshiqiang/p/6076363.html���ݿ��м���
 #############
 ���ڼ�ͨ������ʾ���  ��  http://demo.szjiton.net:8001   ��   �˺ţ�admin   û������
 #############
-jira
-caoyange@ibiandan.cn
-@cyg22668800
-����Ա�˺ţ�admin/ @cyg22668800
-ServerId:BXP5-QB6L-0W6D-P2TY
-License:AAABdw0ODAoPeNp9kU1vgkAQhu/8CpJe2sMSwGirCUkr7EGDHxX6lfQy4qjb6EJmF1v/fRE01YoeZ3fmned95ybKpdkHabq26TY6zftOwzH9KC5qp20sCFEu0yxDskKRoFTIZ0KLVHp8GPPJeNKLuDHM11Ok0fxFISmPOYafSg2JHsIavQTSLcgFPoqpADkDaSXS+BIE1tnYOKdkCQoD0Ojt9jPbYa5j7DfH2wxLSX80GPCJ33sKD1/8JxO0PZpzmWsfMPgAxKqeI0LaIPUCr/s+brLnbitk9lsrYGM3/qggM0pneaKtXcFUOtffQGgVqmKDnqYcq7bL4dREWGekYJQaJcjkgpkrNGdB7vcUvsJeEPEhCx23fd9qNh+MovJOX64IRxpII3lzWCk0RrQAKRSUDg8pGj5h+fL/aKuK4bVA2vW7J0Fg4ZUyEmqfYYAqIZGVyv0CwYz2COZtdaK7z47JN7DKy10V86Uj1MV7vPx47k+zqn8BeIcMbjAsAhQE2tzkEg5iLpiWVPOZfgoVlUK5jAIUB7eY2iDtWmqm3PkDBFSCBhJmCOM=X02ia
-#############
 fineReport��
 username��  james_fineReport
 password: 22668800
@@ -269,59 +237,12 @@ b4b7b76fd49b417ca12ae1dbc1e8f11b
 �鿴Linux�ں˰汾��
  cat /proc/version
 ############
-��˾Jenkins
-192.168.3.10
-user:administrator
-password:Ibiandan@2017!.
-jenkins�˺ţ�
-admin/biandan_admin
-############
-svn://svnbucket.com/wangmao/nuanshu
-svn��ַ
-###############
-��˾����
-caoyange@ibiandan.cn
-Cyg22668800
-##############
-http://www.thingjs.com/
-ע�����䣺caoyange@ibiandan.cn
-���룺cyg123456789
-�û�����jamesCao/�ֻ���
 
 
 http://www.thingjs.com/admin/#/myScene  ��¼�Լ��˺ź��ַ
 http://www.3dmomoda.com/zone/indexAll/
-##############
-Axure���û�����
-caoyange@ibiandan.cn
-123456789
-https://gbkqw1.axshare.com
-###############
-������
-https://www.aliyun.com/?accounttraceid=f0a14419-ca23-4ce5-ac28-ef047155fe42
-jamescloudaccount
-cyg22668800
-###############
-git�ֿ��ַ
-https://code.aliyun.com/biandankj/tfy.git
-jamesbiandan
-cyg22668800
-��������
-ϵͳĬ���û�����ab3c48c59ca42358
-��¼����username:caoyange@ibiandan.cn
-password:cyg226688James
-key:55d6a8e5947621b9c8d17ebe
-DevSecret: aebd0ccd389d648fe0c64349
-###############
-svn://svnbucket.com/wangmao/nuanshu/nuanshu_ems
-############
-�����linux �û��� root  ���룺Ibiandan0629@. 
-���ݿ� 
-
-root
-bdkj2018
-47.92.226.176 
-jenkins:
+############## 
+############### 
 
 bb0ce6940c724b80a9b18ded12c22eb0
 password:
@@ -386,10 +307,7 @@ windows  ɱ������
 taskkill /pid 13064 /f 8189
 ##################
 arthas����ҳ�����(������)
-http://127.0.0.1:8563/
-
-�������裺
-���룺E:\james\tools\alibaba
+http://127.0\tools\alibaba
 ���� ��java -jar arthas-boot.jar
 ������Ž������뼴��
 
