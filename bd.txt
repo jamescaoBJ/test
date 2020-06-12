@@ -26,10 +26,6 @@ root/Bmwh20200119.
 黄涛项目样例
 http://192.144.161.227:2106
 ，用户名：admin，密码：123456
-#################
-华为云：test
-Test!@3$%67890test
-################
 http://localhost:8888/
 本机jenkins
 admin/admin_cyg22668800/
@@ -41,21 +37,6 @@ http://www.hightopo.com/
 ################
 Istio
 ############
-新密供暖华为云账号
-121.36.228.143
-操作系统：root/yunruiOsSystem_pw
-数据库：root/xinxigongnuan_platform
-https://console.huaweicloud.com/
-华为云账号：18860370144/yr116688
-emq-dashboard:
-james/james
-############
-中蓝华为云服务器：
-IP：121.36.93.63
-用户名：root
-密码：ZhongLan!@3$%67890
-CREATE DATABASE zhonglanhuanbaoDB DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-update user set password=PASSWORD("zhonglanhuanbaoDB") where User='root';
 中蓝百度地图的账号：
 18339911756/zhonglan888
 ############
@@ -67,16 +48,6 @@ https://open.ys7.com/bbs/article/6
 ############
 scp /var/upload.tar.gz root@114.116.230.126:/usr/local
 ############
-###########
-银河铝业服务器：
-服务器IP：39.100.22.52
-远程密码：YHLY12yhly
-阿里云账号和密码需要确认：
-https://cucc.wocloud.cn/zhuzhan/A-caclucation/20181227/3636.html
-https://pboss.wocloud.cn/#/login
-760ALY016546
-Aa15637112237*
-##########
 ###################
 ###########
 https://www.huaweicloud.com/product/ief.html
